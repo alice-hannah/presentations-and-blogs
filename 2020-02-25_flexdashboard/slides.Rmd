@@ -1,0 +1,152 @@
+---
+title: "Building Management <br> Reports using flexdashboard"
+subtitle: "PHI useR Group"
+author: 'Alice Byers <br> Information Services Division <br>'
+date: "25 February 2020 <br><br> Slides: https://github.com/alicebyers5/presentations/2020-02-25_flexdashboard"
+output:
+  ioslides_presentation:
+    widescreen: true
+    css: my-theme.css
+---
+
+```{r setup, include = FALSE}
+# Load packages required
+library(knitr)
+
+knitr::opts_chunk$set(echo = TRUE)
+
+error_hook <- knitr::knit_hooks$get("error")
+knitr::knit_hooks$set(error = function(x, options) {
+  if (!is.null(n <- options$linewidth)) {
+    x = knitr:::split_lines(x)
+    if (any(nchar(x) > n)) x = strwrap(x, width = n)
+    x = paste(x, collapse = '\n')
+  }
+  error_hook(x, options)
+})
+```
+
+
+## Background and Motivation
+
+- Quarterly management reports for [Dementia Post Diagnostic Support (PDS)](https://www.isdscotland.org/Health-Topics/Mental-Health/Dementia-Post-diagnostic-Support/) data
+
+- SPSS used for data preparation and calculating performance measures
+
+- Excel used to present data
+
+- New data recording guidance prompted review of methodology and presentation of management reports
+
+
+## Why flexdashboard?
+
+- Process can be automated using R and R Markdown
+
+- Output can include interactive elements
+
+- Output as a stand alone html file
+
+    - Universal file format
+    - No requirement for password protected shiny server
+    - Can continue to be distributed via email to restrict access
+
+- Looks swish!
+
+
+## Using flexdashboard
+
+Define output as flexdashboard in YAML header of R Markdown document:
+
+```{r eval = FALSE}
+---
+title: "Dementia PDS Quarterly Management Report"
+output: 
+  flexdashboard::flex_dashboard:
+    navbar:
+      - title: "Data as at 31 December 2019"
+    logo: isdscotland.png
+    orientation: rows
+    vertical_layout: scroll
+---
+```
+
+
+## Using flexdashboard
+
+Add a new row...
+
+```{r eval = FALSE}
+Row
+-------------------------------------------------
+```
+
+Add multiple pages...
+
+```{r eval = FALSE}
+Home
+=================================================
+```
+
+Create a tabset to switch between sections...
+  
+```{r eval = FALSE}
+Row {.tabset}
+-------------------------------------------------
+```
+
+
+## Using flexdashboard
+
+```{r eval = FALSE}
+flexdashboard::valueBox(paste0(80, "%"), 
+                        icon = "fa-percent",
+                        caption = paste("of people estimated to be newly",
+                                        " diagnosed with dementia were referred",
+                                        " for post-diagnostic support.")
+)
+```
+
+```{r echo = FALSE, fig.align = 'center'}
+include_graphics(
+  here::here("2020-02-25_flexdashboard", "images", "valuebox.png")
+)
+```
+
+
+## R Markdown Child Templates
+
+- Used to create multiple pages with the same layout for each financial year and health board, thus avoiding duplication of code
+
+- Write separate R Markdown document called a "child" template
+
+- Use `knitr::knit_child()` in the main markdown document to knit the "child" template for each combination of parameters
+
+- [Tutorial to use R Markdown Childs with flexdashboard](https://somtom.github.io/post/using-dynamically-rendered-r-markdown-childs-for-reports/)
+
+
+## Next Steps
+
+- Automate date in navbar so dashboard is fully automated
+
+- Improve comments/documentation of code
+
+- Develop further data analysis
+
+- Develop as shiny dashboard when infrastructure available
+
+
+## Contact & Links
+
+### Alice Byers - Health & Social Care Team
+
+- Email - [alice.byers@nhs.net](mailto:alice.byers@nhs.net)
+
+- GitHub - [alicebyers5](https://github.com/alicebyers5)
+
+
+### Useful Links
+
+- [flexdashboard](https://rmarkdown.rstudio.com/flexdashboard/index.html)
+
+- [Tutorial to use R Markdown Childs with flexdashboard](https://somtom.github.io/post/using-dynamically-rendered-r-markdown-childs-for-reports/)
+
