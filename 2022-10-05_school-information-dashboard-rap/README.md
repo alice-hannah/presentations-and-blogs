@@ -1,0 +1,3 @@
+# School Information Dashboard RAP Project
+
+Slides for presentation on [School Information Dashboard Reproducible Analytical Pipeline (RAP) project](https://github.com/DataScienceScotland/school-information-dashboard) at the [Scottish Government R User Day](https://github.com/DataScienceScotland/R-user-day-talks) on 5 October 2022. This presentation was jointly delivered with [Laura Stott](https://github.com/LauraStott). 
