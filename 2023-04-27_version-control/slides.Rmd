@@ -1,0 +1,59 @@
+---
+title: "Git and GitHub for <br> Reproducible Data Analysis"
+subtitle: "Data Standards and Open Data Community of Practice"
+author: "Alice Byers <br> Data Innovation Team <br>"
+date: "27 April 2023 <br><br> Slides: https://github.com/alicebyers5/presentations/2023-04-27_version-control"
+output:
+  ioslides_presentation:
+    widescreen: true
+    css: my-theme.css
+---
+
+
+## Aims
+
+<br>
+
+* Describe what version control is
+
+* Introduce Git and GitHub
+
+* Explain how these can be used for reproducible data analysis
+
+<br>
+
+Note: The aim of this presentation is to introduce concepts and will be non-technical. If you would like technical support, please get in touch.
+
+
+## What is version control?
+
+
+## Git
+
+
+## GitHub
+
+
+## Why use Git and GitHub?
+
+* Coding in the open
+
+* RAP
+
+
+## Contact & Links
+
+### Alice Byers, Data Innovation Team
+
+* Email - [alice.byers@gov.scot](mailto:alice.byers@gov.scot)
+
+* GitHub - [alicebyers5](https://github.com/alicebyers5)
+
+
+### Useful Links
+
+* Version control [Saltire pages](http://saltire/orgspaces/Analytic-Professions/Analytical-Tools/Pages/version-control-guide.aspx)
+
+* [Data Science Scotland](https://github.com/DataScienceScotland) GitHub Organisation
+
+* ONS Learning Hub [Introduction to Git](https://analysisfunction.civilservice.gov.uk/training/introduction-to-git/) training
