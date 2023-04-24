@@ -2,12 +2,16 @@
 title: "Git and GitHub for <br> Reproducible Data Analysis"
 subtitle: "Data Standards and Open Data Community of Practice"
 author: "Alice Byers <br> Data Innovation Team <br>"
-date: "27 April 2023 <br><br> Slides: https://github.com/alicebyers5/presentations/2023-04-27_version-control"
+date: "27 April 2023 <br><br> Slides: https://github.com/alicebyers5/presentations/tree/main/2023-04-27_version-control"
 output:
   ioslides_presentation:
     widescreen: true
     css: my-theme.css
 ---
+
+```{r save-to-pdf, include = FALSE}
+pagedown::chrome_print(here::here("2023-04-27_version-control", "slides.html"))
+```
 
 
 ## Aims
