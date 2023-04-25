@@ -18,46 +18,154 @@ pagedown::chrome_print(here::here("2023-04-27_version-control", "slides.html"))
 
 <br>
 
-* Describe what version control is
+* What is version control?
 
-* Introduce Git and GitHub
+* Introduction to Git and GitHub
 
-* Explain how these can be used for reproducible data analysis
+* How Git and GitHub can be used for reproducible data analysis
 
-<br>
-
-Note: The aim of this presentation is to introduce concepts and will be non-technical. If you would like technical support, please get in touch.
+* Note: This aim of this presentation is to introduce concepts and will be non-technical. If you would like technical support, please get in touch. (Contact details are at the end of the slides.)
 
 
 ## What is version control?
 
+Version control is the practice of tracking and managing changes to files. 
 
-## Git
+<br>
+
+Does this look familiar?
+
+```
+├── presentation
+│   ├── version-control-slides-first-draft.pptx
+│   ├── version-control-slides-first-draft-v2.pptx
+│   ├── version-control-slides-first-draft-v2 AB review.pptx
+│   ├── version-control-slides-final.pptx
+│   ├── version-control-slides-final-FINAL.pptx
+```
 
 
-## GitHub
+## Git <a href="https://git-scm.com/"><img src="images/git.svg" alt="git logo" align="right" height="75"/></a>
+
+Git is a free and open source software for version control. 
+
+To use:
+
+* Install Git on your computer
+
+* Initiate Git in a project folder (also called a repository)
+
+* Use Git to record any changes you make to files (these records are called 'commits')
+
+* Undo changes and revert to previous version of files
+
+* Branching?
+
+
+## Git <a href="https://git-scm.com/"><img src="images/git.svg" alt="git logo" align="right" height="75"/></a>
+
+Using Git means you don't need to save multiple copies of the same file to retain older versions. This information is stored by Git. 
+
+Commits contain information on:
+
+* **who** made a change,
+* **what** the change was,
+* **when** the change was made, and
+* **why** the change was made.
+
+
+## GitHub <a href="https://github.com/"><img src="images/github.svg" alt="GitHub logo" align="right" height="75"/></a>
+
+GitHub is a platform for hosting version controlled code. GitHub is mostly free, but some extra features are available for a fee.
+
+GitHub can be used to:
+
+* Make code publicly available (although repositories can also be private)
+
+* Facilitate code review (via pull requests)
+
+* Manage projects using tools such as issue tracking
+
+* Navigate Git history and view previous versions of files
+
+* View other people's code and collaborate
+
+
+## What is in a code repository?
+
+A code repository will usually contain files for one project and can contain:
+
+* Code (e.g. R scripts)
+* Documentation (e.g. README)
+* Configuration files
+* ...but **NOT DATA**!
+
+
+Data can be stored within your code repository, but it should not be tracked by Git or uploaded to GitHub. To ensure data files (and any other files containing sensitive information) are not tracked, a **.gitignore** file can be used to exclude them. Alternatively, data can be stored outside of your code repository.
+
+More information on using Git safely can be found in the [Duck Book](https://best-practice-and-impact.github.io/qa-of-code-guidance/version_control.html#avoid-commiting-sensitive-information-to-git-repositories).
+
+
+## How to use Git and GitHub
+
+* Git can be used without GitHub
+
+* Git can be used via a terminal-like tool called Git Bash, or via R Studio
+
+* GitHub is often used as the main copy of a code repository. Copies (or clones) of the repository are taken from GitHub for developers to work on.
+
+* Use Git locally to track changes and regularly 'push' to GitHub
+
+* Use GitHub to facilitate code review and merging of branches
+
+
+## GitHub Organisation
+
+https://github.com/DataScienceScotland
+
+<div style="text-align: center;"><a href="https://github.com/DataScienceScotland"><img src="images/data-science-scotland.png" alt="Screenshot of Data Science Scotland GitHub organisation homepage" align="middle" height="400" width="800"/></a></div>
 
 
 ## Why use Git and GitHub?
 
-* Coding in the open
+* Preferable to lots of copies of the same file with various names!
 
-* RAP
+* [Reproducible Analytical Pipelines (RAP)](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/)
+
+   * Reproducible: You can rerun your code as it was at any point in time.
+   
+   * Auditable: You have a record of when changes were made and why.
+   
+   * Transparent: Your code is publicly available on GitHub
 
 
-## Contact & Links
+## Links and Resources {.smaller}
 
-### Alice Byers, Data Innovation Team
+* Version control [Saltire pages](http://saltire/orgspaces/Analytic-Professions/Analytical-Tools/Pages/version-control-guide.aspx) (accessible on Scottish Government SCOTS network only)
+
+* [Data Science Scotland](https://github.com/DataScienceScotland) GitHub Organisation
+
+* Duck Book
+
+   * [Version Control](https://best-practice-and-impact.github.io/qa-of-code-guidance/version_control.html)
+   
+   * [Using Git safely](https://best-practice-and-impact.github.io/qa-of-code-guidance/version_control.html#avoid-commiting-sensitive-information-to-git-repositories)
+   
+* Government Analysis Function guidance on [open sourcing analytical code](https://analysisfunction.civilservice.gov.uk/policy-store/open-sourcing-analytical-code/)
+
+* ONS Learning Hub (contact Data.Science.Campus.Faculty@ons.gov.uk to request an account)
+   
+   * [Command Line Basics](https://gss.civilservice.gov.uk/training/command-line-basics/)
+   
+   * [Introduction to Git](https://analysisfunction.civilservice.gov.uk/training/introduction-to-git/)
+
+
+## Contact
+
+Alice Byers <br>
+RAP Developer <br>
+Data Innovation Team, Scottish Government
 
 * Email - [alice.byers@gov.scot](mailto:alice.byers@gov.scot)
 
 * GitHub - [alicebyers5](https://github.com/alicebyers5)
-
-
-### Useful Links
-
-* Version control [Saltire pages](http://saltire/orgspaces/Analytic-Professions/Analytical-Tools/Pages/version-control-guide.aspx)
-
-* [Data Science Scotland](https://github.com/DataScienceScotland) GitHub Organisation
-
-* ONS Learning Hub [Introduction to Git](https://analysisfunction.civilservice.gov.uk/training/introduction-to-git/) training

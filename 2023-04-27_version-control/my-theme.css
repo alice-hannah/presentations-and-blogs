@@ -14,3 +14,7 @@ slides > slide {
   background-position: left 3% bottom 3%;
   background-size: 200px;
 }
+
+body, p, h1, h2, h3, h4, li {
+  color: #000000;
+}
