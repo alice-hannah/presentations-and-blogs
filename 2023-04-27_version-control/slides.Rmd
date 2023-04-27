@@ -37,12 +37,13 @@ Version control is the practice of tracking and managing changes to files.
 Does this look familiar?
 
 ```
-├── presentation
-│   ├── version-control-slides-first-draft.pptx
-│   ├── version-control-slides-first-draft-v2.pptx
-│   ├── version-control-slides-first-draft-v2 AB review.pptx
-│   ├── version-control-slides-final.pptx
-│   ├── version-control-slides-final-FINAL.pptx
+├── stats-publication
+│   ├── publication-analysis-code.R
+│   ├── publication-analysis-code-v2.R
+│   ├── publication-analysis-code-v2 NEW METHODOLOGY.R
+│   ├── publication-analysis-code-v2 NEW METHODOLOGY AB-changes.R
+│   ├── publication-analysis-code-final.R
+│   ├── publication-analysis-code-final April 2023.R
 ```
 
 
@@ -89,14 +90,14 @@ A version controlled code repository will usually contain files for one project 
 * ...but **NOT DATA**!
 
 
-Data can be stored within your code repository, but it should not be tracked by Git or uploaded to GitHub. To ensure data files (and any other files containing sensitive information) are not tracked, a **.gitignore** file can be used to exclude them. Alternatively, data can be stored outside of your code repository.
+Data can be stored within your code repository, but it should not be tracked by Git. To ensure data files (and any other files containing sensitive information) are not tracked, a **.gitignore** file can be used to exclude them. Alternatively, data can be stored outside of your code repository.
 
 More information on using Git safely can be found in the [Duck Book](https://best-practice-and-impact.github.io/qa-of-code-guidance/version_control.html#avoid-commiting-sensitive-information-to-git-repositories).
 
 
 ## GitHub <a href="https://github.com/"><img src="images/github.svg" alt="GitHub logo" align="right" height="75"/></a>
 
-GitHub is a web interface for hosting version controlled code. GitHub is mostly free, but some extra features are available for a fee.
+GitHub is a web interface for hosting version controlled code. GitHub is owned by Microsoft but is mostly free to use, although some extra features are available for a fee. Rivals also exist, e.g. GitLab, Bitbucket.
 
 GitHub can be used to:
 
@@ -166,6 +167,7 @@ https://github.com/DataScienceScotland
    
    * [Introduction to Git](https://analysisfunction.civilservice.gov.uk/training/introduction-to-git/)
 
+* [Happy Git with R](https://happygitwithr.com/)
 
 ## Contact
 
