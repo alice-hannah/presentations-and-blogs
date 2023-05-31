@@ -1,0 +1,23 @@
+---
+title: "Getting Started with <br> Git and GitHub"
+author: "Alice Byers <br> Data Innovation Team, Scottish Government <br>"
+date: "15 June 2023 <br><br> Slides: https://github.com/alicebyers5/presentations/tree/main/2023-06-15_version-control-technical"
+output:
+  ioslides_presentation:
+    widescreen: true
+    css: my-theme.css
+lang: en
+---
+
+## Aims
+
+
+## Contact
+
+Alice Byers <br>
+RAP Developer <br>
+Data Innovation Team, Scottish Government
+
+* Email - [alice.byers@gov.scot](mailto:alice.byers@gov.scot)
+
+* GitHub - [alicebyers5](https://github.com/alicebyers5)
