@@ -1,0 +1,29 @@
+project:
+  type: website
+  render:
+    - "*.qmd"
+
+format: 
+  html:
+    theme: cosmo
+
+website:
+  title: "Alice Byers"
+  sidebar:
+    style: "docked"
+    align: center
+    title: "Alice Byers"
+    logo: "https://avatars.githubusercontent.com/u/36480969?v=4"
+    tools: 
+      - icon: github
+        href: https://github.com/alicebyers5
+        text: "Alice Byers GitHub Profile"
+    contents:
+      - text: "Home"
+        file: "index.qmd"
+      - section: "2023"
+        contents: 
+          - "2023-04-27_version-control/version-control.qmd"
+      - section: "2020"
+        contents: 
+          - "2020-02-25_flexdashboard/flexdashboard.qmd"
