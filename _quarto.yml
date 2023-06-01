@@ -1,7 +1,8 @@
 project:
   type: website
   render:
-    - "*.qmd"
+    - "index.qmd"
+    - "pages/*"
 
 format: 
   html:
@@ -24,7 +25,7 @@ website:
       - section: "2023"
         contents:
           - text: "Introduction to Git and GitHub"
-            file: "pages/version-control.qmd"
+            file: "pages/git-github-intro.qmd"
       - section: "2020"
         contents:           
           - text: "Flexdashboard"
