@@ -1,7 +1,7 @@
 ---
-title: Git and GitHub for Reproducible Data Analysis
+title: Introduction to Git and GitHub
 ---
 
-Slides for [Data Standards and Open Data Community of Practice talk](https://www.eventbrite.co.uk/e/git-and-github-for-reproducible-data-analysis-tickets-558593497187) on 27 April 2023.
+Slides for non-technical presentation to the Scottish Government [Data Standards and Open Data Community of Practice](https://www.eventbrite.co.uk/e/git-and-github-for-reproducible-data-analysis-tickets-558593497187) on 27 April 2023.
 
 <iframe width=1150 height=750 src="slides.html"></iframe>

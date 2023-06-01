@@ -2,6 +2,6 @@
 title: Creating Management Reports using flexdashboard
 ---
 
-Slides for talk on creating management reports using the [`flexdashboard`](https://rmarkdown.rstudio.com/flexdashboard/) R package at the [PHI useR Group](https://github.com/Public-Health-Scotland/PHI-useR-group) meeting on 25 February 2020.
+Slides for presentation on creating management reports using the [`flexdashboard`](https://rmarkdown.rstudio.com/flexdashboard/) R package at the [PHI useR Group](https://github.com/Public-Health-Scotland/PHI-useR-group) meeting on 25 February 2020.
 
-<iframe width=1200 height=700 src="slides.html"></iframe>
+<iframe width=1150 height=750 src="slides.html"></iframe>
