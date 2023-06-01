@@ -22,8 +22,10 @@ website:
       - text: "Home"
         file: "index.qmd"
       - section: "2023"
-        contents: 
-          - "2023-04-27_version-control/version-control.qmd"
+        contents:
+          - text: "Version Control"
+            file: "2023-04-27_version-control/version-control.qmd"
       - section: "2020"
-        contents: 
-          - "2020-02-25_flexdashboard/flexdashboard.qmd"
+        contents:           
+          - text: "Flexdashboard"
+            file: "2020-02-25_flexdashboard/flexdashboard.qmd"

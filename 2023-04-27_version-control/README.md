@@ -1,3 +1,0 @@
-# Git and GitHub for Reproducible Data Analysis
-
-Slides for [Data Standards and Open Data Community of Practice talk](https://www.eventbrite.co.uk/e/git-and-github-for-reproducible-data-analysis-tickets-558593497187) on 27 April 2023. Slides can be viewed on [RPubs](https://rpubs.com/alicebyers5/version-control-slides).
