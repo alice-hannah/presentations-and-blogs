@@ -23,9 +23,9 @@ website:
         file: "index.qmd"
       - section: "2023"
         contents:
-          - text: "Version Control"
-            file: "2023-04-27_version-control/version-control.qmd"
+          - text: "Introduction to Git and GitHub"
+            file: "pages/version-control.qmd"
       - section: "2020"
         contents:           
           - text: "Flexdashboard"
-            file: "2020-02-25_flexdashboard/flexdashboard.qmd"
+            file: "pages/flexdashboard.qmd"
