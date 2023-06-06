@@ -1,0 +1,104 @@
+---
+title: "<img class='image1' src='images/sgplot-logo.svg' alt=''/>Creating accessible charts in R using sgplot"
+author: "Alice Byers"
+institute: "Data Innovation Team, Scottish Government"
+date: "19 June 2023"
+format:
+  revealjs: 
+    embed-resources: true
+    slide-number: true
+    logo: images/SG-logo.jpg
+    controls: true
+    theme: [default, styles.scss]
+execute:
+  echo: TRUE
+  eval: TRUE
+lang: en
+---
+
+## Aims
+
+* Explain why analysts should use sgplot
+
+*	Demonstrate how to use sgplot
+
+*	Offer some general guidance on creating good charts for Scottish Government analysis
+
+
+## Why use sgplot
+
+
+## Installation
+
+
+## Example without sgplot (default ggplot2 style)
+
+```{r}
+#| code-line-numbers: "1-4|6-22"
+ 
+# Load packages
+library(ggplot2)
+library(dplyr)
+library(gapminder)
+
+# Create line chart
+gapminder |>
+  filter(country %in% c("United Kingdom", "China")) |>
+  ggplot(aes(x = year, y = lifeExp, colour = country)) +
+  geom_line() +
+  scale_y_continuous(limits = c(0, 82),
+                     breaks = seq(0, 80, 20),
+                     expand = c(0, 0)) +
+  scale_x_continuous(breaks = seq(1952, 2007, 5)) +
+  labs(
+    x = "Year",
+    y = NULL,
+    title = "Living Longer",
+    subtitle = "Life Expectancy in the United Kingdom and China 1952-2007",
+    caption = "Source: Gapminder",
+    colour = NULL
+  )
+```
+
+## use_sgplot()
+
+```{r}
+#| code-line-numbers: "1|3"
+ 
+library(sgplot)
+
+use_sgplot()
+```
+
+
+## Package website
+
+<https://datasciencescotland.github.io/sgplot>{preview-link="true"}
+
+* Cookbook
+
+* Function reference
+
+* Further guidance on accessibility, colours and saving charts
+
+* Guidance on how to ask for help or contribute
+
+
+## Future developments
+
+* Highcharter
+
+* Anything that would make your life easier!
+
+  * If your team has its own branding style and/or colour palettes, these can be added to sgplot (as long as they're accessible!)
+  
+  
+## Links
+
+* [sgplot website](https://datasciencescotland.github.io/sgplot)
+
+* [GitHub repository](https://github.com/DataScienceScotland/sgplot/)
+
+* [Contributing guidance](https://datasciencescotland.github.io/sgplot/CONTRIBUTING.html)
+
+* Contact me at <alice.byers@gov.scot>
