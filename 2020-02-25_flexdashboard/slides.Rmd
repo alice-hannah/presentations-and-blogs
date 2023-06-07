@@ -2,7 +2,7 @@
 title: "Building Management <br> Reports using flexdashboard"
 subtitle: "PHI useR Group"
 author: 'Alice Byers <br> Information Services Division <br>'
-date: "25 February 2020 <br><br> Slides: https://github.com/alicebyers5/presentations/2020-02-25_flexdashboard"
+date: "25 February 2020 <br><br> Slides: https://alicebyers5.github.io/presentations-and-blogs/2020-02-25_flexdashboard/slides.html"
 output:
   ioslides_presentation:
     widescreen: true
