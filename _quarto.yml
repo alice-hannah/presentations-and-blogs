@@ -1,8 +1,8 @@
 project:
   type: website
+  output-dir: site
   render:
     - "index.qmd"
-    - "pages/*"
 
 format: 
   html:
@@ -19,14 +19,3 @@ website:
       - icon: github
         href: https://github.com/alicebyers5
         text: "Alice Byers GitHub Profile"
-    contents:
-      - text: "Home"
-        file: "index.qmd"
-      - section: "2023"
-        contents:
-          - text: "Introduction to Git and GitHub"
-            file: "pages/git-github-intro.qmd"
-      - section: "2020"
-        contents:           
-          - text: "Flexdashboard"
-            file: "pages/flexdashboard.qmd"
