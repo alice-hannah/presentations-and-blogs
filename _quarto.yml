@@ -8,7 +8,9 @@ project:
 
 format: 
   html:
-    theme: cosmo
+    theme: 
+      - cosmo
+      - styles.scss
 
 website:
   title: "Alice Byers"
