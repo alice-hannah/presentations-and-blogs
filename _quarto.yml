@@ -24,7 +24,5 @@ website:
     contents:
       - text: "About"
         file: index.qmd
-      - text: "Presentations"
-        file: presentations.qmd
-      - text: "Blogs"
-        file: blogs.qmd
+      - presentations.qmd
+      - blogs.qmd
