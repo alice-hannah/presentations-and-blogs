@@ -1,5 +1,8 @@
 ---
 title: Presentations
+format: 
+  html:
+    toc: true
 ---
 
 ## 2023
