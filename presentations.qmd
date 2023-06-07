@@ -1,0 +1,15 @@
+---
+title: Presentations
+---
+
+## Introduction to Git and GitHub
+
+Slides for non-technical presentation to the Scottish Government [Data Standards and Open Data Community of Practice](https://www.eventbrite.co.uk/e/git-and-github-for-reproducible-data-analysis-tickets-558593497187) on 27 April 2023.
+
+Slides: <https://alicebyers5.github.io/presentations-and-blogs/2023-04-27_git-github-intro/slides.html>
+
+## Creating Management Reports using flexdashboard
+
+Slides for presentation on creating management reports using the [`flexdashboard`](https://rmarkdown.rstudio.com/flexdashboard/) R package at the [PHI useR Group](https://github.com/Public-Health-Scotland/PHI-useR-group) meeting on 25 February 2020.
+
+Slides: <https://alicebyers5.github.io/presentations-and-blogs/2020-02-25_flexdashboard/slides.html>

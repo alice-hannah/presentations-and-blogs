@@ -3,6 +3,8 @@ project:
   output-dir: site
   render:
     - "index.qmd"
+    - "presentations.qmd"
+    - "blogs.qmd"
 
 format: 
   html:
@@ -19,3 +21,10 @@ website:
       - icon: github
         href: https://github.com/alicebyers5
         text: "Alice Byers GitHub Profile"
+    content:
+      - text: "About"
+        file: index.qmd
+      - text: "Presentations"
+        file: presentations.qmd
+      - text: "Blogs"
+        file: blogs.qmd
