@@ -21,7 +21,7 @@ website:
       - icon: github
         href: https://github.com/alicebyers5
         text: "Alice Byers GitHub Profile"
-    content:
+    contents:
       - text: "About"
         file: index.qmd
       - text: "Presentations"
