@@ -8,15 +8,18 @@ format:
     embed-resources: true
     slide-number: true
     logo: images/SG-logo.jpg
+    footer: "Creating accessible charts in R using [sgplot](https://datasciencescotland.github.io/sgplot)"
     controls: true
     theme: [default, styles.scss]
 execute:
-  echo: TRUE
-  eval: TRUE
+  echo: true
+  fig-format: "svg"
 lang: en
 ---
 
 ## Aims
+
+* Introduce sgplot
 
 * Explain why analysts should use sgplot
 
@@ -25,31 +28,134 @@ lang: en
 *	Offer some general guidance on creating good charts for Scottish Government analysis
 
 
-## Why use sgplot
+## <img width='15%' align='right' src='images/sgplot-logo.svg' alt=''/> <br> sgplot 
+
+* sgplot is an R package for creating accessible plots
+
+* It works as an add-on for [`ggplot2`](https://ggplot2.tidyverse.org/) plots
+
+* Includes a `ggplot2` theme and colour palettes
+
+
+## Why use sgplot {.smaller}
+
+* Helps to make charts accessible
+
+  * All content published on public sector websites, including charts, must meet the level A and AA success criterion in the [Web Content Accessibility Guidelines 2.1](https://www.w3.org/TR/WCAG21/).
+
+  * Developed using Government Analysis Function data visualisation guidance for [charts](https://analysisfunction.civilservice.gov.uk/policy-store/data-visualisation-charts/) and [colours](https://analysisfunction.civilservice.gov.uk/policy-store/data-visualisation-colours-in-charts/)
+  
+. . .
+
+* Helps to make Scottish Government charts consistent
+
+  * Consistent quality
+
+  * Consistent style and colour palette
 
 
 ## Installation
 
+* On SCOTS, install in the same way you install other R packages
 
-## Example without sgplot (default ggplot2 style)
+* Easiest way is to use [pkginstaller](https://github.com/DataScienceScotland/pkginstaller) add-in
 
-```{r}
-#| code-line-numbers: "1-4|6-22"
+* More guidance available on [eRDM](https://erdm.scotland.gov.uk/documents/A42404229/details)
+
+* Use `remotes::install_github()` if not working on SCOTS
+
+
+## Example - data
+
+```{r echo = TRUE}
+#| output-location: fragment
+#| code-line-numbers: "1-4|6-12"
  
 # Load packages
 library(ggplot2)
 library(dplyr)
 library(gapminder)
 
+# Create data set
+life_exp <-
+  gapminder |>
+  select(year, country, lifeExp) |>
+  filter(country %in% c("United Kingdom", "China"))
+
+head(life_exp)
+```
+
+
+## Example - ggplot2 defaults
+
+```{r}
+#| output-location: fragment
+#| fig.height: 4
+#| fig.width: 8
+#| fig-alt: "A multiple line chart using default ggplot2 theme and colours. The background is grey with white grid lines, and the data lines are turquoise and orange."
+
 # Create line chart
-gapminder |>
-  filter(country %in% c("United Kingdom", "China")) |>
-  ggplot(aes(x = year, y = lifeExp, colour = country)) +
-  geom_line() +
+ggplot(life_exp) +
+  geom_line(aes(x = year, y = lifeExp, colour = country))
+```
+
+
+## Example - use_sgplot()
+
+```{r}
+#| code-line-numbers: "1|3"
+
+library(sgplot)
+
+use_sgplot()
+```
+
+. . . 
+
+<br>
+
+* Sets default ggplot2 theme to `theme_sg`
+
+* Sets default colour palettes
+
+* Sets default geom aesthetics; e.g. sets size of lines, bars and points relative to sizes used in theme
+
+
+## Example - use_sgplot()
+
+```{r}
+#| output-location: fragment
+#| fig-height: 4
+#| fig-width: 8
+#| fig-alt: "A multiple line chart using sgplot theme and main2 colour palette. The background is white with grey horizontal grid lines. The data lines are dark blue and orange." 
+
+# Create line chart
+life_exp_chart <- 
+  ggplot(life_exp) +
+  geom_line(aes(x = year, y = lifeExp, colour = country))
+
+life_exp_chart
+```
+
+
+## Example - other improvements
+
+```{r}
+#| output-location: slide
+#| code-line-numbers: "1-3|5-9|11-19"
+#| fig-alt: "A multiple line chart using sgplot theme and main2 colour palette. A title, subtitle and caption are included and formatting has been applied to axis labels and titles."
+
+# Existing line chart
+life_exp_chart <- 
+  life_exp_chart +
+  
+  # Customise x and y axes
   scale_y_continuous(limits = c(0, 82),
                      breaks = seq(0, 80, 20),
                      expand = c(0, 0)) +
   scale_x_continuous(breaks = seq(1952, 2007, 5)) +
+  
+  # Add titles and labels
   labs(
     x = "Year",
     y = NULL,
@@ -58,17 +164,65 @@ gapminder |>
     caption = "Source: Gapminder",
     colour = NULL
   )
+
+life_exp_chart
 ```
 
-## use_sgplot()
+## Example - labels instead of legend
 
 ```{r}
-#| code-line-numbers: "1|3"
- 
-library(sgplot)
+#| output-location: slide
+#| code-line-numbers: "1-6|8-11|13-15|17-23"
+#| fig-alt: "A multiple line chart using sgplot theme and main2 colour palette. There is no colour legend. Instead each data line is labelled within the chart."
 
-use_sgplot()
+# Calculate label positions using data
+life_exp_labs <- life_exp |>
+  group_by(country) |>
+  mutate(min_year = min(year)) |>
+  filter(year == max(year)) |>
+  ungroup()
+
+life_exp_chart <- life_exp_chart +
+
+  # Remove legend
+  guides(colour = FALSE) +
+  
+  # Adjust x axis to give extra room for labels  
+  scale_x_continuous(limits = c(1952, 2017),
+                     breaks = seq(1952, 2017, 5)) +
+  
+  # Add labels
+  geom_label(data = life_exp_labs,
+             aes(x = year, y = lifeExp, label = country, colour = country),
+             hjust = 0,
+             vjust = 0.5,
+             nudge_x = 0.5,
+             label.size = NA)
+
+life_exp_chart  
 ```
+
+
+## Example - apply to individual charts
+
+```{r}
+#| output-location: fragment
+#| code-line-numbers: "1-2|3|4"
+#| fig-height: 4
+#| fig-width: 8
+#| fig-alt: "A multiple line chart using sgplot theme and main2 colour palette. The background is white with grey horizontal grid lines. The data lines are dark blue and orange." 
+
+ggplot(life_exp) +
+  geom_line(aes(x = year, y = lifeExp, colour = country)) +
+  theme_sg() +
+  scale_colour_discrete_sg("main2")
+```
+
+::: {.notes}
+* Using use_sgplot() will apply sgplot styling to all charts you create in your R session. 
+* You can also apply specific sgplot functions to individual charts
+* Say something about arguments of theme_sg
+:::
 
 
 ## Package website
@@ -84,18 +238,59 @@ use_sgplot()
 * Guidance on how to ask for help or contribute
 
 
+## Other things to think about
+
+* Using sgplot does not guarantee accessibility
+
+* sgplot should be used in conjunction with [Analysis Function data visualisation guidance](https://analysisfunction.civilservice.gov.uk/policy-store/?area=data-visualisation)
+
+  * Their [e-learning](https://analysisfunction.civilservice.gov.uk/support/communicating-analysis/introduction-to-data-visualisation-e-learning/) is a good place to start
+  
+  * Review the [charts checklist](https://analysisfunction.civilservice.gov.uk/policy-store/charts-a-checklist/) before sharing or publishing your chart
+
+
+## Other things to think about {.smaller}
+
+* Consider what type of chart is best to convey your message - keep it as simple as possible 
+
+* Save charts in [SVG image format](https://datasciencescotland.github.io/sgplot/articles/saving.html#file-format). The [size should match the column width of the surrounding text](https://datasciencescotland.github.io/sgplot/articles/saving.html#size-and-dimensions).
+
+* Include titles, subtitles and captions in the main body of the page (e.g. in html or Word document) rather than embedding within the chart image
+
+* Provide alternative text for your chart. This may sit within the image properties, but could also be a table of data or a text description of the message the chart is presenting.
+
+* sgplot package website has details of [other things to consider for accessibility](https://datasciencescotland.github.io/sgplot/articles/accessibility.html#other-accessibility-considerations)
+
+
 ## Future developments
 
-* Highcharter
+* Support for [Highcharter](https://jkunst.com/highcharter/)
 
 * Anything that would make your life easier!
 
   * If your team has its own branding style and/or colour palettes, these can be added to sgplot (as long as they're accessible!)
+
+
+## Contributing
+
+* Open to anybody to get involved
+
+  * Make a suggestion
   
+  * Fix a typo
+  
+  * Write a new function
+  
+  * Be a maintainer
+
+* [Contributing guidance](https://datasciencescotland.github.io/sgplot/CONTRIBUTING.html)
+ 
   
 ## Links
 
 * [sgplot website](https://datasciencescotland.github.io/sgplot)
+
+* [Cookbook](https://datasciencescotland.github.io/sgplot/articles/cookbook.html)
 
 * [GitHub repository](https://github.com/DataScienceScotland/sgplot/)
 
