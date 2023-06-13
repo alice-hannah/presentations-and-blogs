@@ -1,0 +1,222 @@
+---
+title: "<img class='image1' src='images/rap_hex.png' alt=''/>Reproducible Analytical Pipelines in the Scottish Government"
+author: "Alice Byers"
+institute: "Data Innovation Team, Scottish Government"
+format:
+  revealjs: 
+    embed-resources: true
+    slide-number: true
+    preview-links: auto
+    logo: images/SG-logo.jpg
+    controls: true
+    theme: [default, styles.scss]
+lang: en
+---
+
+## What is RAP?
+
+Automated statistical and analytical processes that are:
+
+-   Reproducible
+
+-   Auditable
+
+-   Efficient
+
+-   High quality
+
+::: footer
+Source: [Reproducible Analytical Pipelines (RAP) – Government Analysis Function](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/)
+:::
+
+## Features of RAP {.smaller}
+
+At minimum, a RAP must:
+
+-   Minimise manual steps
+
+-   Be built using open-source software; e.g. R, python
+
+-   Be peer reviewed by colleagues
+
+-   Be version controlled; e.g. git
+
+-   Be open to anyone; e.g. code published on GitHub
+
+-   Follow good practice for quality assurance
+
+-   Contain well-commented code and have documentation embedded
+
+::: footer
+Source: [Reproducible Analytical Pipelines (RAP) – Government Analysis Function](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/)
+:::
+
+## RAP Strategy {.smaller}
+
+-   Developed by Government Analysis Function to help analysts and analyst leaders understand why RAP is important and how to deliver it.
+
+-   Vision: RAP is the default approach to analysis
+
+-   Three goals
+
+    -   Tools
+
+    -   Capability
+
+    -   Culture
+
+::: footer
+Source: [Reproducible Analytical Pipelines (RAP) strategy – Government Analysis Function](https://analysisfunction.civilservice.gov.uk/policy-store/reproducible-analytical-pipelines-strategy/)
+:::
+
+
+## RAP Support
+
+::: {style="font-size: 65%;"}
+
+-   Data Innovation Team, Data Division
+
+-   We can provide the following support:
+
+    -   Review existing process and plan RAP project
+    -   Best practice for project structure and code style
+    -   Code review and general feedback
+    -   Training to use Git and GitHub
+    -   Advanced topics such as R package development, data visualisation and interactive dashboard development
+
+-   Contact us
+
+    -   [Alice Byers](mailto:alice.byers@gov.scot), RAP Developer
+    -   [Tom Wilson](mailto:thomas.wilson@gov.scot), Data Scientist
+    -   [Gerry Scullion](mailto:gerard.scullion@gov.scot), Head of Data Innovation
+
+:::
+
+## Case Study - Existing Process
+
+-   School Information Dashboards
+
+-   10 data sources
+
+-   Data cleaned, linked and analysed manually in Excel
+
+-   Dashboards created in Tableau
+
+-   Updated twice a year; each update took three weeks of work for three statisticians - longer if errors were found
+
+## Case Study - Planning
+
+-   Engage with SG RAP support team
+
+-   Define aims -- what will success look like?
+
+-   Mock ups of what dashboards would look like
+
+-   Planning how best to structure datasets
+
+-   Work with data providers to improve process
+
+
+## Case Study - RAP Principles Applied {.smaller}
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="22%"}
+<center>
+<img class='icon' alt='' src='images/folder-open-solid.svg'/>
+Organised folder structure
+
+<br>
+
+<img class='icon' alt='' src='images/pencil-solid.svg'/>
+Writing manual processes as code
+</center>
+:::
+
+::: {.column width="4%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="22%"}
+<center>
+<img class='icon' alt='' src='images/file-signature-solid.svg'/>
+Standardised naming conventions
+
+<br>
+
+<img class='icon' alt='' src='images/gears-solid.svg'/>
+Functions
+</center>
+:::
+
+::: {.column width="4%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="22%"}
+<center>
+<img class='icon' alt='' src='images/Rlogo.svg'/>
+Open-source software
+
+<br><br>
+
+<img class='icon' alt='' src='images/git.svg'/>
+Version control using git
+</center>
+:::
+
+::: {.column width="4%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="22%"}
+<center>
+<img class='icon' alt='' src='images/folder-tree-solid.svg'/>
+Relative file paths
+
+<br><br>
+
+<img class='icon' alt='' src='images/github.svg'/>
+Open code on GitHub
+</center>
+:::
+
+::::
+
+## Case Study - Result
+
+-   Faster
+
+    -   Previously took three weeks for three statisticians (twice per year)
+
+    -   Now takes at most half a day for one statistician (twice per year)
+
+-   More accurate
+
+-   Reduced risk
+
+-   Well documented
+
+-   Developed skills to apply to other projects
+
+## Links {.smaller}
+
+-   [RAP Strategy](https://analysisfunction.civilservice.gov.uk/policy-store/reproducible-analytical-pipelines-strategy/)
+
+-   [Government Analysis Function RAP Resources](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/)
+
+-   [RAP: Overcoming Barriers to Adoption (OSR Paper)](https://osr.statisticsauthority.gov.uk/publication/reproducible-analytical-pipelines-overcoming-barriers-to-adoption/)
+
+-   [RAP Blog](https://dataingovernment.blog.gov.uk/2017/03/27/reproducible-analytical-pipeline/)
+
+-   [SG RAP Yammer Group](https://web.yammer.com/main/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxOTI2NDMyMzU4NSJ9/all)
+
+-   [SG RAP Support Offer](https://erdm.scotland.gov.uk:8443/documents/A40151583/details)
+
+-   [School Information Dashboard GitHub repository](https://github.com/DataScienceScotland/school-information-dashboard)
+
+-   Email me -- I'm always happy to talk about RAP!
+
+    -   [alice.byers\@gov.scot](mailto:alice.byers@gov.scot)

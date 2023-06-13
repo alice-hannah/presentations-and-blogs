@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Presentations and Blogs",
+    "section": "",
+    "text": "This site contains presentation slides and blogs I have written.\nI currently work as a Reproducible Analytical Pipeline (RAP) developer at the Scottish Government. Prior to this, I worked at Public Health Scotland (PHS) analysing data on topics such as Delayed Discharges, Dementia and Palliative and End of Life Care.\nA lot of my work is open and available on my GitHub profile."
+  },
+  {
+    "objectID": "presentations.html",
+    "href": "presentations.html",
+    "title": "Presentations",
+    "section": "",
+    "text": "Slides for the Scottish Government Analyst Induction event on Data Tools and Standards on 13 June 2023.\nSlides\n\n\n\nSlides for non-technical presentation to the Scottish Government Data Standards and Open Data Community of Practice on 27 April 2023.\nSlides"
+  },
+  {
+    "objectID": "presentations.html#section",
+    "href": "presentations.html#section",
+    "title": "Presentations",
+    "section": "",
+    "text": "Slides for the Scottish Government Analyst Induction event on Data Tools and Standards on 13 June 2023.\nSlides\n\n\n\nSlides for non-technical presentation to the Scottish Government Data Standards and Open Data Community of Practice on 27 April 2023.\nSlides"
+  },
+  {
+    "objectID": "presentations.html#section-1",
+    "href": "presentations.html#section-1",
+    "title": "Presentations",
+    "section": "2022",
+    "text": "2022\n\nRAP in Practice\nSlides for presentation on RAP (Reproducible Analytical Pipelines) in Practice at the Scottish Government Digital Academy Fit for the Future event on 23 November 2022.\nSlides\n\n\nSchool Information Dashboard RAP\nSlides for presentation on School Information Dashboard Reproducible Analytical Pipeline (RAP) project at the Scottish Government R User Day on 5 October 2022. This presentation was jointly delivered with Laura Stott.\nSlides"
+  },
+  {
+    "objectID": "presentations.html#section-2",
+    "href": "presentations.html#section-2",
+    "title": "Presentations",
+    "section": "2020",
+    "text": "2020\n\nCreating Management Reports using flexdashboard\nSlides for presentation on creating management reports using the flexdashboard R package at the PHI useR Group meeting on 25 February 2020.\nSlides"
+  }
+]
