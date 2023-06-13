@@ -1,7 +1,6 @@
 ---
 title: "<img class='image1' src='images/sgplot-logo.svg' alt=''/>Creating accessible charts in R using sgplot"
-author: "Alice Byers"
-institute: "Data Innovation Team, Scottish Government"
+author: "**Lee Bunce**, Office of the Chief Statistician<br>**Alice Byers**, Data Innovation Team"
 date: "19 June 2023"
 format:
   revealjs: 
@@ -238,6 +237,45 @@ ggplot(life_exp) +
 * Guidance on how to ask for help or contribute
 
 
+## Future developments
+
+* Support for [Highcharter](https://jkunst.com/highcharter/)
+
+* Add Scottish Government colour palettes when available
+
+* Anything that would make your life easier!
+
+  * If your team has its own branding style and/or colour palettes, these can be added to sgplot (as long as they're accessible!)
+
+
+## Support and feedback
+
+* [How to get help](https://datasciencescotland.github.io/sgplot/SUPPORT.html)
+
+  * [R Users Yammer Community](https://web.yammer.com/main/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiI2MzQ4MzE2NjczIn0)
+  
+  * [Open an issue on GitHub](https://github.com/DataScienceScotland/sgplot/issues/new) if you've found a bug
+  
+  * [Contact the maintainers](https://datasciencescotland.github.io/sgplot/authors.html#authors)
+
+* Please [let us know](mailto:alice.byers@gov.scot;lee.bunce@gov.scot?subject=I&#39;m%20using%20sgplot&#33;) if you're using sgplot - we would love to see examples of publications using sgplot
+
+
+## Get involved
+
+* Open to anybody
+
+  * Make a suggestion
+  
+  * Fix a typo
+  
+  * Write a new function
+  
+  * Become a package maintainer
+
+* [Contributing guidance](https://datasciencescotland.github.io/sgplot/CONTRIBUTING.html)
+ 
+
 ## Other things to think about
 
 * Using sgplot does not guarantee accessibility
@@ -261,41 +299,30 @@ ggplot(life_exp) +
 
 * sgplot package website has details of [other things to consider for accessibility](https://datasciencescotland.github.io/sgplot/articles/accessibility.html#other-accessibility-considerations)
 
-
-## Future developments
-
-* Support for [Highcharter](https://jkunst.com/highcharter/)
-
-* Anything that would make your life easier!
-
-  * If your team has its own branding style and/or colour palettes, these can be added to sgplot (as long as they're accessible!)
-
-
-## Contributing
-
-* Open to anybody to get involved
-
-  * Make a suggestion
-  
-  * Fix a typo
-  
-  * Write a new function
-  
-  * Become a package maintainer
-
-* [Contributing guidance](https://datasciencescotland.github.io/sgplot/CONTRIBUTING.html)
- 
   
 ## Links
 
 * [sgplot website](https://datasciencescotland.github.io/sgplot)
 
-* [Cookbook](https://datasciencescotland.github.io/sgplot/articles/cookbook.html)
+    * [Cookbook](https://datasciencescotland.github.io/sgplot/articles/cookbook.html)
+
+    * [How to contribute](https://datasciencescotland.github.io/sgplot/CONTRIBUTING.html)
+    
+    * [How to get help](https://datasciencescotland.github.io/sgplot/SUPPORT.html)
 
 * [GitHub repository](https://github.com/DataScienceScotland/sgplot/)
 
-* [Contributing guidance](https://datasciencescotland.github.io/sgplot/CONTRIBUTING.html)
-
 * [Analysis Function Data Visualisation Guidance](https://analysisfunction.civilservice.gov.uk/policy-store/?area=data-visualisation)
 
-* Contact me at <alice.byers@gov.scot>
+* [Scottish Government Design System charts guidance](https://designsystem.gov.scot/guidance/charts/)
+
+
+## Contact us
+
+* Lee Bunce, Office of the Chief Statistician (OCS)
+
+  <lee.bunce@gov.scot>
+  
+* Alice Byers, Data Innovation Team
+  
+  <alice.byers@gov.scot>
