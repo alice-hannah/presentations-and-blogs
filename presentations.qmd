@@ -7,6 +7,12 @@ format:
 
 ## 2023
 
+### RAP in the Scottish Government
+
+Slides for the Scottish Government Analyst Induction event on Data Tools and Standards on 13 June 2023.
+
+[Slides](https://alicebyers5.github.io/presentations-and-blogs/2023-06-13_RAP-in-SG/slides.html){.external target="_blank"}
+
 ### Introduction to Git and GitHub
 
 Slides for non-technical presentation to the Scottish Government [Data Standards and Open Data Community of Practice](https://www.eventbrite.co.uk/e/git-and-github-for-reproducible-data-analysis-tickets-558593497187) on 27 April 2023.
