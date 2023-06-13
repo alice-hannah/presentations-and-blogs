@@ -1,0 +1,36 @@
+---
+title: Presentations
+format: 
+  html:
+    toc: true
+---
+
+## 2023
+
+### Introduction to Git and GitHub
+
+Slides for non-technical presentation to the Scottish Government [Data Standards and Open Data Community of Practice](https://www.eventbrite.co.uk/e/git-and-github-for-reproducible-data-analysis-tickets-558593497187) on 27 April 2023.
+
+[Slides](https://alicebyers5.github.io/presentations-and-blogs/2023-04-27_git-github-intro/slides.html){.external target="_blank"}
+
+## 2022
+
+### RAP in Practice
+
+Slides for presentation on RAP (Reproducible Analytical Pipelines) in Practice at the [Scottish Government Digital Academy Fit for the Future](https://digitalacademy.arlo.co/courses/112-fit-for-the-future-leading-a-modern-statistical-service?e=2f5fd1d61f1240239af248e29ede693d) event on 23 November 2022.
+
+[Slides](https://github.com/alicebyers5/presentations-and-blogs/raw/main/2022-11-23_fit-for-the-future/rap-in-practice.pptx){.download target="_blank"}
+
+### School Information Dashboard RAP
+
+Slides for presentation on [School Information Dashboard Reproducible Analytical Pipeline (RAP) project](https://github.com/DataScienceScotland/school-information-dashboard) at the [Scottish Government R User Day](https://github.com/DataScienceScotland/R-user-day-talks) on 5 October 2022. This presentation was jointly delivered with [Laura Stott](https://github.com/LauraStott). 
+
+[Slides](https://github.com/alicebyers5/presentations-and-blogs/raw/main/2022-10-05_school-information-dashboard-rap/school-information-dashboard-rap.pptx){.download target="_blank"}
+
+## 2020
+
+### Creating Management Reports using flexdashboard
+
+Slides for presentation on creating management reports using the [`flexdashboard`](https://rmarkdown.rstudio.com/flexdashboard/) R package at the [PHI useR Group](https://github.com/Public-Health-Scotland/PHI-useR-group) meeting on 25 February 2020.
+
+[Slides](https://alicebyers5.github.io/presentations-and-blogs/2020-02-25_flexdashboard/slides.html){.external target="_blank"}
