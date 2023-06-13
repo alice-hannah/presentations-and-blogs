@@ -237,17 +237,6 @@ ggplot(life_exp) +
 * Guidance on how to ask for help or contribute
 
 
-## Future developments
-
-* Support for [Highcharter](https://jkunst.com/highcharter/)
-
-* Add Scottish Government colour palettes when available
-
-* Anything that would make your life easier!
-
-  * If your team has its own branding style and/or colour palettes, these can be added to sgplot (as long as they're accessible!)
-
-
 ## Support and feedback
 
 * [How to get help](https://datasciencescotland.github.io/sgplot/SUPPORT.html)
@@ -259,6 +248,17 @@ ggplot(life_exp) +
   * [Contact the maintainers](https://datasciencescotland.github.io/sgplot/authors.html#authors)
 
 * Please [let us know](mailto:alice.byers@gov.scot;lee.bunce@gov.scot?subject=I&#39;m%20using%20sgplot&#33;) if you're using sgplot - we would love to see examples of publications using sgplot
+
+
+## Future developments
+
+* Support for [Highcharter](https://jkunst.com/highcharter/)
+
+* Add Scottish Government colour palettes when available
+
+* Anything that would make your life easier!
+
+  * If your team has its own branding style and/or colour palettes, these can be added to sgplot (as long as they're accessible!)
 
 
 ## Get involved
