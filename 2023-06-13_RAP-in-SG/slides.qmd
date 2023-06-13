@@ -189,9 +189,9 @@ Open code on GitHub
 
 -   Faster
 
--   Previously took three weeks for three statisticians (twice per year)
+    -   Previously took three weeks for three statisticians (twice per year)
 
--   Now takes at most half a day for one statistician (twice per year)
+    -   Now takes at most half a day for one statistician (twice per year)
 
 -   More accurate
 
