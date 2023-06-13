@@ -104,21 +104,13 @@ ggplot(life_exp) +
 
 ```{r}
 #| code-line-numbers: "1|3"
+#| message: TRUE
+#| output-location: fragment
 
 library(sgplot)
 
 use_sgplot()
 ```
-
-. . . 
-
-<br>
-
-* Sets default ggplot2 theme to `theme_sg`
-
-* Sets default colour palettes
-
-* Sets default geom aesthetics; e.g. sets size of lines, bars and points relative to sizes used in theme
 
 
 ## Example - use_sgplot()
