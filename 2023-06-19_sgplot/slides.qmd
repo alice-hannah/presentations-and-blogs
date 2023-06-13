@@ -28,7 +28,9 @@ lang: en
 *	Offer some general guidance on creating good charts for Scottish Government analysis
 
 
-## <img width='15%' align='right' src='images/sgplot-logo.svg' alt=''/> <br> sgplot 
+## sgplot <img width='15%' align='right' src='images/sgplot-logo.svg' alt=''/> 
+
+<br>
 
 * sgplot is an R package for creating accessible plots
 
@@ -160,6 +162,12 @@ life_exp_chart <-
 life_exp_chart
 ```
 
+::: {.notes}
+* This chart could still be improved to make it more accessible.
+* Where use of a legend relies on a user matching the label to the data using colour alone, it is better to label data directly.
+:::
+
+
 ## Example - labels instead of legend
 
 ```{r}
@@ -273,7 +281,7 @@ ggplot(life_exp) +
   
   * Write a new function
   
-  * Be a maintainer
+  * Become a package maintainer
 
 * [Contributing guidance](https://datasciencescotland.github.io/sgplot/CONTRIBUTING.html)
  
@@ -287,5 +295,7 @@ ggplot(life_exp) +
 * [GitHub repository](https://github.com/DataScienceScotland/sgplot/)
 
 * [Contributing guidance](https://datasciencescotland.github.io/sgplot/CONTRIBUTING.html)
+
+* [Analysis Function Data Visualisation Guidance](https://analysisfunction.civilservice.gov.uk/policy-store/?area=data-visualisation)
 
 * Contact me at <alice.byers@gov.scot>
