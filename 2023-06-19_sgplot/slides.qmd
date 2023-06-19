@@ -90,6 +90,11 @@ life_exp <-
 head(life_exp)
 ```
 
+::: {.notes}
+* Load the packages we need
+* Use gapminder package to get some data to use in examples
+:::
+
 
 ## ggplot2 defaults
 
@@ -104,6 +109,11 @@ ggplot(life_exp) +
   geom_line(aes(x = year, y = lifeExp, colour = country))
 ```
 
+::: {.notes}
+* Use `life_exp` data we created in previous slide
+* Create a simple line chart with year on x axis, life expectancy on y axis and separate countries with colour.
+:::
+
 
 ## use_sgplot()
 
@@ -116,6 +126,13 @@ library(sgplot)
 
 use_sgplot()
 ```
+
+::: {.notes}
+* Load the sgplot package
+* Running `use_sgplot()` will change default ggplot2 behaviour for your R session. 
+* The only output from running this are the messages shown on the slide.
+* In practice, add this to the start of your R script or R Markdown document to style all subsequent ggplot charts with sgplot.
+:::
 
 
 ## use_sgplot()
@@ -133,6 +150,11 @@ life_exp_chart <-
 
 life_exp_chart
 ```
+
+::: {.notes}
+* This code is exactly the same as the code from the ggplot2 defaults slide. 
+* The output looks different because we have run `use_sgplot()`.
+:::
 
 
 ## Other improvements
@@ -166,8 +188,10 @@ life_exp_chart
 ```
 
 ::: {.notes}
-* This chart could still be improved to make it more accessible.
-* Where use of a legend relies on a user matching the label to the data using colour alone, it is better to label data directly.
+* A few other improvements to the look of the chart that can't be controlled with sgplot.
+* Adjust axis breaks and labels
+* Add titles and labels; Lee will talk more about importance of titles later in presentation.
+* The [cookbook](https://datasciencescotland.github.io/sgplot/articles/cookbook.html#other-customisations) contains examples of other tweaks you might want to make.
 :::
 
 
@@ -175,20 +199,19 @@ life_exp_chart
 
 ```{r}
 #| output-location: slide
-#| code-line-numbers: "1-6|8-11|13-15|17-23"
+#| code-line-numbers: "1-5|7-10|12-14|16-22"
 #| fig-alt: "A multiple line chart using sgplot theme and main2 colour palette. There is no colour legend. Instead each data line is labelled within the chart."
 
 # Calculate label positions using data
 life_exp_labs <- life_exp |>
   group_by(country) |>
-  mutate(min_year = min(year)) |>
   filter(year == max(year)) |>
   ungroup()
 
 life_exp_chart <- life_exp_chart +
 
   # Remove legend
-  guides(colour = FALSE) +
+  guides(colour = "none") +
   
   # Adjust x axis to give extra room for labels  
   scale_x_continuous(limits = c(1952, 2017),
@@ -204,6 +227,13 @@ life_exp_chart <- life_exp_chart +
 
 life_exp_chart  
 ```
+
+::: {.notes}
+* Where use of a legend relies on a user matching the label to the data using colour alone, it is better to label data directly.
+* You can add labels manually using `annotate`, however this means you'll need to adjust the code any time your data changes.
+* Create a little extra data frame to calculate position values for labels based on data. This will automatically recalculate position when data changes.
+* Further information on annotations is in the [cookbook](https://datasciencescotland.github.io/sgplot/articles/cookbook.html#annotations).
+:::
 
 
 ## Apply to individual charts
@@ -224,7 +254,27 @@ ggplot(life_exp) +
 ::: {.notes}
 * Using use_sgplot() will apply sgplot styling to all charts you create in your R session. 
 * You can also apply specific sgplot functions to individual charts
-* Say something about arguments of theme_sg
+:::
+
+
+## Apply to individual charts
+
+```{r}
+#| output-location: fragment
+#| code-line-numbers: "1-4|3"
+#| fig-height: 4
+#| fig-width: 7
+#| fig-alt: "A multiple line chart using sgplot theme and main2 colour palette. The background is white with grey horizontal grid lines. The data lines are dark blue and orange." 
+
+ggplot(life_exp) +
+  geom_line(aes(x = year, y = lifeExp, colour = country)) +
+  theme_sg(legend = "top") +
+  scale_colour_discrete_sg("main2")
+```
+
+::: {.notes}
+* `theme_sg()` takes various arguments to allow customisation; e.g. sizing, grid lines and legend position.
+* More information can be found in the function help file; run `?theme_sg` in R or go to the [Reference](https://datasciencescotland.github.io/sgplot/reference/index.html) section of the package website. 
 :::
 
 
@@ -235,13 +285,13 @@ ggplot(life_exp) +
 
 <https://datasciencescotland.github.io/sgplot>{preview-link="true"}
 
-* Cookbook
+* [Cookbook](https://datasciencescotland.github.io/sgplot/articles/cookbook.html); lots of example code
 
-* Function reference
+* [Reference](https://datasciencescotland.github.io/sgplot/reference/index.html); help files for sgplot functions
 
-* Further guidance on accessibility, colours and saving charts
+* [Further guidance](https://datasciencescotland.github.io/sgplot/articles/index.html) on accessibility, colours and saving charts
 
-* Guidance on how to ask for help or contribute
+* Guidance on [how to ask for help](https://datasciencescotland.github.io/sgplot/SUPPORT.html) or [contribute](https://datasciencescotland.github.io/sgplot/CONTRIBUTING.html)
 
 
 ## Support and feedback
@@ -259,7 +309,7 @@ ggplot(life_exp) +
 
 ## Future developments
 
-* Support for [Highcharter](https://jkunst.com/highcharter/)
+* Support for interactive chart packages
 
 * Add Scottish Government colour palettes when available
 
@@ -268,6 +318,14 @@ ggplot(life_exp) +
 * Anything that would make your life easier!
 
   * If your team has its own branding style and/or colour palettes, these can be added to sgplot (as long as they're accessible!)
+
+::: {.notes}
+* The current version of the package is by no means the final version - there is no final version!
+* Currently, sgplot works on interactive charts created using `plotly::ggplotly()`, however this has quite a lot of quirks! In the future we'd like to develop support for other interactive chart packages such as Highcharts.
+* The gov.scot design system contains some [SG branded colour palettes](https://designsystem.gov.scot/styles/colour-customisation/), however these have been developed with web development in mind and so are not considered accessible when using for charts.
+* The design system team have recently published some [charts guidance](https://designsystem.gov.scot/guidance/charts/) and are developing SG branded colour palettes to use for charts.
+* We want to keep developing and improving so that it can be as useful as possible for as many people.
+:::
 
 
 ## Get involved
@@ -283,7 +341,12 @@ ggplot(life_exp) +
   * Become a package maintainer
 
 * [Contributing guidance](https://datasciencescotland.github.io/sgplot/CONTRIBUTING.html)
- 
+
+::: {.notes}
+* A great way to develop skills in using R and package management
+* If you're a beginner and aren't sure how to do things, I can help you learn.
+:::
+
  
 # Accessibility {.h1-blue}
  
@@ -341,12 +404,12 @@ ggplot(life_exp) +
 
 * These should be included in the main text, above the image
 
-* Currently updating our standard Word Template for Statistical Publications to incorporate this
+* Currently updating our standard [Word Template for Statistical Publications](https://erdm.scotland.gov.uk:8443/documents/A37037374/details) to incorporate this
 
 
 ## Data visualisation is actually about text
 
-* John Burn Murdoch, Financial Times ([YouTube](https://www.youtube.com/watch?v=uoFN3nxeMco&t=835s&pp=ygURam9obiBidXJuIG11cmRvY2g%3D))
+* John Burn-Murdoch, Financial Times ([YouTube](https://www.youtube.com/watch?v=uoFN3nxeMco&t=835s&pp=ygURam9obiBidXJuIG11cmRvY2g%3D))
 
   * Charts can be extremely effective at communicating information
 
