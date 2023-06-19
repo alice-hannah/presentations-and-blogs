@@ -1,0 +1,508 @@
+---
+title: "<img class='image1' src='images/sgplot-logo.svg' alt=''/>Creating accessible charts in R using sgplot"
+author: "**Lee Bunce**, Office of the Chief Statistician<br>**Alice Byers**, Data Innovation Team"
+date: "19 June 2023"
+format:
+  revealjs: 
+    embed-resources: true
+    slide-number: true
+    logo: images/SG-logo.jpg
+    footer: "Creating accessible charts in R using [sgplot](https://datasciencescotland.github.io/sgplot)"
+    controls: true
+    link-external-newwindow: true
+    theme: [default, styles.scss]
+execute:
+  echo: true
+  fig-format: "svg"
+lang: en
+---
+
+## Aims
+
+* Introduce sgplot
+
+* Explain why analysts should use sgplot
+
+*	Demonstrate how to use sgplot
+
+*	Offer some general guidance on creating good charts for Scottish Government analysis
+
+
+## sgplot <img width='15%' align='right' src='images/sgplot-logo.svg' alt=''/> 
+
+<br>
+
+* sgplot is an R package for creating Scottish Government themed accessible plots
+
+* It works as an add-on for [`ggplot2`](https://ggplot2.tidyverse.org/) plots
+
+* Includes a `ggplot2` theme and colour palettes
+
+
+## Why use sgplot
+
+sgplot contributes to our wider priorities:
+
+* Quality, consistency and trust
+
+* Accessibility
+
+* RAP
+
+* Story-driven publications*
+
+::: {.notes}
+* All content published on public sector websites, including charts, must meet the level A and AA success criterion in the [Web Content Accessibility Guidelines 2.1](https://www.w3.org/TR/WCAG21/).
+:::
+
+
+# How to use sgplot {.h1-blue}
+
+
+## Installation
+
+* On SCOTS, install in the same way you install other R packages
+
+* Easiest way is to use [pkginstaller](https://github.com/DataScienceScotland/pkginstaller) add-in
+
+* More guidance available on [eRDM](https://erdm.scotland.gov.uk/documents/A42404229/details)
+
+* Use `remotes::install_github()` if not working on SCOTS
+
+
+## Get some data
+
+```{r echo = TRUE}
+#| output-location: fragment
+#| code-line-numbers: "1-4|6-12"
+ 
+# Load packages
+library(ggplot2)
+library(dplyr)
+library(gapminder)
+
+# Create data set
+life_exp <-
+  gapminder |>
+  select(year, country, lifeExp) |>
+  filter(country %in% c("United Kingdom", "China"))
+
+head(life_exp)
+```
+
+::: {.notes}
+* Load the packages we need
+* Use gapminder package to get some data to use in examples
+:::
+
+
+## ggplot2 defaults
+
+```{r}
+#| output-location: fragment
+#| fig.height: 4
+#| fig.width: 8
+#| fig-alt: "A multiple line chart using default ggplot2 theme and colours. The background is grey with white grid lines, and the data lines are turquoise and orange."
+
+# Create line chart
+ggplot(life_exp) +
+  geom_line(aes(x = year, y = lifeExp, colour = country))
+```
+
+::: {.notes}
+* Use `life_exp` data we created in previous slide
+* Create a simple line chart with year on x axis, life expectancy on y axis and separate countries with colour.
+:::
+
+
+## use_sgplot()
+
+```{r}
+#| code-line-numbers: "1|3"
+#| message: TRUE
+#| output-location: fragment
+
+library(sgplot)
+
+use_sgplot()
+```
+
+::: {.notes}
+* Load the sgplot package
+* Running `use_sgplot()` will change default ggplot2 behaviour for your R session. 
+* The only output from running this are the messages shown on the slide.
+* In practice, add this to the start of your R script or R Markdown document to style all subsequent ggplot charts with sgplot.
+:::
+
+
+## use_sgplot()
+
+```{r}
+#| output-location: fragment
+#| fig-height: 4
+#| fig-width: 8
+#| fig-alt: "A multiple line chart using sgplot theme and main2 colour palette. The background is white with grey horizontal grid lines. The data lines are dark blue and orange." 
+
+# Create line chart
+life_exp_chart <- 
+  ggplot(life_exp) +
+  geom_line(aes(x = year, y = lifeExp, colour = country))
+
+life_exp_chart
+```
+
+::: {.notes}
+* This code is exactly the same as the code from the ggplot2 defaults slide. 
+* The output looks different because we have run `use_sgplot()`.
+:::
+
+
+## Other improvements
+
+```{r}
+#| output-location: slide
+#| code-line-numbers: "1-3|5-9|11-19"
+#| fig-alt: "A multiple line chart using sgplot theme and main2 colour palette. A title, subtitle and caption are included and formatting has been applied to axis labels and titles."
+
+# Existing line chart
+life_exp_chart <- 
+  life_exp_chart +
+  
+  # Customise x and y axes
+  scale_y_continuous(limits = c(0, 82),
+                     breaks = seq(0, 80, 20),
+                     expand = c(0, 0)) +
+  scale_x_continuous(breaks = seq(1952, 2007, 5)) +
+  
+  # Add titles and labels
+  labs(
+    x = "Year",
+    y = NULL,
+    title = "Living Longer",
+    subtitle = "Life Expectancy in the United Kingdom and China 1952-2007",
+    caption = "Source: Gapminder",
+    colour = NULL
+  )
+
+life_exp_chart
+```
+
+::: {.notes}
+* A few other improvements to the look of the chart that can't be controlled with sgplot.
+* Adjust axis breaks and labels
+* Add titles and labels; Lee will talk more about importance of titles later in presentation.
+* The [cookbook](https://datasciencescotland.github.io/sgplot/articles/cookbook.html#other-customisations) contains examples of other tweaks you might want to make.
+:::
+
+
+## Labels instead of legend
+
+```{r}
+#| output-location: slide
+#| code-line-numbers: "1-5|7-10|12-14|16-22"
+#| fig-alt: "A multiple line chart using sgplot theme and main2 colour palette. There is no colour legend. Instead each data line is labelled within the chart."
+
+# Calculate label positions using data
+life_exp_labs <- life_exp |>
+  group_by(country) |>
+  filter(year == max(year)) |>
+  ungroup()
+
+life_exp_chart <- life_exp_chart +
+
+  # Remove legend
+  guides(colour = "none") +
+  
+  # Adjust x axis to give extra room for labels  
+  scale_x_continuous(limits = c(1952, 2017),
+                     breaks = seq(1952, 2017, 5)) +
+  
+  # Add labels
+  geom_label(data = life_exp_labs,
+             aes(x = year, y = lifeExp, label = country, colour = country),
+             hjust = 0,
+             vjust = 0.5,
+             nudge_x = 0.5,
+             label.size = NA)
+
+life_exp_chart  
+```
+
+::: {.notes}
+* Where use of a legend relies on a user matching the label to the data using colour alone, it is better to label data directly.
+* You can add labels manually using `annotate`, however this means you'll need to adjust the code any time your data changes.
+* Create a little extra data frame to calculate position values for labels based on data. This will automatically recalculate position when data changes.
+* Further information on annotations is in the [cookbook](https://datasciencescotland.github.io/sgplot/articles/cookbook.html#annotations).
+:::
+
+
+## Apply to individual charts
+
+```{r}
+#| output-location: fragment
+#| code-line-numbers: "1-2|3|4"
+#| fig-height: 4
+#| fig-width: 8
+#| fig-alt: "A multiple line chart using sgplot theme and main2 colour palette. The background is white with grey horizontal grid lines. The data lines are dark blue and orange." 
+
+ggplot(life_exp) +
+  geom_line(aes(x = year, y = lifeExp, colour = country)) +
+  theme_sg() +
+  scale_colour_discrete_sg("main2")
+```
+
+::: {.notes}
+* Using use_sgplot() will apply sgplot styling to all charts you create in your R session. 
+* You can also apply specific sgplot functions to individual charts
+:::
+
+
+## Apply to individual charts
+
+```{r}
+#| output-location: fragment
+#| code-line-numbers: "1-4|3"
+#| fig-height: 4
+#| fig-width: 7
+#| fig-alt: "A multiple line chart using sgplot theme and main2 colour palette. The background is white with grey horizontal grid lines. The data lines are dark blue and orange." 
+
+ggplot(life_exp) +
+  geom_line(aes(x = year, y = lifeExp, colour = country)) +
+  theme_sg(legend = "top") +
+  scale_colour_discrete_sg("main2")
+```
+
+::: {.notes}
+* `theme_sg()` takes various arguments to allow customisation; e.g. sizing, grid lines and legend position.
+* More information can be found in the function help file; run `?theme_sg` in R or go to the [Reference](https://datasciencescotland.github.io/sgplot/reference/index.html) section of the package website. 
+:::
+
+
+# Where to get help and <br> how to get involved {.h1-blue}
+
+
+## Package website
+
+<https://datasciencescotland.github.io/sgplot>{preview-link="true"}
+
+* [Cookbook](https://datasciencescotland.github.io/sgplot/articles/cookbook.html); lots of example code
+
+* [Reference](https://datasciencescotland.github.io/sgplot/reference/index.html); help files for sgplot functions
+
+* [Further guidance](https://datasciencescotland.github.io/sgplot/articles/index.html) on accessibility, colours and saving charts
+
+* Guidance on [how to ask for help](https://datasciencescotland.github.io/sgplot/SUPPORT.html) or [contribute](https://datasciencescotland.github.io/sgplot/CONTRIBUTING.html)
+
+
+## Support and feedback
+
+* [How to get help](https://datasciencescotland.github.io/sgplot/SUPPORT.html)
+
+  * [R Users Yammer Community](https://web.yammer.com/main/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiI2MzQ4MzE2NjczIn0)
+  
+  * [Open an issue on GitHub](https://github.com/DataScienceScotland/sgplot/issues/new) if you've found a bug
+  
+  * [Contact the maintainers](https://datasciencescotland.github.io/sgplot/authors.html#authors)
+
+* Please [let us know](mailto:alice.byers@gov.scot;lee.bunce@gov.scot?subject=I&#39;m%20using%20sgplot&#33;) if you're using sgplot - we would love to see examples of publications using sgplot
+
+
+## Future developments
+
+* Support for interactive chart packages
+
+* Add Scottish Government colour palettes when available
+
+* Use [Roboto](https://fonts.google.com/specimen/Roboto) Google font as per [Scottish Government design system](https://designsystem.gov.scot/styles/typography/#font)
+
+* Anything that would make your life easier!
+
+  * If your team has its own branding style and/or colour palettes, these can be added to sgplot (as long as they're accessible!)
+
+::: {.notes}
+* The current version of the package is by no means the final version - there is no final version!
+* Currently, sgplot works on interactive charts created using `plotly::ggplotly()`, however this has quite a lot of quirks! In the future we'd like to develop support for other interactive chart packages such as Highcharts.
+* The gov.scot design system contains some [SG branded colour palettes](https://designsystem.gov.scot/styles/colour-customisation/), however these have been developed with web development in mind and so are not considered accessible when using for charts.
+* The design system team have recently published some [charts guidance](https://designsystem.gov.scot/guidance/charts/) and are developing SG branded colour palettes to use for charts.
+* We want to keep developing and improving so that it can be as useful as possible for as many people.
+:::
+
+
+## Get involved
+
+* Open to anybody
+
+  * Make a suggestion
+  
+  * Fix a typo
+  
+  * Write a new function
+  
+  * Become a package maintainer
+
+* [Contributing guidance](https://datasciencescotland.github.io/sgplot/CONTRIBUTING.html)
+
+::: {.notes}
+* A great way to develop skills in using R and package management
+* If you're a beginner and aren't sure how to do things, I can help you learn.
+:::
+
+ 
+# Accessibility {.h1-blue}
+ 
+
+## Analysis Function guidance
+
+* Using sgplot does not guarantee accessibility
+
+* sgplot should be used in conjunction with [Analysis Function data visualisation guidance](https://analysisfunction.civilservice.gov.uk/policy-store/?area=data-visualisation)
+
+  * Their [e-learning](https://analysisfunction.civilservice.gov.uk/support/communicating-analysis/introduction-to-data-visualisation-e-learning/) is a good place to start
+  
+  * Review the [charts checklist](https://analysisfunction.civilservice.gov.uk/policy-store/charts-a-checklist/) before sharing or publishing your chart
+
+
+## Important to remember
+
+* sgplot package website has details of [other things to consider for accessibility](https://datasciencescotland.github.io/sgplot/articles/accessibility.html#other-accessibility-considerations)
+
+  * Save charts in [SVG image format](https://datasciencescotland.github.io/sgplot/articles/saving.html#file-format)
+
+  * Include titles, subtitles and captions in the main body of the page (e.g. in html or Word document) rather than embedding within the chart image
+
+  * Provide alternative text
+
+::: {.notes}
+* [Chart size should match the column width of the surrounding text](https://datasciencescotland.github.io/sgplot/articles/saving.html#size-and-dimensions)
+* Alt text may sit within the image properties, but could also be a table of data or a text description of the message the chart is presenting.
+:::
+
+
+# Story-driven publications {.h1-blue}
+
+
+## Telling stories with charts
+
+* Our [best practice guidance](https://erdm.scotland.gov.uk:8443/documents/A34983727/details) discusses story-driven publications – charts are very much a part of this
+
+* Charts should have a clear key message you are trying to communicate
+
+* This key message should be interesting or notable in some way
+
+* [Analysis Function guidance](https://analysisfunction.civilservice.gov.uk/policy-store/data-visualisation-charts/): If you can’t write down the message your chart is giving, you should think again about the chart you have chosen
+
+
+## Chart titles
+
+* Most effective way to communicate your message is in the title
+
+* Analysis Function Guidance recommends two titles for charts
+
+  * A main title that describes the main message of the chart
+
+  * A statistical subtitle which gives details about the data, geography, time period etc.
+
+* These should be included in the main text, above the image
+
+* Currently updating our standard [Word Template for Statistical Publications](https://erdm.scotland.gov.uk:8443/documents/A37037374/details) to incorporate this
+
+
+## Data visualisation is actually about text
+
+* John Burn-Murdoch, Financial Times ([YouTube](https://www.youtube.com/watch?v=uoFN3nxeMco&t=835s&pp=ygURam9obiBidXJuIG11cmRvY2g%3D))
+
+  * Charts can be extremely effective at communicating information
+
+  * However, to create effective charts you need to understand how people consume charts
+
+  * People consume charts passively, you need to make your message clear and easy to digest
+
+  * Evidence suggests users tend to focus on the title first
+
+## FT
+
+![](images/ft.png){fig-alt="A small multiples area chart with minimal style, a main title and statistical title."}
+
+::: {.footer}
+Source: [Pay rises along will not stem the flow of Britain's medics - FT](https://www.ft.com/content/f0fe5dcc-3797-4796-a19e-a2ee6c1b7be9)
+:::
+
+
+## BBC
+
+![](images/bbc.png){fig-alt="A multiple line chart with minimal style, a main title and statistical title."}
+
+::: {.footer}
+Source: [Nationwide latest lender to raise mortgage rates again - BBC News](https://www.bbc.co.uk/news/business-65921085)
+:::
+
+
+## Economist
+
+![](images/economist.png){fig-alt="A multiple line chart with minimal style, a main title and statistical title."}
+
+::: {.footer}
+Source: [Fentanyl trafficking tests America’s foreign policy - Economist](https://www.economist.com/united-states/2023/05/11/fentanyl-trafficking-tests-americas-foreign-policy?utm_medium=social-media.content.np&utm_source=twitter&utm_campaign=editorial-social&utm_content=discovery.content)
+:::
+
+
+## Chartr
+
+![](images/chartr.png){fig-alt="An area chart with minimal style, a main title and annotations to highlight interesting features."}
+
+::: {.footer}
+Source: [Chartr: Data Storytelling](https://read.chartr.co/)
+:::
+
+
+## Guardian
+
+![](images/guardian.png){fig-alt="A multiple line chart with minimal style, a main title and statistical title."}
+
+::: {.footer}
+Source: [Find out where you can afford to buy or rent in Great Britain - The Guardian](https://www.theguardian.com/society/ng-interactive/2023/jun/12/interactive-tool-that-shows-where-you-can-afford-to-buy-or-rent-home-great-britain)
+:::
+
+## ONS
+
+![](images/ons.png){fig-alt="A multiple line chart with minimal style, a main title and statistical title."}
+
+::: {.footer}
+Source: [Housing affordability in England and Wales - Office for National Statistics](https://www.ons.gov.uk/peoplepopulationandcommunity/housing/bulletins/housingaffordabilityinenglandandwales/2022#housing-affordability-in-england-and-in-wales)
+:::
+
+## ONS - Census 2021
+
+![](images/ons-census.png){fig-alt="Two horizontal stacked bar charts with minimal style, a main title and statistical title."}
+
+::: {.footer}
+Source: [General health by age, sex and deprivation, England and Wales - Office for National Statistics](https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/healthandwellbeing/articles/generalhealthbyagesexanddeprivationenglandandwales/census2021)
+:::
+
+
+## Links
+
+* [sgplot website](https://datasciencescotland.github.io/sgplot)
+
+    * [Cookbook](https://datasciencescotland.github.io/sgplot/articles/cookbook.html)
+
+    * [How to contribute](https://datasciencescotland.github.io/sgplot/CONTRIBUTING.html)
+    
+    * [How to get help](https://datasciencescotland.github.io/sgplot/SUPPORT.html)
+
+* [GitHub repository](https://github.com/DataScienceScotland/sgplot/)
+
+* [Analysis Function Data Visualisation Guidance](https://analysisfunction.civilservice.gov.uk/policy-store/?area=data-visualisation)
+
+* [Scottish Government Design System charts guidance](https://designsystem.gov.scot/guidance/charts/)
+
+
+## Contact us
+
+* Lee Bunce, Office of the Chief Statistician (OCS)
+
+  <lee.bunce@gov.scot>
+  
+* Alice Byers, Data Innovation Team
+  
+  <alice.byers@gov.scot>

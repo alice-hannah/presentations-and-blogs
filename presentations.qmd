@@ -7,6 +7,12 @@ format:
 
 ## 2023
 
+### Creating accessible charts in R using sgplot
+
+Slides for the Scottish Government analytical seminar on use of the [sgplot](https://datasciencescotland.github.io/sgplot/) package on 19 June 2023. This presentation was jointly delivered with Lee Bunce from the Office of the Chief Statistician.
+
+[Slides](https://alicebyers5.github.io/presentations-and-blogs/2023-06-19_sgplot/slides.html){.external target="_blank"}
+
 ### RAP in the Scottish Government
 
 Slides for the Scottish Government Analyst Induction event on Data Tools and Standards on 13 June 2023.
