@@ -1,0 +1,21 @@
+---
+title: "Getting started with Git and GitHub in Scottish Government<br><img class='image1' src='images/git.svg' alt=''/>&nbsp;<img class='image1' src='images/github.svg' alt=''/>"
+author: "Alice Byers, Data Innovation Team"
+date: "11 July 2023"
+format:
+  revealjs: 
+    embed-resources: true
+    slide-number: true
+    logo: images/SG-logo.jpg
+    controls: true
+    link-external-newwindow: true
+    theme: [default, styles.scss]
+execute:
+  echo: true
+  fig-format: "svg"
+lang: en
+---
+
+## Aims
+
+
