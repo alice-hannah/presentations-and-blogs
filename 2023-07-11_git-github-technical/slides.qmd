@@ -1,7 +1,7 @@
 ---
-title: "Getting started with Git and GitHub in Scottish Government<br><img class='image1' src='images/git.svg' alt=''/>&nbsp;<img class='image1' src='images/github.svg' alt=''/>"
+title: "Using Git and GitHub in the Scottish Government<br><img class='image1' src='images/git.svg' alt=''/>&nbsp;<img class='image1' src='images/github.svg' alt=''/>"
 author: "Alice Byers, Data Innovation Team"
-date: "11 July 2023"
+institute: "Scottish Government"
 format:
   revealjs: 
     embed-resources: true
@@ -10,12 +10,422 @@ format:
     controls: true
     link-external-newwindow: true
     theme: [default, styles.scss]
+    code-line-numbers: false
+    auto-stretch: false
 execute:
   echo: true
+  eval: false
   fig-format: "svg"
 lang: en
 ---
 
+
 ## Aims
 
+-   These slides aim to demonstrate the use of Git and GitHub in the Scottish Government, with consideration to limitations of the SCOTS network.
+
+-   An understanding of the concept of version control, Git and GitHub is assumed. 
+More information can be found in these [introduction to version control slides](https://alicebyers5.github.io/presentations-and-blogs/2023-04-27_git-github-intro/slides.html).
+
+-   Further guidance and resources for using version control on SCOTS are available on the [Statistics Group sharepoint site](https://scotsconnect.sharepoint.com/sites/StatisticsGroup-Org-SG/SitePages/Version-Control.aspx).
+
+
+## Contents
+
+-   [How to install and setup Git](#git-setup)
+
+-   [A basic Git workflow](#git-workflow)
+
+-   [How to use Git with RStudio integration](#using-git-with-rstudio-integration)
+
+-   [GitHub and the Data Science Scotland organisation](#github-and-data-science-scotland)
+
+-   [How to use GitHub as remote Git repository on SCOTS](#using-git-with-github)
+
+
+# Git setup {.h1-blue}
+
+
+## Install Git
+
+-   Make an [iFix request](https://ifix.systems.gov.scot/assystnet/application.jsp#serviceOfferings/257) for "Git version 2.21.0.windows.1"
+
+-   Git is a free and open-source software and therefore does not incur a cost to install
+
+
+## Git Bash
+
+-   Git Bash is a command line interface for using Git
+
+-   It is installed with Git
+
+![](images/screenshots/git-bash.png){fig-align="center" width=60%}
+
+
+## Git Bash
+
+-   Some basic commands include:
+
+    - `pwd`; prints present working directory
+  
+    - `ls`; lists files contained in working directory
+  
+    - `cd <filepath>`; changes working directory
+
+-   ONS Learning Hub has further training on [Command Line Basics](https://analysisfunction.civilservice.gov.uk/training/command-line-basics/)
+
+
+## Set name and email {.h2-no-padding .smaller}
+
+-   Your name and email is linked to every commit you make using Git and cannot be changed retrospectively, therefore it is important to do this. 
+
+-   If you plan to use GitHub, make sure your user name and email address match those associated with your GitHub account.
+
+To do this in Git Bash, run:
+
+```bash
+git config --global user.name alicebyers5
+git config --global user.email alice.byers@gov.scot
+```
+
+<p style="margin:0.5em;"></p>
+
+To check this has worked:
+
+```{bash eval = TRUE}
+git config --global user.name
+```
+    
+<p style="margin:0.5em;"></p>
+
+```{bash eval = TRUE}
+git config --global user.email
+```
+
+
+# Git workflow {.h1-blue}
+
+
+## Example project folder
+
+<br>
+
+![](images/screenshots/file-explorer.png){fig-align="center" width=80%}
+
+
+
+## Open Git Bash in working directory {.h2-no-padding}
+
+::: {.panel-tabset}
+
+### File Explorer
+
+-   Right click in working folder and select 'Git Bash here'
+
+![](images/screenshots/git-bash-here.png){fig-align="center" width=60%}
+ 
+### cd in Git Bash
+
+-   Open Git Bash from Windows start menu
+
+-   Use `cd` command to change directory to your working folder
+
+![](images/screenshots/cd.png){fig-align="center" width=50%}
+
+:::
+
+
+## Initiate Git respository {.h2-no-padding}
+
+-   Run `git init` to initiate Git. 
+This will create a .git folder within your project. 
+(Note: you only need to do this once per project.)
+
+![](images/screenshots/git-init.png){fig-align="center" width=65%}
+
+
+## Create a gitignore file {.h2-no-padding}
+
+-   A gitignore file defines what files **should not be tracked** by Git. 
+This is especially important if you plan on using GitHub as sensitive information should not be made available there.
+
+-   Generally, the following should be ignored:
+
+    -   Data files
+
+    -   Passwords or credentials
+
+    -   Code that contains sensitive information
+
+    -   Configuration files
+
+
+## Create a gitignore file {.h2-no-padding}
+
+To tell Git to ignore these files:
+
+-   Create a new file in your directory called `.gitignore`. 
+This can be done in the usual way in File Explorer, or by using the `touch` command in Git Bash.
+
+-   Open the .gitignore file in a text editor (or R) and add names of folders and files to be ignored.
+
+    -   This is a good [example gitignore](https://github.com/DataScienceScotland/welcome/blob/main/.gitignore) that contains many common data and R files. Copy the contents to the file you've just created.
+
+
+## git status {.h2-no-padding .smaller}
+
+-   Use `git status` to show a summary of your Git repository - run this often to check that your other git commands have done what you expect them to do
+
+![](images/screenshots/git-status.png){fig-align="center" width=50%}
+
+-   Notice that `data.csv` is not listed here. This is because we have told Git to ignore csv files in the gitignore.
+
+
+## git add {.h2-no-padding .smaller}
+
+-   Use `git add` to 'stage' files for the next commit
+
+    - Either list the files you'd like to stage; e.g. `git add code.R`, or
+    
+    - To stage all tracked files, use a full stop; e.g. `git add .` 
+
+![](images/screenshots/git-add.png){fig-align="center" width=60%}
+
+
+## git add {.h2-no-padding .smaller}
+
+-   Use `git status` to check that the correct files have been staged
+
+![](images/screenshots/git-add-status.png){fig-align="center" width=60%}
+
+-   Files names are now coloured green and listed under 'changed to be committed'
+
+
+## git commit {.h2-no-padding .smaller}
+
+-   Use `git commit` to add the files to the Git history. 
+
+    - Accompany the commit with a message to give a short and informative description of the changes.
+    
+![](images/screenshots/git-commit.png){fig-align="center" width=60%}
+
+
+## Your first commit {.h2-no-padding}
+
+-   Running `git status` again shows that there are no further changes to commit
+
+![](images/screenshots/git-commit-status.png){fig-align="center" width=70%}
+
+
+## Your first commit {.h2-no-padding}
+
+-   Running `git log --oneline` will give a short summary of the commit history
+
+![](images/screenshots/git-log.png){fig-align="center" width=70%}
+
+
+## Make a change
+
+-   Now, let's make a change to `code.R`. Define a new variable called `y`.
+
+<center>
+![](images/screenshots/code-orig.png){width=48%}
+![](images/screenshots/code-change.png){width=48%}
+</center>
+
+
+## Make a change
+
+-   Run `git status` to check that Git has recognised the change
+
+![](images/screenshots/unstaged-change.png){fig-align="center" width=70%}
+
+
+## git diff {.h2-no-padding}
+
+- Run `git diff` to inspect what changes have been made to `code.R`.
+Green text highlights additions and red text highlights deletions.
+
+![](images/screenshots/git-diff.png){fig-align="center" width=70%}
+
+
+## Stage and commit the change {.h2-no-padding}
+
+-   Use `git add` and `git commit` to stage and commit the change to `code.R`.
+
+![](images/screenshots/stage-and-commit-change.png){fig-align="center" width=70%}
+
+
+## Stage and commit the change
+
+-   Use `git log` to view the Git history - there are now two commits
+
+![](images/screenshots/git-log-2.png){fig-align="center" width=70%}
+
+
+# Using Git with RStudio Integration {.h1-blue}
+
+## RStudio {.smaller}
+
+-   Not all Git functionality is available from RStudio, but it can be more user-friendly and convenient if you're working with R
+
+-   Changes are listed in the Git pane (usually in the top right window)
+
+![](images/screenshots/rstudio-git.png){fig-align="center" width=45%}
+
+
+## Open the commit window
+
+-   Click the 'Commit' button to open up the commit window
+
+![](images/screenshots/rstudio-git-2.png){fig-align="center" width=75%}
+
+
+## Commiting a change from RStudio {.h2-no-padding .smaller}
+
+-   Like Git Bash, you need to both stage and commit the change
+
+-   To stage, tick the box next to each file you'd like to add (top-left pane)
+
+-   To commit, enter a message and click 'Commit' (top-right pane)
+
+![](images/screenshots/rstudio-commit.png){fig-align="center" width=55%}
+
+
+# GitHub and<br> Data Science Scotland {.h1-blue}
+
+
+## Create GitHub account {.smaller}
+
+-   Use your work email address
+
+    - Note that you can associate multiple email addresses with your account. 
+    Just made sure you author commits for work projects with your gov.scot address.
+    
+-   Enable two-factor authentication
+
+-   Add a (work appropriate) photo and username
+
+-   Add your contact details and employer
+
+-   Make your gov.scot email address public on your profile
+
+
+## Join Data Science Scotland organisation
+
+-   Work projects should all be hosted from the Data Science Scotland organisation
+
+-   [Request to join](https://github.com/DataScienceScotland/welcome/issues/new?assignees=alicebyers5%2Ctomwilsonsco%2Cjsphdms&labels=member-request&template=new-member-request.yml&title=New+member+request) the organisation
+
+    - You'll be asked to read the [SG GitHub User Responsibilities](https://erdm.scotland.gov.uk/documents/A42743383/details)
+    
+-   Once your request has been accepted, you will be free to create Git repositories in Data Science Scotland
+
+
+## Create a repository
+
+
+# Using Git with GitHub {.h1-blue}
+
+## One time setup - create SSH key {.smaller}
+
+-   Generate an SSH key in Git Bash
+
+    ```{r engine = "bash"}
+    ssh-keygen -t ed25519 -C "your_email@example.com"
+    ```
+
+    (this should be the email registered with your Github account)
+
+-   Git Bash will ask where you want to create the key. 
+The default location is recommended. 
+(You can find your SSH home in Git Bash by running: `echo ~/.ssh`.)
+
+-   Git Bash will ask if you want to set a passphrase. 
+This is a local password that will be requested each time you use the key. 
+It is OK not to set a passphrase here by just pressing enter twice.
+
+
+## One time setup - add SSH key to GitHub account
+
+-   Copy the SSH key:
+
+    ```{r engine = "bash"}
+    # Navigate to the directory where you've saved your SSH key
+    cd ~/.ssh
+
+    # Print the contents of the public SSH key file
+    cat id_ed25519.pub
+    ```
+    
+    Copy the returned value from Git Bash.
+
+-   Add the copied SSH key to your GitHub account:
+
+
+## Clone repository from GitHub {.h2-no-padding .smaller}
+
+-   Now you have an SSH key setup, you should use the SSH URL to clone repositories from GitHub.
+
+-   Click the green 'Code' button and under 'Clone', select 'SSH', and copy the address.
+
+![](images/screenshots/copy-ssh.png){fig-align="center" width=55%}
+
+
+## Clone repository from GitHub {.h2-no-padding .smaller}
+
+-   Open Git Bash and navigate to the directory you'd like to clone the repository to
+
+-   Use `git clone` to clone the repository
+
+screenshot
+
+## Clone repository from GitHub {.h2-no-padding .smaller}
+
+-   Git Bash is still running from the parent directory. To move to the cloned repository, use `cd`
+
+screenshot
+
+
+## Push to GitHub
+
+
+## Pull from GitHub
+
+
+# There's still more! {.h1-blue}
+
+::: {.notes}
+-   The content covered so far will hopefully be enough to help you get started using Git and GitHub.
+-   However, there are more features that are of particular use when working and collaborating with others.
+:::
+
+
+## Other concepts
+
+-   Branches
+
+-   Pull requests and code review
+
+-   Issues
+
+-   Project management
+
+
+## Resources
+
+-   [Statistics Group sharepoint site](https://scotsconnect.sharepoint.com/sites/StatisticsGroup-Org-SG/SitePages/Version-Control.aspx)
+
+-   [RAP Yammer Community](https://web.yammer.com/main/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxOTI2NDMyMzU4NSJ9/all)
+
+- [Duck book: Writing good commit messages](https://best-practice-and-impact.github.io/qa-of-code-guidance/version_control.html#write-short-and-informative-commits)
+
+
+## Contact me
+
+Alice Byers, Data Innovation Team
+
+Scottish Government
+
+[alice.byers\@gov.scot](mailto:alice.byers@gov.scot){.email}
 

@@ -4,7 +4,7 @@ $presentation-title-slide-text-align: left !default;
 
 $presentation-font-size-root: 35px;
 
-$presentation-font-smaller: 0.8 !default;
+$presentation-font-smaller: 0.85 !default;
 
 $presentation-line-height: 1.8;
 
@@ -13,7 +13,7 @@ $presentation-h2-line-height: 2.5;
 $link-color: #0079d2;
 
 #title-slide .title {
-  font-size: 2em;
+  font-size: 2.2em;
   margin-bottom: 2.5rem;
 }
 
@@ -23,7 +23,7 @@ $link-color: #0079d2;
 }
 
 .image1 { 
-  width: 10%; 
+  width: 12%; 
   height: auto;
   display: inline-block;
   margin-left: auto;
@@ -44,13 +44,16 @@ $link-color: #0079d2;
   font-size: 0.8em;
 }
 
-.smallest {
-  @extend .smaller;
-  font-size: 0.5;
-}
-
 .h1-blue h1 {
   color: #0065bd !important;
+}
+
+.h2-no-padding h2 {
+  margin-bottom: 8px !important;
+}
+
+.panel-tabset-tabby a {
+  font-size: 0.7em !important;
 }
 
 
@@ -76,4 +79,3 @@ $link-color: #0079d2;
 .reveal .footer a {
   color: $link-color;
 }
-
