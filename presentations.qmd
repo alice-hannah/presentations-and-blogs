@@ -7,6 +7,12 @@ format:
 
 ## 2023
 
+### Using Git and GitHub in the Scottish Government
+
+Slides for an internal training session to demonstrate the use of Git and GitHub in the Scottish Government when working in the SCOTS network.
+
+[Slides](https://alicebyers5.github.io/presentations-and-blogs/2023-07-11_git-github-technical/slides.html){.external target="_blank"}
+
 ### Creating accessible charts in R using sgplot
 
 Slides for the Scottish Government analytical seminar on use of the [sgplot](https://datasciencescotland.github.io/sgplot/) package on 19 June 2023. This presentation was jointly delivered with Lee Bunce from the Office of the Chief Statistician.
