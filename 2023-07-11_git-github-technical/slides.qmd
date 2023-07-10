@@ -22,10 +22,10 @@ lang: en
 
 ## Aims
 
--   These slides aim to demonstrate the use of Git and GitHub in the Scottish Government, with consideration to limitations of the SCOTS network.
+-   These slides aim to demonstrate the use of Git and GitHub in the Scottish Government when working in the SCOTS network.
 
--   An understanding of the concept of version control, Git and GitHub is assumed. 
-More information can be found in these [introduction to version control slides](https://alicebyers5.github.io/presentations-and-blogs/2023-04-27_git-github-intro/slides.html).
+-   An understanding of the concepts of version control, Git and GitHub is assumed. 
+More information can be found in the [Introduction to Version Control slides](https://alicebyers5.github.io/presentations-and-blogs/2023-04-27_git-github-intro/slides.html).
 
 -   Further guidance and resources for using version control on SCOTS are available on the [Statistics Group sharepoint site](https://scotsconnect.sharepoint.com/sites/StatisticsGroup-Org-SG/SitePages/Version-Control.aspx).
 
@@ -40,7 +40,11 @@ More information can be found in these [introduction to version control slides](
 
 -   [GitHub and the Data Science Scotland organisation](#github-and-data-science-scotland)
 
--   [How to use GitHub as remote Git repository on SCOTS](#using-git-with-github)
+-   [Using Git with GitHub](#using-git-with-github)
+
+-   [Branches and other GitHub features](#theres-more)
+
+-   [Links, resources and contact details](#resources)
 
 
 # Git setup {.h1-blue}
@@ -103,6 +107,13 @@ git config --global user.email
 ```
 
 
+## Summary
+
+-   Install Git via iFix
+
+-   Set name and email address in Git Bash
+
+
 # Git workflow {.h1-blue}
 
 
@@ -112,6 +123,9 @@ git config --global user.email
 
 ![](images/screenshots/file-explorer.png){fig-align="center" width=80%}
 
+::: {.notes}
+-   Avoid storing projects using Git in OneDrive
+:::
 
 
 ## Open Git Bash in working directory {.h2-no-padding}
@@ -205,7 +219,7 @@ This can be done in the usual way in File Explorer, or by using the `touch` comm
 
 -   Use `git commit` to add the files to the Git history. 
 
-    - Accompany the commit with a message to give a short and informative description of the changes.
+    - Accompany the commit with a message to give a [short and informative description](https://best-practice-and-impact.github.io/qa-of-code-guidance/version_control.html#write-short-and-informative-commits) of the changes.
     
 ![](images/screenshots/git-commit.png){fig-align="center" width=60%}
 
@@ -226,11 +240,19 @@ This can be done in the usual way in File Explorer, or by using the `touch` comm
 
 ## Make a change
 
--   Now, let's make a change to `code.R`. Define a new variable called `y`.
+-   Now, let's make a change to `code.R`. 
+Add some commented lines to give the script a title and description.
 
 <center>
-![](images/screenshots/code-orig.png){width=48%}
-![](images/screenshots/code-change.png){width=48%}
+::: {layout-ncol=2}
+
+![Before](images/screenshots/code-orig.png){width=48%}
+
+::: {.fragment}
+![After](images/screenshots/code-change.png){width=48%}
+:::
+
+:::
 </center>
 
 
@@ -263,15 +285,41 @@ Green text highlights additions and red text highlights deletions.
 ![](images/screenshots/git-log-2.png){fig-align="center" width=70%}
 
 
+## Tips
+
+-   Commit early and often (especially when you're still learning)
+
+-   Write [commit messages that make sense](https://best-practice-and-impact.github.io/qa-of-code-guidance/version_control.html#write-short-and-informative-commits) (your future self and colleagues will thank you)
+
+-   Run `git status` often (especially when you're still learning)
+
+    -   Check which files have changes tracked
+    
+    -   Check you have staged the correct files
+
+    -   Check files that should be ignored are not being tracked (and committed!)
+
+
+## Summary
+
+-   Make a change
+
+-   `git add`
+
+-   `git commit`
+
+-   `git status` often
+
+
 # Using Git with RStudio Integration {.h1-blue}
 
-## RStudio {.smaller}
+## RStudio {.h2-no-padding .smaller}
 
 -   Not all Git functionality is available from RStudio, but it can be more user-friendly and convenient if you're working with R
 
 -   Changes are listed in the Git pane (usually in the top right window)
 
-![](images/screenshots/rstudio-git.png){fig-align="center" width=45%}
+![](images/screenshots/rstudio-git.png){fig-align="center" width=65%}
 
 
 ## Open the commit window
@@ -293,7 +341,6 @@ Green text highlights additions and red text highlights deletions.
 
 
 # GitHub and<br> Data Science Scotland {.h1-blue}
-
 
 ## Create GitHub account {.smaller}
 
@@ -324,10 +371,64 @@ Green text highlights additions and red text highlights deletions.
 
 ## Create a repository
 
+<center>
+::: {.r-stack}
+![](images/screenshots/github-new-repo-1.png){.fragment width=75%}
+
+![](images/screenshots/github-new-repo-2.png){.fragment width=75%}
+:::
+</center>
+
+
+## Create a repository
+
+-   Select Data Science Scotland as owner for work projects
+
+-   Give the repository a name
+
+-   Choose whether to make your repository public or private
+
+-   Add a README file
+
+-   Click the green 'Create repository' button
+
 
 # Using Git with GitHub {.h1-blue}
 
-## One time setup - create SSH key {.smaller}
+## Remote repository
+
+-   A 'remote' is a version of your Git repository hosted on the internet or network somewhere.
+
+-   This should be thought of as the main place where your repository is stored.
+
+-   Most commonly, GitHub is used to host remote repositories.
+But, it can also be a folder on an internal shared network.
+
+
+## Remote repository {.smaller}
+
+-   Users take a copy ('clone') of the repository from the remote
+
+-   Users regularly 'push' their changes back to the remote so other users have access to the latest version
+
+-   Users regularly 'pull' from the remote to ensure they are working with the latest version
+
+```{mermaid}
+%%| eval: true
+%%| echo: false
+%%| fig-height: 2.5
+
+flowchart TB
+  R[Remote]
+  R <--> U1((<font size=2>User 1))
+  R <--> U2((<font size=2>User 2))
+  R <--> U3((<font size=2>User 3))
+  
+  linkStyle default stroke-width:1px;
+```
+
+
+## Create SSH key (one time setup) {.smaller}
 
 -   Generate an SSH key in Git Bash
 
@@ -346,7 +447,7 @@ This is a local password that will be requested each time you use the key.
 It is OK not to set a passphrase here by just pressing enter twice.
 
 
-## One time setup - add SSH key to GitHub account
+## Add SSH key to GitHub account <br>(one time setup)
 
 -   Copy the SSH key:
 
@@ -360,7 +461,7 @@ It is OK not to set a passphrase here by just pressing enter twice.
     
     Copy the returned value from Git Bash.
 
--   Add the copied SSH key to your GitHub account:
+-   [Add the copied SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account#adding-a-new-ssh-key-to-your-account)
 
 
 ## Clone repository from GitHub {.h2-no-padding .smaller}
@@ -369,7 +470,7 @@ It is OK not to set a passphrase here by just pressing enter twice.
 
 -   Click the green 'Code' button and under 'Clone', select 'SSH', and copy the address.
 
-![](images/screenshots/copy-ssh.png){fig-align="center" width=55%}
+![](images/screenshots/copy-ssh.png){fig-align="center" width=50%}
 
 
 ## Clone repository from GitHub {.h2-no-padding .smaller}
@@ -378,22 +479,57 @@ It is OK not to set a passphrase here by just pressing enter twice.
 
 -   Use `git clone` to clone the repository
 
-screenshot
+-   Change directory to the cloned repository using `cd`
 
-## Clone repository from GitHub {.h2-no-padding .smaller}
+![](images/screenshots/git-clone.png){fig-align="center" width=55%}
 
--   Git Bash is still running from the parent directory. To move to the cloned repository, use `cd`
 
-screenshot
+## Make a change {.h2-no-padding .smaller}
+
+-   Add a new file
+
+-   `git add`
+
+-   `git commit`
+
+![](images/screenshots/github-repo-change.png){fig-align="center" width=55%}
+
+
+## Push to GitHub {.h2-no-padding .smaller}
+
+-   'Push' the commit to GitHub (the remote) using `git push`
+
+-   Note that `git status` now says the repository is up to date with origin/main (this is another name for the remote repository)
+
+![](images/screenshots/git-push.png){fig-align="center" width=55%}
 
 
 ## Push to GitHub
 
+-   The commit is now visible by viewing the GitHub repository
 
-## Pull from GitHub
+![](images/screenshots/git-push-2.png){fig-align="center" width=65%}
 
 
-# There's still more! {.h1-blue}
+## Pull from GitHub {.h2-no-padding .smaller}
+
+-   'Pull' from GitHub regularly to ensure your local copy of the repository is up to date (especially if other people are also working on the repository)
+
+-   Note that there is now an extra commit when running `git log`
+
+![](images/screenshots/git-pull.png){fig-align="center" width=65%}
+
+
+## Summary
+
+-   Use SSH keys to connect to GitHub from Git Bash
+
+-   `git push` often
+
+-   `git pull` often
+
+
+# There's more! {.h1-blue}
 
 ::: {.notes}
 -   The content covered so far will hopefully be enough to help you get started using Git and GitHub.
@@ -401,15 +537,30 @@ screenshot
 :::
 
 
-## Other concepts
+## Branches
 
--   Branches
+-   Main branch?
 
--   Pull requests and code review
+-   Branches allow users to make changes to files without affecting the 'production-ready' main branch
 
--   Issues
+-   Allows changes to be peer reviewed before being merged into main branch
 
--   Project management
+-   More information on branching in the [Duck book](https://best-practice-and-impact.github.io/qa-of-code-guidance/version_control.html#use-branching-appropriately)
+
+
+## GitHub features {.smaller}
+
+-   [Pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests) and [code review](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests)
+
+    -   Open a pull request to merge a branch and request a code review from a collaborator
+
+-   [Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues)
+
+    -   Keep track of bugs and requested enhancements for future development
+
+-   [Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects)
+
+    -   A task board for planning and tracking work. Integrates with issues and pull requests. 
 
 
 ## Resources
@@ -418,10 +569,14 @@ screenshot
 
 -   [RAP Yammer Community](https://web.yammer.com/main/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxOTI2NDMyMzU4NSJ9/all)
 
-- [Duck book: Writing good commit messages](https://best-practice-and-impact.github.io/qa-of-code-guidance/version_control.html#write-short-and-informative-commits)
+- [Duck book](https://best-practice-and-impact.github.io/qa-of-code-guidance/version_control.html)
+
+    - [Writing good commit messages](https://best-practice-and-impact.github.io/qa-of-code-guidance/version_control.html#write-short-and-informative-commits)
+    
+-   [Happy Git with R](https://happygitwithr.com/index.html)
 
 
-## Contact me
+## Contact
 
 Alice Byers, Data Innovation Team
 
