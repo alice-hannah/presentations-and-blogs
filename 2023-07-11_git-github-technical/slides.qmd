@@ -76,6 +76,8 @@ More information can be found in the [Introduction to Version Control slides](ht
   
     - `cd <filepath>`; changes working directory
 
+-   [Git Bash cheat sheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
+
 -   ONS Learning Hub has further training on [Command Line Basics](https://analysisfunction.civilservice.gov.uk/training/command-line-basics/)
 
 
