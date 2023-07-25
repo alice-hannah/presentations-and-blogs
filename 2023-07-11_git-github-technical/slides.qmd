@@ -86,10 +86,27 @@ More information can be found in the [Introduction to Version Control slides](ht
 
 -   If you plan to use GitHub, make sure your user name and email address match those associated with your GitHub account
 
-To do this, run the following in Git Bash (replacing my details with your own):
+::: {.panel-tabset}
+
+### Screenshot
 
 ![](images/screenshots/git-config.png){fig-align="center" width=50%}
 
+### Code
+
+```bash
+# Set user name
+git config --global user.name <username>
+
+# Set email
+git config --global user.email <email>
+
+# Check this has worked
+git config --global user.name
+git config --global user.email
+```
+
+:::
 
 ## Summary
 
@@ -133,14 +150,25 @@ To do this, run the following in Git Bash (replacing my details with your own):
 :::
 
 
-## Initiate Git respository {.h2-no-padding}
+## Initiate Git respository {.h2-no-padding .smaller}
 
 -   Run `git init` to initiate Git. 
 This will create a .git folder within your project. 
 (Note: you only need to do this once per project.)
 
-![](images/screenshots/git-init.png){fig-align="center" width=65%}
+::: {.panel-tabset}
 
+### Screenshot
+
+![](images/screenshots/git-init.png){fig-align="center" width=60%}
+
+### Code
+
+```bash
+git init
+```
+
+:::
 
 ## Create a gitignore file {.smaller}
 
@@ -175,10 +203,21 @@ This can be done in the usual way in File Explorer, or by using the `touch` comm
 
 -   Use `git status` to show a summary of your Git repository - run this often to check that your other git commands have done what you expect them to do
 
+::: {.panel-tabset}
+
+### Screenshot
+
 ![](images/screenshots/git-status.png){fig-align="center" width=50%}
 
 -   Notice that `data.csv` is not listed here. This is because we have told Git to ignore csv files in the gitignore.
 
+### Code
+
+```bash
+git status
+```
+
+:::
 
 ## git add {.h2-no-padding .smaller}
 
@@ -188,16 +227,39 @@ This can be done in the usual way in File Explorer, or by using the `touch` comm
     
     - To stage all tracked files, use a full stop; e.g. `git add .` 
 
+::: {.panel-tabset}
+
+### Screenshot
+
 ![](images/screenshots/git-add.png){fig-align="center" width=60%}
 
+### Code
+
+```bash
+git add .
+```
+
+:::
 
 ## git add {.h2-no-padding .smaller}
 
 -   Use `git status` to check that the correct files have been staged
 
+::: {.panel-tabset}
+
+### Screenshot
+
 ![](images/screenshots/git-add-status.png){fig-align="center" width=60%}
 
 -   Files names are now coloured green and listed under 'changes to be committed'
+
+### Code
+
+```bash
+git status
+```
+
+:::
 
 
 ## git commit {.h2-no-padding .smaller}
@@ -208,21 +270,57 @@ This can be done in the usual way in File Explorer, or by using the `touch` comm
 
     -   Accompany the commit with a message to give a [short and informative description](https://best-practice-and-impact.github.io/qa-of-code-guidance/version_control.html#write-short-and-informative-commits) of the changes
     
+::: {.panel-tabset}
+
+### Screenshot 
+
 ![](images/screenshots/git-commit.png){fig-align="center" width=55%}
+
+### Code
+
+```bash
+git commit -m "Add files"
+```
+
+:::
 
 
 ## Your first commit {.h2-no-padding}
 
 -   Running `git status` again shows that there are no further changes to commit
 
+::: {.panel-tabset}
+
+### Screenshot
+
 ![](images/screenshots/git-commit-status.png){fig-align="center" width=70%}
+
+### Code
+
+```bash
+git status
+```
+
+:::
 
 
 ## Your first commit {.h2-no-padding}
 
 -   Running `git log --oneline` will give a short summary of the commit history
 
+::: {.panel-tabset}
+
+### Screenshot
+
 ![](images/screenshots/git-log.png){fig-align="center" width=70%}
+
+### Code
+
+```bash
+git log --oneline
+```
+
+:::
 
 
 ## Make a change
