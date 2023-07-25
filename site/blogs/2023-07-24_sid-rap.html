@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Alice Byers - Presentations and Blogs</title>
+<title>Alice Byers - Reproducible Analytical Pipelines: How we saved 3 analysts 6 weeks of copying and pasting</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -63,7 +63,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar docked fullcontent">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -72,7 +72,9 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">About</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      Alice Byers
+      </li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -82,15 +84,15 @@ ul.task-list li input[type="checkbox"] {
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header sidebar-header-stacked">
-      <a href="./index.html" class="sidebar-logo-link">
+      <a href="../index.html" class="sidebar-logo-link">
       <img src="https://avatars.githubusercontent.com/u/36480969?v=4" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Alice Byers</a> 
+      <a href="../">Alice Byers</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/alicebyers5" rel="" title="Alice Byers GitHub Profile" class="quarto-navigation-tool px-1" aria-label="Alice Byers GitHub Profile"><i class="bi bi-github"></i></a>
 </div>
@@ -105,19 +107,19 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">About</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./presentations.html" class="sidebar-item-text sidebar-link">
+  <a href="../presentations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Presentations</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./blogs.html" class="sidebar-item-text sidebar-link">
+  <a href="../blogs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Blogs</span></a>
   </div>
 </li>
@@ -128,11 +130,11 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page-right" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Presentations and Blogs</h1>
+<h1 class="title">Reproducible Analytical Pipelines: How we saved 3 analysts 6 weeks of copying and pasting</h1>
 </div>
 
 
@@ -147,11 +149,74 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>This site contains presentation slides and blogs I have written.</p>
-<p>I currently work as a Reproducible Analytical Pipeline (RAP) developer at the Scottish Government. Prior to this, I worked at Public Health Scotland (PHS) analysing data on topics such as Delayed Discharges, Dementia and Palliative and End of Life Care.</p>
-<p>A lot of my work is open and available on my <a href="https://github.com/alicebyers5">GitHub profile</a>.</p>
+<blockquote class="blockquote">
+<p>This blog was originally published on the <a href="https://blogs.gov.scot/statistics/2023/07/24/reproducible-analytical-pipelines-how-we-saved-3-analysts-6-weeks-of-copying-and-pasting/">Scottish Government Statistics blog</a> on 24 July 2023.</p>
+</blockquote>
+<p>Like most analysts, I’ve spent a lot of time copying and pasting from spreadsheets, analysing data in laborious and manual ways with lots of potential for human error. This is why RAPs – <a href="https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/rap-case-studies/">Reproducible Analytical Pipelines</a> – grabbed my attention when they were first <a href="https://www.isdscotland.org/About-ISD/Methodologies/_docs/Reproducible_Analytical_Pipelines_paper_v1.4.pdf">introduced in Public Health Scotland</a> (then the Information Services Division) when I was working there back in 2018.</p>
+<section id="whats-rap" class="level2">
+<h2 class="anchored" data-anchor-id="whats-rap">What’s RAP?</h2>
+<div class="columns">
+<div class="column" style="width:75%;">
+<p>If you’ve not come across RAPs before, they are automated analytical processes including everything from initial data extract, data cleaning, analysis and modelling to visualisation and reporting. What’s special about a RAP is that it’s designed to ensure reproducibility, quality and efficiency.</p>
+<p>With RAP, analytical processes are written as version controlled code, using open-source software and with quality assurance built in. The RAP should also be peer-reviewed and publicly available where possible.</p>
+<p>The Scottish Government is committed to embedding RAP in its analytical processes which is why I came to the Data Division in January 2023, to be part of the Data Innovation team offering RAP support across government.</p>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:20%;">
+<p><img src="images/rap_hex.png" class="img-fluid" style="width:80.0%" alt=""></p>
+</div>
+</div>
+</section>
+<section id="education-statistics" class="level2">
+<h2 class="anchored" data-anchor-id="education-statistics">Education statistics</h2>
+<p>My first project on joining the team was helping to develop a RAP for the production of the <a href="https://education.gov.scot/parentzone/my-school/school-information-dashboard/">School Information Dashboards</a> (SIDs) for Education Analytical Services.</p>
+<p>When I got involved, their team of three analysts were spending around three weeks twice a year on getting the data and dashboards ready for publication. The majority of this time was spent copying and pasting figures between Excel files. That’s 90 days of highly labour intensive work, prone to human error, for a very busy team.</p>
+<p>Laura Stott, the statistician leading the SIDs, was determined to change this. She’d already started teaching herself how to use R and Shiny, and had created mock-ups for the new look dashboards she hoped to create.</p>
+</section>
+<section id="first-version-control" class="level2">
+<h2 class="anchored" data-anchor-id="first-version-control">First – version control</h2>
+<p>We started by setting up a version controlled code repository and <a href="https://github.com/DataScienceScotland/school-information-dashboard">hosted this publicly on GitHub</a>. Using version control software such as <a href="https://git-scm.com/">Git</a> provides an audit trail of what changes have been made to the code, when they were made, why they were made and who made them. This means you no longer need to keep copies of previous versions of code ‘just in case’. If you need to revert to an old version, you can do this using Git.</p>
+<p>Making code open on <a href="https://github.com/">GitHub</a> ensures your code and audit trail is available to anybody and also makes collaboration so much easier. For example, we used GitHub to facilitate code review throughout the project.</p>
+</section>
+<section id="the-importance-of-open-source-software" class="level2">
+<h2 class="anchored" data-anchor-id="the-importance-of-open-source-software">The importance of open-source software</h2>
+<p>An important principle of RAP is using open-source software, which is free for anybody to use. Using proprietary software such as SAS, Microsoft Excel, or Tableau means your analysis is not truly reproducible because you cannot run the process without owning a license. Although any open-source analytical software can be used for RAP, <a href="https://www.r-project.org/">R</a> is the most widely used and well supported in the Scottish Government, which is why we chose that option.</p>
+</section>
+<section id="we-didnt-want-to-just-replicate-the-existing-manual-process-in-code" class="level2">
+<h2 class="anchored" data-anchor-id="we-didnt-want-to-just-replicate-the-existing-manual-process-in-code">We didn’t want to just replicate the existing manual process in code</h2>
+<p>We also took the opportunity to step back to think about the most efficient and logical way to reach our goal, and not let ourselves be constrained by the existing approach.</p>
+<p>Working backwards from the mock-up dashboards Laura had created, we worked out the best structure for the required data files and then how to create these from our input data using R code. We used <a href="https://shiny.posit.co/">Shiny</a> to develop the dashboards, making sure to write our code as functions as much as possible to avoid repeating ourselves.</p>
+<p>As co-chair of the Disabled Staff Network, Laura had a great understanding of digital accessibility requirements. We spent a lot of time ensuring our dashboards met those standards and in the process learned a lot about how Shiny can be used to do this. By prioritising accessibility, the user experience is improved for everyone.</p>
+<p>Developing a RAP is not a linear process. It would often become clear after working on the Shiny code that a slightly different input data structure would work better. So we’d go back to the data wrangling code to make changes. We had regular code reviews throughout which led to good discussions and helped improve our approach. Everyone who was involved developed their technical skills massively during the project, including me!</p>
+</section>
+<section id="days-to-2-days" class="level2">
+<h2 class="anchored" data-anchor-id="days-to-2-days">90 days to 2 days</h2>
+<p>We had to invest a lot of time and effort to develop the RAP, but the benefits have been huge. The new RAP reduced the publication process from 90 working days to just 2 days. The dashboards are less error prone due to quality assurance being embedded in the code; they are visually simpler and therefore easier to digest; and they are accessible.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/sid-screenshot.png" class="img-fluid figure-img" style="width:75.0%" alt="Screenshot of primary school information dashboard. A sidebar on the left allows users to select a local authority and school of interest. The main body shows a map, summary figures and information buttons."></p>
+</figure>
+</div>
+</section>
+<section id="what-happened-next" class="level2">
+<h2 class="anchored" data-anchor-id="what-happened-next">What happened next?</h2>
+<p>Towards the end of the project, Laura successfully secured a promotion to a different team. This meant we had to reprioritise and make decisions about which developments were essential to complete before she left. I’d recommend having more team members involved in projects like this so that skills learned are not lost from the team when a key member of staff leaves. However, the RAP process was so much clearer and better documented so it was much easier for her replacement to pick up.</p>
+<p>Although Laura left the team, her skills have not been lost. In her new role, she is using R for everyday analysis and is planning another RAP project. She’s sharing her knowledge and learning with her new team and is a brilliant advocate for this way of working.</p>
+<p>I’ve also made a new friend! I started working at the Scottish Government during the Covid-19 pandemic so hadn’t met many people from outside my immediate team. Working with Laura was great; it helped me learn about other teams in the Scottish Government and we bonded over our shared love of dogs and wine.</p>
+</section>
+<section id="here-to-help-you" class="level2">
+<h2 class="anchored" data-anchor-id="here-to-help-you">Here to help you</h2>
+<p>I’m really keen to hear from you if you work in analysis in the Scottish Government and have been thinking about implementing RAP. Our team currently has some capacity to support RAP projects, so you don’t have to do this alone. Drop me an email at <a href="mailto:alice.byers@gov.scot" class="email">alice.byers@gov.scot</a> and we can have a chat.</p>
+<p>If you’re interested in learning more about RAP in the Scottish Government, have a look at the open projects in our <a href="https://github.com/DataScienceScotland">Data Science Scotland GitHub organisation</a>.</p>
+<p>Finally, you can view the School Information Dashboards at:</p>
+<ul>
+<li><a href="https://scotland.shinyapps.io/sg-primary_school_information_dashboard">Primary School dashboard</a></li>
+<li><a href="https://scotland.shinyapps.io/sg-secondary_school_information_dashboard">Secondary School dashboard</a></li>
+<li><a href="https://scotland.shinyapps.io/sg-special_school_information_dashboard">Special School dashboard</a></li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
