@@ -5,7 +5,8 @@ project:
     - "index.qmd"
     - "presentations.qmd"
     - "blogs.qmd"
-
+    - "blogs/"
+    
 format: 
   html:
     theme: 
