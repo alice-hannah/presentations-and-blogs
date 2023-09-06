@@ -142,7 +142,7 @@ https://github.com/DataScienceScotland
 
 ## Links and Resources {.smaller}
 
-* Version control [Saltire pages](http://saltire/orgspaces/Analytic-Professions/Analytical-Tools/Pages/version-control-guide.aspx) (accessible on Scottish Government SCOTS network only)
+* Version control [Saltire pages](https://scotsconnect.sharepoint.com/sites/StatisticsGroup-Org-SG/SitePages/Version-Control.aspx) (accessible on Scottish Government SCOTS network only)
 
 * [Data Science Scotland](https://github.com/DataScienceScotland) GitHub Organisation
 
