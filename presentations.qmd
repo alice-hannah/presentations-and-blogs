@@ -7,6 +7,12 @@ format:
 
 ## 2023
 
+### Accessible data visualisations
+
+Slides for the Scottish Government Accessibility Champions network meeting on 28 September 2023.
+
+[Slides](https://alicebyers5.github.io/presentations-and-blogs/2023-09-28_accessible-data-vis/slides.html){.external target="_blank"}
+
 ### Creating accessible charts in R using sgplot
 
 Slides for the Scottish Government analytical seminar on use of the [sgplot](https://datasciencescotland.github.io/sgplot/) package on 19 June 2023. This presentation was jointly delivered with Lee Bunce from the Office of the Chief Statistician.
