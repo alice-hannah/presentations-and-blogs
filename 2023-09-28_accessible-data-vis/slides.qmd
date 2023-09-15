@@ -1,0 +1,204 @@
+---
+title: "Accessible data visualisations"
+subtitle: "Scottish Government Accessibility Champions Network"
+author: "Alice Byers"
+institute: "Data Innovation Team, Data Division"
+date: "28 September 2023"
+format:
+  revealjs: 
+    embed-resources: true
+    slide-number: true
+    logo: images/SG-logo.jpg
+    controls: true
+    link-external-newwindow: true
+    theme: [default, styles.scss]
+execute:
+  echo: false
+  fig-format: "svg"
+lang: en
+---
+
+## About me
+
+* [Reproducible Analytical Pipeline (RAP)](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/) developer
+
+* Background in statistics and data analysis
+
+* New to the Accessibility Champions Network
+
+::: {.notes}
+* Work with statisticians to improve their analytical processes and outputs
+* Use R programming language to write code for data cleaning, analysis, visualisation and reporting.
+* Worked on a project last year to support a team to develop a dashboard where I learned a lot about accessibility and how to make data visualisation accessible.
+:::
+
+
+## Agenda
+
+* Examples of charts and how to make them accessible
+
+* What to consider when using colour in data visualisations
+
+* An introduction to the [sgplot R package](https://datasciencescotland.github.io/sgplot/)
+
+* An overview of available guidance for making charts accessible
+
+
+# Examples {.h1-blue}
+
+## Basic chart
+
+```{r get-data}
+# Load packages
+library(ggplot2)
+library(dplyr)
+library(gapminder)
+library(sgplot)
+
+# Create data set
+life_exp <-
+  gapminder |>
+  select(year, country, lifeExp) |>
+  filter(country %in% c("United Kingdom", "China"))
+```
+
+```{r basic-chart, fig.alt = basic_alt}
+#| fig.height: 4
+#| fig.width: 8
+
+basic_alt <- paste(
+  "A multiple line chart with year on x axis, life expectancy on y axis and",
+  "separate countries with colour. The chart background is grey with white",
+  "grid lines, and the data lines are turquoise and orange."
+)
+
+basic <- 
+  ggplot(life_exp) +
+  geom_line(aes(x = year, y = lifeExp, colour = country))
+
+basic
+```
+
+::: {.notes}
+* A simple line chart with year on x axis, life expectancy on y axis and separate countries with colour.
+* The background is grey with white grid lines, and the data lines are turquoise and orange.
+* Ask audience what they think is inaccessible about this chart?
+:::
+
+
+## Chart Background (1) {.smaller}
+
+```{r background-1, ref.label="basic-chart", fig.alt=basic_alt}
+#| fig.height: 3.5
+#| fig.width: 7
+#| fig-align: center
+```
+
+* Lots of grid lines make the chart look cluttered
+* Poor contrast between grey background and white grid lines
+
+
+## Chart Background (2) {.smaller}
+
+```{r background-2, fig.alt=background_alt}
+#| fig.height: 3.5
+#| fig.width: 7
+#| fig-align: center
+
+background_alt <- paste(
+  "A multiple line chart with year on x axis, life expectancy on y axis and",
+  "separate countries with colour. The chart background is white with minimal",
+  "light grey grid lines, and the data lines are turquoise and orange."
+)
+
+background <-
+  basic +
+  theme(
+    panel.background = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(colour = "#d9d9d9"),
+    panel.grid.minor = element_blank(),
+    axis.line.x = element_line(colour = "#d9d9d9"),
+    axis.line.y = element_blank(),
+    axis.ticks.x = element_line(colour = "#d9d9d9"),
+    axis.ticks.y = element_line(colour = "#d9d9d9")
+  )
+
+background
+```
+
+* White background
+* Minimal grid lines
+
+
+## Text (1) {.smaller}
+
+```{r text-1, ref.label="background-2", fig.alt=basic_alt}
+#| fig.height: 3.5
+#| fig.width: 7
+#| fig-align: center
+```
+
+* y-axis title is vertical
+* x-axis labels are at an angle
+* Labels aren't understandable
+
+
+## Text (2)
+
+```{r text-2, fig.alt=background_alt}
+#| fig.height: 3.5
+#| fig.width: 7
+#| fig-align: center
+
+background_alt <- paste(
+  "A multiple line chart with year on x axis, life expectancy on y axis and",
+  "separate countries with colour. The chart background is white with minimal",
+  "light grey grid lines, and the data lines are turquoise and orange."
+)
+
+text <-
+  background +
+  labs(
+    x = "Year",
+    y = "Life\nExpectancy",
+    colour = "Country"
+  ) +
+  theme(
+    axis.title.x = element_text(hjust = 0.5, vjust = 0.5, angle = 0),
+    axis.title.y = element_text(hjust = 0.5, vjust = 1, angle = 0),
+    axis.text  = element_text(hjust = 0.5, vjust = 0.5, angle = 0)
+  )
+
+text
+```
+
+* No need to tilt head to read text
+
+
+## use_sgplot (1)
+
+```{r use-sgplot-1, ref.label="basic-chart", fig.alt=basic_alt}
+#| fig.height: 4
+#| fig.width: 8
+#| fig-align: center
+```
+
+## use_sgplot (2)
+
+```{r use-sgplot-2, fig.alt=basic_alt}
+#| fig.height: 4
+#| fig.width: 8
+#| fig-align: center
+
+use_sgplot()
+
+basic
+```
+
+
+# Colour {.h1-blue}
+
+
+# sgplot {.h1-blue}
+
