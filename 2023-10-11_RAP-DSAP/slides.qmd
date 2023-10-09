@@ -30,6 +30,7 @@ Automated statistical and analytical processes that are:
 Source: [Reproducible Analytical Pipelines (RAP) – Government Analysis Function](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/)
 :::
 
+
 ## Features of RAP {.smaller}
 
 At minimum, a RAP must:
@@ -52,6 +53,7 @@ At minimum, a RAP must:
 Source: [Reproducible Analytical Pipelines (RAP) – Government Analysis Function](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/)
 :::
 
+
 ## RAP Strategy {.smaller}
 
 -   Developed by Government Analysis Function to help analysts and analyst leaders understand why RAP is important and how to deliver it.
@@ -68,6 +70,10 @@ Source: [Reproducible Analytical Pipelines (RAP) – Government Analysis Functio
 
 ::: footer
 Source: [Reproducible Analytical Pipelines (RAP) strategy – Government Analysis Function](https://analysisfunction.civilservice.gov.uk/policy-store/reproducible-analytical-pipelines-strategy/)
+:::
+
+::: notes
+* Applicable to Civil Service but could also be useful to other public sector bodies looking to develop their RAP capability
 :::
 
 
