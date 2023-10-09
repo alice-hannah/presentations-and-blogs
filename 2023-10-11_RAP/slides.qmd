@@ -71,28 +71,6 @@ Source: [Reproducible Analytical Pipelines (RAP) strategy – Government Analysi
 :::
 
 
-## RAP Support
-
-::: {style="font-size: 65%;"}
-
--   Data Innovation Team, Data Division
-
--   We can provide the following support:
-
-    -   Review existing process and plan RAP project
-    -   Best practice for project structure and code style
-    -   Code review and general feedback
-    -   Training to use Git and GitHub
-    -   Advanced topics such as R package development, data visualisation and interactive dashboard development
-
--   Contact us
-
-    -   [Alice Byers](mailto:alice.byers@gov.scot), RAP Developer
-    -   [Tom Wilson](mailto:thomas.wilson@gov.scot), Data Scientist
-    -   [Gerry Scullion](mailto:gerard.scullion@gov.scot), Head of Data Innovation
-
-:::
-
 ## Case Study - Existing Process
 
 -   School Information Dashboards
@@ -104,6 +82,7 @@ Source: [Reproducible Analytical Pipelines (RAP) strategy – Government Analysi
 -   Dashboards created in Tableau
 
 -   Updated twice a year; each update took three weeks of work for three statisticians - longer if errors were found
+
 
 ## Case Study - Planning
 
@@ -186,6 +165,7 @@ Open code on GitHub
 
 ::::
 
+
 ## Case Study - Result
 
 -   Faster
@@ -201,6 +181,7 @@ Open code on GitHub
 -   Well documented
 
 -   Developed skills to apply to other projects
+
 
 ## Links {.smaller}
 
