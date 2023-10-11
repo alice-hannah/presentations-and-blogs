@@ -16,6 +16,8 @@ lang: en
 
 ## Is RAP relevent to me?
 
+::: {.incremental}
+
 -   Would it be a nightmare to have to go back and rerun your process from the beginning if you found a mistake?
 
 -   Do you have to make a lot of manual edits to code before each run?
@@ -24,6 +26,7 @@ lang: en
 
 -   Would a new person find it difficult to understand the process?
 
+:::
 
 ::: notes
 -   If the answer to any of these is yes, then RAP could help you.
@@ -56,6 +59,9 @@ Source: [Reproducible Analytical Pipelines (RAP) – Government Analysis Functio
 -   High quality means that you are confident your process is doing what you expect it to, often demonstrated by peer review.
 
 -   More information on these principles can be found in the [Duck book](https://best-practice-and-impact.github.io/qa-of-code-guidance/principles.html)
+
+-   There are lots of things you could do to work towards these, but the Government Analysis Function have outlined 7 core features to aim for
+
 :::
 
 
@@ -82,7 +88,9 @@ Source: [Reproducible Analytical Pipelines (RAP) – Government Analysis Functio
 :::
 
 ::: notes
--   Something about how you might not apply all of these features at once / from the beginning. They all bring their own benefits, but it is a useful list to keep in mind for further developments.
+-   It is not essential to do all of these at once. Start small and iterate.
+
+-   This is where using agile project management can be useful to encourage iterative development and continuous review.
 :::
 
 
@@ -148,6 +156,16 @@ Blog: [How we saved 3 analysts 6 weeks of copying and pasting](https://blogs.gov
 
 ::: footer
 Blog: [How we saved 3 analysts 6 weeks of copying and pasting](https://blogs.gov.scot/statistics/2023/07/24/reproducible-analytical-pipelines-how-we-saved-3-analysts-6-weeks-of-copying-and-pasting/)
+:::
+
+::: notes
+-   RAP Support team; find people who can help you or are willing to be a critical friend
+
+-   What are we aiming for, whilst also being open to this changing as we go
+
+-   Work with data providers; don't feel restricted by the current setup. If something doesn't make sense and you're having to do extra work to accommodate, talk to people. Often you'll find they're also having to do extra work to produce the output in the format they think you need it in!
+
+-   This links to an important point - RAP isn't about replicating / shoehorning an existing process into new software. Step back - look at what you have to start with, what you'd like to end up with and the most logical way of getting from one to the other. It's easy to assume processes are complex and convoluted for unavoidable reasons, but often they're just a result of years of different analysts adding new layers on top of old ones until it doesn't make sense anymore!
 :::
 
 
@@ -224,7 +242,9 @@ Blog: [How we saved 3 analysts 6 weeks of copying and pasting](https://blogs.gov
 :::
 
 ::: notes
--   Talk about how these match to 3 principles and 7 features?
+-   Not an exhaustive list but some of the fundamentals
+
+-   Some seemingly 'simple' things that had a big impact
 :::
 
 
@@ -234,7 +254,7 @@ Blog: [How we saved 3 analysts 6 weeks of copying and pasting](https://blogs.gov
 
     -   Previously took three weeks for three statisticians (twice per year)
 
-    -   Now takes at most half a day for one statistician (twice per year)
+    -   Now takes at most one day for one statistician (twice per year)
 
 -   More accurate
 
@@ -248,53 +268,63 @@ Blog: [How we saved 3 analysts 6 weeks of copying and pasting](https://blogs.gov
 Blog: [How we saved 3 analysts 6 weeks of copying and pasting](https://blogs.gov.scot/statistics/2023/07/24/reproducible-analytical-pipelines-how-we-saved-3-analysts-6-weeks-of-copying-and-pasting/)
 :::
 
+::: notes
+-   This is a time saving of 90 days to 2 days
+:::
 
 ## Where to start
 
+::: {.fragment}
+-   Open-source software
+:::
+
+::: {.fragment}
 -   Would it be a nightmare to have to go back and rerun your process from the beginning if you found a mistake?
 
-    ::: {.fragment}
-    - Git 
-    :::
+    -   Git 
+:::
 
+::: {.fragment}
 -   Do you have to make a lot of manual edits to code before each run?
 
-    ::: {.fragment}
-    - Setup script 
-    :::
+    -   Setup script 
+:::
 
-
-## Where to start
-
--   Is there a lot of repetition in your code?
-
-    ::: {.fragment}
-    - Functions 
-    :::
-
--   Would a new person find it difficult to understand the process?
-
-    ::: {.fragment}
-    - Documentation 
-    :::
-    
 
 ::: notes
--   Think of one way you could improve your current process and try and implement a change or some changes to address this.
+-   As I said earlier, start by thinking of one way you could improve your current process and try and implement some changes to address this.
 
--   Open source: go on some training; try and replicate a small part of existing process in R (for example) to practice and test approach
+-   Open source: will make other changes easier; go on some training; try and replicate a small part of existing process in R (for example) to practice and test approach
 
 -   Reproducibility: using Git keeps your history so you can revert back to previous versions if need be
 
--   Manual edits: set up script
+-   Manual edits: set up script; set all variables here and reuse across the rest of your code
+:::
 
+
+## Where to start
+
+::: {.fragment}
+-   Is there a lot of repetition in your code?
+
+    -   Functions 
+:::
+
+::: {.fragment}
+-   Would a new person find it difficult to understand the process?
+
+    -   Documentation 
+:::
+    
+
+::: notes
 -   Functions: where identical or similar code is repeated, write a function
 
 -   Documentation: save in the same place as the project code/files; ask other people to read and give feedback; comment code
 :::
 
 
-## Links
+## Links & Contact
 
 -   [Government Analysis Function RAP Resources](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/)
 

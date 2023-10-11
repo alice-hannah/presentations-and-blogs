@@ -1150,12 +1150,14 @@ margin-right: 0; }
 
 <section id="is-rap-relevent-to-me" class="slide level2">
 <h2>Is RAP relevent to me?</h2>
+<div>
 <ul>
-<li><p>Would it be a nightmare to have to go back and rerun your process from the beginning if you found a mistake?</p></li>
-<li><p>Do you have to make a lot of manual edits to code before each run?</p></li>
-<li><p>Is there a lot of repetition in your code?</p></li>
-<li><p>Would a new person find it difficult to understand the process?</p></li>
+<li class="fragment"><p>Would it be a nightmare to have to go back and rerun your process from the beginning if you found a mistake?</p></li>
+<li class="fragment"><p>Do you have to make a lot of manual edits to code before each run?</p></li>
+<li class="fragment"><p>Is there a lot of repetition in your code?</p></li>
+<li class="fragment"><p>Would a new person find it difficult to understand the process?</p></li>
 </ul>
+</div>
 <aside class="notes">
 <ul>
 <li>If the answer to any of these is yes, then RAP could help you.</li>
@@ -1191,6 +1193,7 @@ display:block!important;
 <li><p>Efficient means that a process is as simple as possible, with no redundant steps.</p></li>
 <li><p>High quality means that you are confident your process is doing what you expect it to, often demonstrated by peer review.</p></li>
 <li><p>More information on these principles can be found in the <a href="https://best-practice-and-impact.github.io/qa-of-code-guidance/principles.html">Duck book</a></p></li>
+<li><p>There are lots of things you could do to work towards these, but the Government Analysis Function have outlined 7 core features to aim for</p></li>
 </ul>
 <style type="text/css">
 span.MJX_Assistive_MathML {
@@ -1221,7 +1224,8 @@ display:block!important;
 </div>
 <aside class="notes">
 <ul>
-<li>Something about how you might not apply all of these features at once / from the beginning. They all bring their own benefits, but it is a useful list to keep in mind for further developments.</li>
+<li><p>It is not essential to do all of these at once. Start small and iterate.</p></li>
+<li><p>This is where using agile project management can be useful to encourage iterative development and continuous review.</p></li>
 </ul>
 <style type="text/css">
 span.MJX_Assistive_MathML {
@@ -1308,6 +1312,24 @@ display:block!important;
 <div class="footer">
 <p>Blog: <a href="https://blogs.gov.scot/statistics/2023/07/24/reproducible-analytical-pipelines-how-we-saved-3-analysts-6-weeks-of-copying-and-pasting/">How we saved 3 analysts 6 weeks of copying and pasting</a></p>
 </div>
+<aside class="notes">
+<ul>
+<li><p>RAP Support team; find people who can help you or are willing to be a critical friend</p></li>
+<li><p>What are we aiming for, whilst also being open to this changing as we go</p></li>
+<li><p>Work with data providers; don’t feel restricted by the current setup. If something doesn’t make sense and you’re having to do extra work to accommodate, talk to people. Often you’ll find they’re also having to do extra work to produce the output in the format they think you need it in!</p></li>
+<li><p>This links to an important point - RAP isn’t about replicating / shoehorning an existing process into new software. Step back - look at what you have to start with, what you’d like to end up with and the most logical way of getting from one to the other. It’s easy to assume processes are complex and convoluted for unavoidable reasons, but often they’re just a result of years of different analysts adding new layers on top of old ones until it doesn’t make sense anymore!</p></li>
+</ul>
+<style type="text/css">
+span.MJX_Assistive_MathML {
+position:absolute!important;
+clip: rect(1px, 1px, 1px, 1px);
+padding: 1px 0 0 0!important;
+border: 0!important;
+height: 1px!important;
+width: 1px!important;
+overflow: hidden!important;
+display:block!important;
+}</style></aside>
 </section>
 <section id="case-study---rap-principles-applied" class="slide level2 smaller">
 <h2>Case Study - RAP Principles Applied</h2>
@@ -1350,7 +1372,8 @@ display:block!important;
 </div>
 <aside class="notes">
 <ul>
-<li>Talk about how these match to 3 principles and 7 features?</li>
+<li><p>Not an exhaustive list but some of the fundamentals</p></li>
+<li><p>Some seemingly ‘simple’ things that had a big impact</p></li>
 </ul>
 <style type="text/css">
 span.MJX_Assistive_MathML {
@@ -1370,7 +1393,7 @@ display:block!important;
 <li><p>Faster</p>
 <ul>
 <li><p>Previously took three weeks for three statisticians (twice per year)</p></li>
-<li><p>Now takes at most half a day for one statistician (twice per year)</p></li>
+<li><p>Now takes at most one day for one statistician (twice per year)</p></li>
 </ul></li>
 <li><p>More accurate</p></li>
 <li><p>Reduced risk</p></li>
@@ -1380,46 +1403,84 @@ display:block!important;
 <div class="footer">
 <p>Blog: <a href="https://blogs.gov.scot/statistics/2023/07/24/reproducible-analytical-pipelines-how-we-saved-3-analysts-6-weeks-of-copying-and-pasting/">How we saved 3 analysts 6 weeks of copying and pasting</a></p>
 </div>
+<aside class="notes">
+<ul>
+<li>This is a time saving of 90 days to 2 days</li>
+</ul>
+<style type="text/css">
+span.MJX_Assistive_MathML {
+position:absolute!important;
+clip: rect(1px, 1px, 1px, 1px);
+padding: 1px 0 0 0!important;
+border: 0!important;
+height: 1px!important;
+width: 1px!important;
+overflow: hidden!important;
+display:block!important;
+}</style></aside>
 </section>
 <section id="where-to-start" class="slide level2">
 <h2>Where to start</h2>
+<div class="fragment">
+<ul>
+<li>Open-source software</li>
+</ul>
+</div>
+<div class="fragment">
 <ul>
 <li><p>Would it be a nightmare to have to go back and rerun your process from the beginning if you found a mistake?</p>
-<div class="fragment">
 <ul>
 <li>Git</li>
+</ul></li>
 </ul>
-</div></li>
-<li><p>Do you have to make a lot of manual edits to code before each run?</p>
+</div>
 <div class="fragment">
 <ul>
+<li><p>Do you have to make a lot of manual edits to code before each run?</p>
+<ul>
 <li>Setup script</li>
+</ul></li>
 </ul>
-</div></li>
+</div>
+<aside class="notes">
+<ul>
+<li><p>As I said earlier, start by thinking of one way you could improve your current process and try and implement some changes to address this.</p></li>
+<li><p>Open source: will make other changes easier; go on some training; try and replicate a small part of existing process in R (for example) to practice and test approach</p></li>
+<li><p>Reproducibility: using Git keeps your history so you can revert back to previous versions if need be</p></li>
+<li><p>Manual edits: set up script; set all variables here and reuse across the rest of your code</p></li>
 </ul>
+<style type="text/css">
+span.MJX_Assistive_MathML {
+position:absolute!important;
+clip: rect(1px, 1px, 1px, 1px);
+padding: 1px 0 0 0!important;
+border: 0!important;
+height: 1px!important;
+width: 1px!important;
+overflow: hidden!important;
+display:block!important;
+}</style></aside>
 </section>
 <section id="where-to-start-1" class="slide level2">
 <h2>Where to start</h2>
+<div class="fragment">
 <ul>
 <li><p>Is there a lot of repetition in your code?</p>
-<div class="fragment">
 <ul>
 <li>Functions</li>
+</ul></li>
 </ul>
-</div></li>
-<li><p>Would a new person find it difficult to understand the process?</p>
+</div>
 <div class="fragment">
 <ul>
+<li><p>Would a new person find it difficult to understand the process?</p>
+<ul>
 <li>Documentation</li>
+</ul></li>
 </ul>
-</div></li>
-</ul>
+</div>
 <aside class="notes">
 <ul>
-<li><p>Think of one way you could improve your current process and try and implement a change or some changes to address this.</p></li>
-<li><p>Open source: go on some training; try and replicate a small part of existing process in R (for example) to practice and test approach</p></li>
-<li><p>Reproducibility: using Git keeps your history so you can revert back to previous versions if need be</p></li>
-<li><p>Manual edits: set up script</p></li>
 <li><p>Functions: where identical or similar code is repeated, write a function</p></li>
 <li><p>Documentation: save in the same place as the project code/files; ask other people to read and give feedback; comment code</p></li>
 </ul>
@@ -1435,8 +1496,8 @@ overflow: hidden!important;
 display:block!important;
 }</style></aside>
 </section>
-<section id="links" class="slide level2">
-<h2>Links</h2>
+<section id="links-contact" class="slide level2">
+<h2>Links &amp; Contact</h2>
 <ul>
 <li><p><a href="https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/">Government Analysis Function RAP Resources</a></p></li>
 <li><p><a href="https://best-practice-and-impact.github.io/qa-of-code-guidance/intro.html">Duck book</a></p></li>
