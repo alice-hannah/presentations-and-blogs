@@ -3,7 +3,7 @@ title: "Accessible data visualisations"
 subtitle: "Scottish Government Accessibility Champions Network"
 author: "Alice Byers"
 institute: "Data Innovation Team, Data Division"
-date: "28 September 2023"
+date: "19 October 2023"
 format:
   revealjs: 
     embed-resources: true

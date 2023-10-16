@@ -28,7 +28,7 @@ ex1 <-
 
 ggsave(
   ex1, 
-  filename = here("2023-09-28_accessible-data-vis", "images", "ex1.svg"),
+  filename = here("2023-10-19_accessible-data-vis", "images", "ex1.svg"),
   width = 200, height = 100, units = "mm"
 )
 
@@ -46,7 +46,7 @@ ex2 <-
 
 ggsave(
   ex2, 
-  filename = here("2023-09-28_accessible-data-vis", "images", "ex2.svg"),
+  filename = here("2023-10-19_accessible-data-vis", "images", "ex2.svg"),
   width = 200, height = 100, units = "mm"
 )
 
@@ -77,7 +77,7 @@ ex3 <-
 
 ggsave(
   ex3, 
-  filename = here("2023-09-28_accessible-data-vis", "images", "ex3.svg"),
+  filename = here("2023-10-19_accessible-data-vis", "images", "ex3.svg"),
   width = 220, height = 100, units = "mm"
 )
 
@@ -103,5 +103,5 @@ table <-
 
 gtsave(
   table,
-  here("2023-09-28_accessible-data-vis", "images", "table.html")
+  here("2023-10-19_accessible-data-vis", "images", "table.html")
 )
