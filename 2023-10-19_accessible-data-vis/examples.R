@@ -8,6 +8,7 @@ library(sgplot)
 library(here)
 library(tidyr)
 library(gt)
+library(htmltools)
 
 
 # Create data set
@@ -29,6 +30,21 @@ ex1 <-
 ggsave(
   ex1, 
   filename = here("2023-10-19_accessible-data-vis", "images", "ex1.svg"),
+  width = 200, height = 100, units = "mm"
+)
+
+
+# Example 1 - Black and White
+
+ex1_bw <-
+  ggplot(life_exp) +
+  geom_line(aes(x = year, y = lifeExp, colour = country)) +
+  scale_discrete_manual("colour", values = rep("black", 6)) +
+  theme(axis.text.x = element_text(angle = 45, vjust = 0.5))
+
+ggsave(
+  ex1_bw, 
+  filename = here("2023-10-19_accessible-data-vis", "images", "ex1_bw.svg"),
   width = 200, height = 100, units = "mm"
 )
 
@@ -95,13 +111,17 @@ table <-
     label = "Life Expectancy",
     columns = !Year
   ) |>
+  cols_width(
+    Year ~ px(10),
+    everything() ~ px(20)
+  ) |>
+  cols_align("left", columns = Year) |>
   tab_options(
-    table.width = pct(100),
-    table.font.size = px(20)) |>
-  opt_vertical_padding(scale = 2.5) |>
-  opt_horizontal_padding(scale = 2.5)
+    table.width = pct(60),
+    table.font.size = px(20)
+  )
 
-gtsave(
-  table,
+save_html(
+  as_raw_html(table),
   here("2023-10-19_accessible-data-vis", "images", "table.html")
 )

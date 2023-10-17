@@ -69,9 +69,9 @@ ex2_alt <- paste(
 )
 
 ex3_alt <- paste(
-  "A multiple line chart with year on x axis, life expectancy on y axis and",
-  "separate countries with colour. The chart background is grey with white",
-  "grid lines, and the data lines are turquoise and orange."
+  "The life expectancy for both the United Kingdom and China have increased",
+  "between 1952 and 2007. The United Kingdom has consistently had a higher",
+  "life expectancy than China throughout this period."
 )
 ```
 
@@ -84,7 +84,7 @@ ex3_alt <- paste(
 
 ## Example 1 {auto-animate=true}
 
-![](images/ex1.svg){fig-alt="`r ex1_alt`" .absolute top=25 right=5 width=500 height=250}
+![](images/ex1.svg){fig-alt="`r ex1_alt`" .absolute top=25 right=0 width=500 height=250}
 
 <br>
 <br>
@@ -116,17 +116,78 @@ ex3_alt <- paste(
 
 ## Things to think about
 
+<br>
+
+:::: {.columns}
+
+::: {.column width="60%"}
+::: {.r-stack}
+![](images/ex1.svg){fig-alt="`r ex1_alt`"}
+
+![](images/ex1_bw.svg){fig-alt="`r ex1_alt`" .fragment fragment-index=4}
+:::
+:::
+
+::: {.column width="40%"}
+
+::: {.fragment fragment-index=1}
+* Contrast with background
+:::
+
+::: {.fragment fragment-index=2}
+* Contrast with other elements
+:::
+
+::: {.fragment fragment-index=3}
+* Reliance on colour
+:::
+
+:::
+
+::::
+
+
+## Colour palettes {.smaller}
+
+* Scottish Government Design System [colour palettes for data visualisations](https://designsystem.gov.scot/guidance/charts/data-visualisation-colour-palettes)
+
+* Example of palette for categorical data:
+
+```{r palettes}
+sgplot:::colour_table(sgplot::sg_colour_palettes$main)
+```
+
+<br style="line-height: 5px"/>
+
+* Other palettes available for sequential and focus charts (with caveats)
+
+::: {.notes}
+* All 4 colours have sufficient contrast (3:1) with a white background and adjacent colours in the palette.
+:::
+
+
+# Example {.h1-blue}
 
 ## Example 2 {.smaller auto-animate=true}
 
 ![](images/ex2.svg){fig-alt="`r ex2_alt`"}
 
+. . .
+
 [Slido poll](https://app.sli.do/event/pZMm3JwX6jxNQgE8Mn7FAu/live/polls){preview-link="true"}: What could be improved?
+
+::: {.notes}
+* Less data
+* Fewer grid lines
+* All text horizontal
+* Accessible colour palette
+* However, there are still issues
+:::
 
 
 ## Example 2 {auto-animate=true}
 
-![](images/ex2.svg){fig-alt="`r ex2_alt`" .absolute top=25 right=5 width=500 height=250}
+![](images/ex2.svg){fig-alt="`r ex2_alt`" .absolute top=25 right=0 width=500 height=250}
 
 <br>
 <br>
@@ -134,9 +195,9 @@ ex3_alt <- paste(
 
 ::: {.incremental}
 
-* Meaningless axis label
-
 * No way to link data lines to legend without colour
+
+* Meaningless axis label
 
 * No title, subtitle or source
 
@@ -147,13 +208,18 @@ ex3_alt <- paste(
 :::
 
 
-## Example 3 {auto-animate=true .smaller}
+## Example 3
 
 ### Living Longer
 #### Life Expectancy in the United Kingdom and China 1952-2007
 
 ![](images/ex3.svg){fig-alt="`r ex3_alt`"}
 <div class="source">Source: Gapminder</div>
+
+::: {.notes}
+* Much improved compared to original chart
+* Almost definitely still improvements that could be made
+:::
 
 
 # Alternative Text {.h1-blue}
@@ -183,18 +249,119 @@ ex3_alt <- paste(
 
 ## Data table
 
-````{=html}
+```{=html}
 ```{r, echo=FALSE, results='asis'}
 xfun::file_string('images/table.html')
 ```
-````
-
+```
 
 # sgplot {.h1-blue}
 
-# Guidance {.h1-blue}
 
-# Contact
+## sgplot
 
+![](images/sgplot-logo.svg){fig-alt="" .absolute top=25 right=0}
+
+* An [R](https://www.r-project.org/) package to apply a style and colour palettes to<br>[`ggplot2`](https://ggplot2.tidyverse.org/) charts
+
+* Applies [Scottish Government Design System colour palettes](https://designsystem.gov.scot/guidance/charts/data-visualisation-colour-palettes) and accessibility best practice
+
+* [Package website](https://datasciencescotland.github.io/sgplot/) with documentation, guidance and examples
+
+* Open project with [code publicly available on GitHub](https://github.com/DataScienceScotland/sgplot/)
+
+
+## Example - `ggplot2` defaults {.smaller}
+
+```{r ggplot2-example, echo = TRUE}
+#| code-fold: true
+
+library(ggplot2)
+
+dat <- data.frame(
+  shop = rep(c("Shop 1", "Shop 2"), each = 2),
+  fruit = rep(c("Apples", "Bananas"), times = 2),
+  number = c(5, 4, 6, 2)
+)
+
+ggplot(dat) +
+  geom_col(aes(x = shop, y = number, fill = fruit),
+           position = "dodge")
+```
+
+
+## Example - `sgplot` defaults {.smaller}
+
+```{r sgplot-example, echo = TRUE}
+#| code-fold: true
+
+library(sgplot)
+
+use_sgplot()
+
+ggplot(dat) +
+  geom_col(aes(x = shop, y = number, fill = fruit),
+           position = "dodge")
+```
+
+::: {.notes}
+* There are obviously still things to improve about this chart; e.g. labels, linking of colour from chart to legend
+* However, it's a big improvement on the original chart with very little effort
+:::
+
+
+## Future Developments
+
+* Support for interactive chart packages
+
+* Use Roboto Google font as per Scottish Government design system
+
+* Anything that would make your life easier!
+
+    * If your team has its own branding style and/or colour palettes, these can be added to sgplot (as long as they’re accessible!)
+
+
+## Get Involved
+
+* [Open to feedback](https://github.com/DataScienceScotland/sgplot/issues)
+
+* [Open for contributions](https://datasciencescotland.github.io/sgplot/CONTRIBUTING.html) (however big or small!)
+
+* Become a package maintainer
+
+
+# Guidance & Resources {.h1-blue}
+
+## Scottish Government
+
+* [Data visualisation accessibility guidance](https://designsystem.gov.scot/guidance/charts)
+
+* [Data visualisation colour palettes](https://designsystem.gov.scot/guidance/charts/data-visualisation-colour-palettes)
+
+* [sgplot guidance](https://datasciencescotland.github.io/sgplot/articles/)
+
+* Viva Engage (Yammer) communities
+
+    * [Digital Accessibility](https://web.yammer.com/main/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiI1Mjc2NzA0NzY5In0/all)
+
+    * [Communicating Analysis with Impact](https://web.yammer.com/main/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiI1NjA2MTA1MDg5In0/all)
+
+
+## Analysis Function
+
+* [Charts](https://analysisfunction.civilservice.gov.uk/policy-store/data-visualisation-charts/)
+
+* [Colours](https://analysisfunction.civilservice.gov.uk/policy-store/data-visualisation-colours-in-charts/)
+
+* [Making analytical publications accessible](https://analysisfunction.civilservice.gov.uk/policy-store/making-analytical-publications-accessible/)
+
+* [Dashboards](https://analysisfunction.civilservice.gov.uk/policy-store/top-tips-for-designing-dashboards/)
+
+* [Data visualisation e-learning](https://analysisfunction.civilservice.gov.uk/support/communicating-analysis/introduction-to-data-visualisation-e-learning/)
+
+
+## Contact
+
+<br>
 <alice.byers@gov.scot>
 
