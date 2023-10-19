@@ -201,7 +201,7 @@ ex3_alt_story <- paste(
 
 ## Colour palettes {.smaller}
 
-* Scottish Government Design System [colour palettes for data visualisations](https://designsystem.gov.scot/guidance/charts/data-visualisation-colour-palettes)
+* Scottish Government Design System [colour palettes for data visualisations](https://designsystem.gov.scot/guidance/charts/data-visualisation-colour-palettes){preview-link="false"}
 
 * Example of palette for categorical data:
 
@@ -353,7 +353,7 @@ xfun::file_string('images/table.html')
 
 * An [R](https://www.r-project.org/) package to apply a style and colour palettes to<br>[ggplot2](https://ggplot2.tidyverse.org/) charts
 
-* Applies [Scottish Government Design System colour palettes](https://designsystem.gov.scot/guidance/charts/data-visualisation-colour-palettes) and accessibility best practice
+* Applies [Scottish Government Design System colour palettes](https://designsystem.gov.scot/guidance/charts/data-visualisation-colour-palettes){preview-link="false"} and accessibility best practice
 
 * [Package website](https://datasciencescotland.github.io/sgplot/) with documentation, guidance and examples
 
@@ -427,9 +427,9 @@ ggplot(dat) +
 
 ## Scottish Government
 
-* [Data visualisation accessibility guidance](https://designsystem.gov.scot/guidance/charts)
+* [Data visualisation accessibility guidance](https://designsystem.gov.scot/guidance/charts){preview-link="false"}
 
-* [Data visualisation colour palettes](https://designsystem.gov.scot/guidance/charts/data-visualisation-colour-palettes)
+* [Data visualisation colour palettes](https://designsystem.gov.scot/guidance/charts/data-visualisation-colour-palettes){preview-link="false"}
 
 * [sgplot guidance](https://datasciencescotland.github.io/sgplot/articles/)
 
