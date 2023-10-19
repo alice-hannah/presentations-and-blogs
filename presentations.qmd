@@ -23,7 +23,7 @@ Slides for the Scottish Government analytical seminar on use of the [sgplot](htt
 
 Slides for the Scottish Government Analyst Induction event on Data Tools and Standards on 13 June 2023.
 
-[Slides](https://alicebyers5.github.io/presentations-and-blogs/2023-06-13_RAP-in-SG/slides.html){.external target="_blank"}
+[Slides](../2023-06-13_RAP-in-SG/slides.html){.external target="_blank"}
 
 ### Introduction to Git and GitHub
 
