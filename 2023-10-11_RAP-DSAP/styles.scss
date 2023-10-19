@@ -1,0 +1,74 @@
+/*-- scss:defaults --*/
+
+$presentation-title-slide-text-align: left !default;
+
+$presentation-font-size-root: 35px;
+
+$presentation-font-smaller: 0.8 !default;
+
+$presentation-line-height: 1.8;
+
+$presentation-h2-line-height: 2.5;
+
+$link-color: #0079d2;
+
+#title-slide .title {
+  font-size: 2em;
+  margin-bottom: 2.5rem;
+}
+
+#title-slide p {
+  font-size: 0.8em;
+  line-height: 1;
+}
+
+.image1 { 
+  width: 240px; 
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 25px;
+}
+
+.icon { 
+  width: auto; 
+  height: 60px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 25px;
+}
+
+.column {
+  font-size: 0.8em;
+}
+
+.smallest {
+  @extend .smaller;
+  font-size: 0.5;
+}
+
+/*-- scss:rules --*/
+
+.reveal .slides h2 {
+  margin-bottom: 2.5rem;
+}
+
+.reveal .slide-logo {
+  height: 50px !important;
+  width: auto !important;
+  max-width: unset !important;
+  max-height: unset !important;
+  margin-bottom: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.reveal .footer {
+  color: $body-color;
+}
+
+.reveal .footer a {
+  color: $link-color;
+}
+

@@ -13,11 +13,17 @@ Slides for the Scottish Government Accessibility Champions network meeting on 19
 
 [Slides](https://alicebyers5.github.io/presentations-and-blogs/2023-10-19_accessible-data-vis/slides.html){.external target="_blank"}
 
+### Introduction to RAP
+
+A version of the previous [RAP in the Scottish Government](#rap-in-the-scottish-government) presentation edited for the [Data Science Accelerator](https://www.gov.scot/publications/data-science-accelerator/) 2023 cohort meeting on 11 October 2023.
+
+[Slides](../2023-10-11_RAP-DSAP/slides.html){.external target="_blank"}
+
 ### Creating accessible charts in R using sgplot
 
 Slides for the Scottish Government analytical seminar on use of the [sgplot](https://datasciencescotland.github.io/sgplot/) package on 19 June 2023. This presentation was jointly delivered with Lee Bunce from the Office of the Chief Statistician.
 
-[Slides](https://alicebyers5.github.io/presentations-and-blogs/2023-06-19_sgplot/slides.html){.external target="_blank"}
+[Slides](../2023-06-19_sgplot/slides.html){.external target="_blank"}
 
 ### RAP in the Scottish Government
 
@@ -29,7 +35,7 @@ Slides for the Scottish Government Analyst Induction event on Data Tools and Sta
 
 Slides for non-technical presentation to the Scottish Government [Data Standards and Open Data Community of Practice](https://www.eventbrite.co.uk/e/git-and-github-for-reproducible-data-analysis-tickets-558593497187) on 27 April 2023.
 
-[Slides](https://alicebyers5.github.io/presentations-and-blogs/2023-04-27_git-github-intro/slides.html){.external target="_blank"}
+[Slides](../2023-04-27_git-github-intro/slides.html){.external target="_blank"}
 
 ## 2022
 
@@ -51,4 +57,4 @@ Slides for presentation on [School Information Dashboard Reproducible Analytical
 
 Slides for presentation on creating management reports using the [`flexdashboard`](https://rmarkdown.rstudio.com/flexdashboard/) R package at the [PHI useR Group](https://github.com/Public-Health-Scotland/PHI-useR-group) meeting on 25 February 2020.
 
-[Slides](https://alicebyers5.github.io/presentations-and-blogs/2020-02-25_flexdashboard/slides.html){.external target="_blank"}
+[Slides](../2020-02-25_flexdashboard/slides.html){.external target="_blank"}
