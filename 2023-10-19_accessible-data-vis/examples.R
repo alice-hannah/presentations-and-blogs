@@ -54,7 +54,7 @@ ggsave(
 life_exp <- life_exp |>
   filter(country %in% c("United Kingdom", "China"))
 
-use_sgplot()
+use_sgplot(base_size = 14, base_line_size = 14/20)
 
 ex2 <- 
   ggplot(life_exp) +
@@ -72,11 +72,13 @@ ggsave(
 ex3 <-
   ggplot(life_exp) +
   geom_line(aes(x = year, y = lifeExp, colour = country)) +
-  theme_sg(legend = "none") +
+  theme_sg(base_size = 14, 
+           base_line_size = 14/20,
+           legend = "none") +
   scale_y_continuous(limits = c(0, 82),
                      breaks = seq(0, 80, 20),
                      expand = c(0, 0)) +
-  scale_x_continuous(limits = c(1952, 2017),
+  scale_x_continuous(limits = c(1952, 2018),
                      breaks = seq(1952, 2007, 5)) +
   annotate(geom = "label", x = 2008, y = 73, label = "China",
            colour = sg_colour_values[1],

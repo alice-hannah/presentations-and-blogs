@@ -206,7 +206,9 @@ ex3_alt_story <- paste(
 * Example of palette for categorical data:
 
 ```{r palettes}
-sgplot:::colour_table(sgplot::sg_colour_palettes$main)
+sgplot:::colour_table(sgplot::sg_colour_palettes$main) |>
+  gt::tab_options(table.font.size = gt::pct(80),
+                  table.width = gt::pct(75))
 ```
 
 <br style="line-height: 5px"/>
@@ -391,7 +393,7 @@ ggplot(dat) +
 
 library(sgplot)
 
-use_sgplot()
+use_sgplot(base_size = 14)
 
 ggplot(dat) +
   geom_col(aes(x = shop, y = number, fill = fruit),
