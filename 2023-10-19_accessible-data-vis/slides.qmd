@@ -1,0 +1,464 @@
+---
+title: "Accessible data visualisations"
+subtitle: "Scottish Government Accessibility Champions Network"
+author: "Alice Byers"
+institute: "Data Innovation Team, Data Division"
+date: "19 October 2023"
+format:
+  revealjs: 
+    embed-resources: true
+    slide-number: true
+    logo: images/SG-logo.jpg
+    controls: true
+    link-external-newwindow: true
+    preview-links: true
+    theme: [default, styles.scss]
+execute:
+  echo: false
+  fig-format: "svg"
+lang: en
+editor_options: 
+  chunk_output_type: console
+---
+
+## About me
+
+* [Reproducible Analytical Pipeline (RAP)](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/) developer
+
+* Background in statistics and data analysis
+
+* New to the Accessibility Champions Network
+
+::: {.notes}
+* Work with statisticians to improve their analytical processes and outputs
+* Use R programming language to write code for data cleaning, analysis, visualisation and reporting.
+* Worked on a project last year to support a team to develop a dashboard where I learned a lot about accessibility and how to make data visualisations accessible.
+* Not an expert - still learning! If anything I say or in the slides isn't quite right - please let me know!
+:::
+
+
+## Agenda
+
+* Examples of charts and common issues
+
+* An introduction to the [sgplot R package](https://datasciencescotland.github.io/sgplot/)
+
+* An overview of available guidance for making charts accessible
+
+<br>
+
+. . .
+
+But first, a quick question: [What software do you use to produce charts?](https://app.sli.do/event/rXbNQTHXSzpYNirBpkDece/embed/polls/df35d195-aa99-47b5-a348-5c3e8605d121){preview-link="true"}
+
+::: {.notes}
+* So I can get a feel for who's in the network and here today, what software do you use?
+:::
+
+
+# Example {.h1-blue}
+
+```{r run-examples}
+if(!all(c(paste0("ex", 1:3, ".svg"), "table.html") %in%
+        list.files("images/"))) {
+  source("examples.R")
+}
+```
+
+```{r alt-text}
+
+ex1_alt <- paste(
+  "A line chart showing a time trend of life expectancy for different",
+  "countries. The background is light grey with lots of white grid lines.",
+  "There are six trend lines differentiated by colour with a legend to the",
+  "right hand side of the chart. The y axis title is at a 90 degree angle and",
+  "the x axis labels are at a 45 degree angle."
+)
+
+ex1_bw_alt <- paste(
+  "A line chart showing a time trend of life expectancy for different",
+  "countries. The background is light grey with lots of white grid lines.",
+  "There are six trend lines with a legend to the right hand side of the",
+  "chart. All lines are black. The y axis title is at a 90 degree angle and",
+  "the x axis labels are at a 45 degree angle."
+)
+
+ex2_alt <- paste(
+  "A line chart showing a time trend of life expectancy for different",
+  "countries. The background is white with light grey, horizontal grid lines.",
+  "There are two trend lines, one dark blue and one turquoise, with a legend",
+  "to the right hand side of the chart. All text is horizontal."
+)
+
+ex3_alt <- paste(
+  "A line chart showing a time trend of life expectancy for different",
+  "countries. The background is white with light grey, horizontal grid lines.",
+  "There are two trend lines, one dark blue and one turquoise. The lines are",
+  "directly labelled with the country they represent. All text is horizontal."
+)
+
+ex3_alt_story <- paste(
+  "The life expectancy for both the United Kingdom and China have increased",
+  "between 1952 and 2007. The United Kingdom has consistently had a higher",
+  "life expectancy than China throughout this period."
+)
+```
+
+## Example 1 {.smaller auto-animate=true}
+
+![](images/ex1.svg){fig-alt="`r ex1_alt`"}
+
+[Slido poll](https://app.sli.do/event/rXbNQTHXSzpYNirBpkDece/embed/polls/9855f8b6-39fb-409c-9ff9-990b2c83c448){preview-link="true"}: What could be improved?
+
+::: {.notes}
+* No context given
+:::
+
+
+## Example 1 {auto-animate=true}
+
+![](images/ex1.svg){fig-alt="`r ex1_alt`" .absolute top=25 right=0 width=500 height=250}
+
+<br>
+<br>
+<br>
+
+::: {.incremental}
+
+* Cluttered; lots of grid lines, lots of colours, lots of data
+
+* Poor colour contrast with background and with other colours
+
+* Angled text not easy to read
+
+:::
+
+::: {.notes}
+* Clutter
+    * What is the chart trying to tell us?
+    * Overwhelming
+
+* Colour
+    * Some colours are difficult to tell apart
+    * Could cause problems for people with low vision or cognitive differences
+
+* Text
+    * Angled text means you have to tilt your head to read
+    * Labels don't make sense
+:::
+
+
+# Colour {.h1-blue}
+
+::: {.notes}
+* Colour can be a very powerful tool to highlight elements of a chart and make it looks visually appealing.
+
+* However, it is also very easy to use it badly which can confuse and exclude some users.
+:::
+
+
+## Things to think about
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="75%"}
+::: {.r-stack}
+![](images/ex1.svg){fig-alt="`r ex1_alt`"}
+
+![](images/ex1_bw.svg){fig-alt="`r ex1_bw_alt`" .fragment fragment-index=4}
+:::
+:::
+
+::: {.column width="25%"}
+
+::: {.fragment fragment-index=1}
+* Contrast with background
+:::
+
+::: {.fragment fragment-index=2}
+* Contrast with other elements
+:::
+
+::: {.fragment fragment-index=3}
+* Reliance on colour
+:::
+
+:::
+
+::::
+
+::: {.notes}
+* Colour contrast is a measure of how different two colours are from each other.
+
+* Graphical elements must have a 3:1 colour contrast ratio with the background and with adjacent colours.
+
+* A good way to check whether you're relying on colour is to remove it. Now colour has been removed, we can probably say that for these countries, there's been a general increase over the time period. But there's one country that has dropped off, and without colour, we have no way of knowing which one this is.
+    * We'll come back to this
+:::
+
+
+## Colour palettes {.smaller}
+
+* Scottish Government Design System [colour palettes for data visualisations](https://designsystem.gov.scot/guidance/charts/data-visualisation-colour-palettes)
+
+* Example of palette for categorical data:
+
+```{r palettes}
+sgplot:::colour_table(sgplot::sg_colour_palettes$main)
+```
+
+<br style="line-height: 5px"/>
+
+* Other palettes available for sequential and focus charts (with caveats)
+
+::: {.notes}
+* All colours have sufficient contrast (3:1) with a white background and adjacent colours in the palette. Therefore, it's important to use them in this order.
+
+* Recommend using a maximum of 4 colours at a time to avoid clutter. However, there is also an extended palette available if absolutely necessary.
+:::
+
+
+# Example {.h1-blue}
+
+## Example 2 {.smaller auto-animate=true}
+
+![](images/ex2.svg){fig-alt="`r ex2_alt`"}
+
+. . .
+
+[Slido poll](https://app.sli.do/event/rXbNQTHXSzpYNirBpkDece/embed/polls/873ed3d5-81c6-4c46-bbdc-33d95da63885){preview-link="true"}: What could be improved?
+
+::: {.notes}
+* Some improvements
+    * Less data
+    * Fewer grid lines
+    * All text horizontal
+    * Accessible colour palette
+
+* However, there are still issues
+:::
+
+
+## Example 2 {auto-animate=true}
+
+![](images/ex2.svg){fig-alt="`r ex2_alt`" .absolute top=25 right=0 width=500 height=250}
+
+<br>
+<br>
+<br>
+
+::: {.incremental}
+
+* No way to link data lines to legend without colour
+
+* Meaningless axis label
+
+* No title, subtitle or source
+
+:::
+
+::: {.notes}
+* Fewer colours used and contrast requirements are met
+    * However, you still can't link the data to the legend without use of colour
+    
+* The axis labels are now horizontal, but they still don't make sense.
+
+* We still don't have the context for this chart. What is the data, why are we seeing this chart? What is the story?
+:::
+
+
+## Example 3
+
+### Living Longer
+#### Life Expectancy in the United Kingdom and China 1952-2007
+
+![](images/ex3.svg){fig-alt="`r ex3_alt`"}
+<div class="source">Source: Gapminder</div>
+
+::: {.notes}
+* Much improved compared to original chart
+    * Directly labelled lines to avoid reliance on colour
+    * Given the y axis a proper title
+    * Added some context; headline title, subtitle and source
+    
+* Almost definitely still improvements that could be made
+:::
+
+
+# Alternative Text {.h1-blue}
+
+::: {.notes}
+* We've focussed so far on visual elements of a chart, but what if you're not able to access the visual elements?
+:::
+
+
+## Forms of alt text
+
+* Commonly sits in the code behind the chart to be read by screen reader software
+
+::: {.incremental}
+
+* However, it can also be:
+
+    * a text description in the main body of the page
+    
+    * a table of the data presented in the chart
+
+:::
+
+::: {.notes}
+* Which form you use should depend on what you expect people to get from the chart.
+    * A text description is better for conveying an overall 'story' of the chart
+    * A table is better if it's important for users to read the individual data points
+    * You can also use both!
+    
+* The best text description of a chart may also depend on the context. For example, the alt text for the example charts in these slides so far talk about the visual elements of the chart; e.g. what colours are used, how many lines there are, where the legend is positioned, etc. 
+
+* However if these charts were in a statistical publication about life expectancy, your alt text would probably be something more like...
+:::
+
+
+## Text description
+
+<br>
+
+`r ex3_alt_story`
+
+
+## Data table
+
+```{=html}
+```{r, echo=FALSE, results='asis'}
+xfun::file_string('images/table.html')
+```
+```
+
+::: {.notes}
+* If using a table, it should be produced in html, rather than an image of a table. As this will not be readable by a screen reader.
+:::
+
+
+# sgplot {.h1-blue}
+
+::: {.notes}
+* Refer back to poll results on what software attendees use
+:::
+
+
+## sgplot
+
+![](images/sgplot-logo.svg){fig-alt="" .absolute top=25 right=0}
+
+* An [R](https://www.r-project.org/) package to apply a style and colour palettes to<br>[ggplot2](https://ggplot2.tidyverse.org/) charts
+
+* Applies [Scottish Government Design System colour palettes](https://designsystem.gov.scot/guidance/charts/data-visualisation-colour-palettes) and accessibility best practice
+
+* [Package website](https://datasciencescotland.github.io/sgplot/) with documentation, guidance and examples
+
+* Open project with [code publicly available on GitHub](https://github.com/DataScienceScotland/sgplot/)
+
+::: {.notes}
+* R is statistical software widely used by statisticians and analysts. 
+* It is code based; you can write code to import data, clean and restructure data, analyse and model data, and then visualise and report on it.
+:::
+
+
+## Example - `ggplot2` defaults {.smaller}
+
+```{r ggplot2-example, echo = TRUE}
+#| code-fold: true
+
+library(ggplot2)
+
+dat <- data.frame(
+  shop = rep(c("Shop 1", "Shop 2"), each = 2),
+  fruit = rep(c("Apples", "Bananas"), times = 2),
+  number = c(5, 4, 6, 2)
+)
+
+ggplot(dat) +
+  geom_col(aes(x = shop, y = number, fill = fruit),
+           position = "dodge")
+```
+
+
+## Example - `sgplot` defaults {.smaller}
+
+```{r sgplot-example, echo = TRUE}
+#| code-fold: true
+
+library(sgplot)
+
+use_sgplot()
+
+ggplot(dat) +
+  geom_col(aes(x = shop, y = number, fill = fruit),
+           position = "dodge")
+```
+
+::: {.notes}
+* There are obviously still things to improve about this chart; e.g. labels, linking of colour from chart to legend
+* However, it's a big improvement on the original chart with very little effort
+:::
+
+
+## Future Developments
+
+* Support for interactive chart packages
+
+* Use Roboto Google font as per Scottish Government design system
+
+* Anything that would make your life easier!
+
+    * If your team has its own branding style and/or colour palettes, these can be added to sgplot (as long as they’re accessible!)
+    
+* [Open to feedback and suggestions](https://github.com/DataScienceScotland/sgplot/issues)
+
+::: {.notes}
+* A fairly new package - released in June 2023
+
+* It is developed and maintained within the Scottish Government (by me!) so it can be developed to suit your needs.
+:::
+
+
+# Guidance & Resources {.h1-blue}
+
+## Scottish Government
+
+* [Data visualisation accessibility guidance](https://designsystem.gov.scot/guidance/charts)
+
+* [Data visualisation colour palettes](https://designsystem.gov.scot/guidance/charts/data-visualisation-colour-palettes)
+
+* [sgplot guidance](https://datasciencescotland.github.io/sgplot/articles/)
+
+* Viva Engage (Yammer) communities
+
+    * [Digital Accessibility](https://web.yammer.com/main/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiI1Mjc2NzA0NzY5In0/all)
+
+    * [Communicating Analysis with Impact](https://web.yammer.com/main/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiI1NjA2MTA1MDg5In0/all)
+
+
+## Government Analysis Function {.smaller}
+
+* [Charts](https://analysisfunction.civilservice.gov.uk/policy-store/data-visualisation-charts/)
+
+* [Colours](https://analysisfunction.civilservice.gov.uk/policy-store/data-visualisation-colours-in-charts/)
+
+* [Making analytical publications accessible](https://analysisfunction.civilservice.gov.uk/policy-store/making-analytical-publications-accessible/)
+
+* [Dashboards](https://analysisfunction.civilservice.gov.uk/policy-store/top-tips-for-designing-dashboards/)
+
+* [Data visualisation e-learning](https://analysisfunction.civilservice.gov.uk/support/communicating-analysis/introduction-to-data-visualisation-e-learning/)
+
+* [Communicating analysis drop-in clinics](https://analysisfunction.civilservice.gov.uk/support/communicating-analysis/#section-3)
+
+* [Basecamp communities](https://analysisfunction.civilservice.gov.uk/support/communicating-analysis/#basecamp)
+
+
+## Contact
+
+<br>
+<alice.byers@gov.scot>
+

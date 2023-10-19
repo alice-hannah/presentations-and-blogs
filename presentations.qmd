@@ -7,6 +7,12 @@ format:
 
 ## 2023
 
+### Accessible data visualisations
+
+Slides for the Scottish Government Accessibility Champions network meeting on 19 October 2023.
+
+[Slides](https://alicebyers5.github.io/presentations-and-blogs/2023-10-19_accessible-data-vis/slides.html){.external target="_blank"}
+
 ### Introduction to RAP
 
 A version of the previous [RAP in the Scottish Government](#rap-in-the-scottish-government) presentation edited for the [Data Science Accelerator](https://www.gov.scot/publications/data-science-accelerator/) 2023 cohort meeting on 11 October 2023.
