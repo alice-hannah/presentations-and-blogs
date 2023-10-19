@@ -1,0 +1,48 @@
+---
+title: "5 practical ways to improve your R project"
+subtitle: "Scottish Government R User Day"
+author: "Alice Byers"
+institute: "Data Innovation Team, Data Division"
+date: "6 December 2023"
+format:
+  revealjs: 
+    embed-resources: true
+    slide-number: true
+    logo: images/SG-logo.jpg
+    controls: true
+    link-external-newwindow: true
+    preview-links: true
+    theme: [default, styles.scss]
+execute:
+  echo: false
+  fig-format: "svg"
+lang: en
+editor_options: 
+  chunk_output_type: console
+---
+
+## 5 examples
+
+<br>
+
+[1. Folder structure]{.fragment .fade-in-then-semi-out}
+
+[2. Define variables in a setup script]{.fragment .fade-in-then-semi-out}
+
+[3. Code style]{.fragment .fade-in-then-semi-out}
+
+[4. Code comments]{.fragment .fade-in-then-semi-out}
+
+[5. Functions]{.fragment .fade-in}
+
+
+# 1. Folder structure {.h1-blue}
+
+# 2. Define variables in a setup script {.h1-blue}
+
+# 3. Code style {.h1-blue}
+
+# 4. Code comments {.h1-blue}
+
+# 5. Functions {.h1-blue}
+
