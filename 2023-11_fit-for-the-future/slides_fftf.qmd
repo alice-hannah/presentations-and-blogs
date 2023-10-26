@@ -1,0 +1,25 @@
+---
+title: "RAP in Practice"
+subtitle: "Fit for the Future - Day 4"
+author: "Alice Byers"
+institute: "Data Innovation Team, Data Division"
+date: "16 November 2023"
+format:
+  revealjs: 
+    embed-resources: true
+    slide-number: true
+    logo: images/SG-logo.jpg
+    controls: true
+    link-external-newwindow: true
+    preview-links: true
+    theme: [default, styles.scss]
+execute:
+  echo: false
+  fig-format: "svg"
+lang: en
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r content, child = "content.qmd"} 
+```
