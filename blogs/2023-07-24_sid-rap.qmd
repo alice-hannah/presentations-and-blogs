@@ -31,7 +31,7 @@ The Scottish Government is committed to embedding RAP in its analytical processe
 
 ::: {.column width="20%"}
 
-![](images/rap_hex.png){width=80% fig-alt=""}
+![](images/rap_hex.png){width=80% fig-alt="A hexagonal logo for RAP. A green pipe on a white background with the word 'RAP' in black text."}
 
 :::
 
