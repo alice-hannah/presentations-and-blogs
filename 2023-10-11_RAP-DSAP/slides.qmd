@@ -14,7 +14,7 @@ format:
 lang: en
 ---
 
-## Is RAP relevent to me?
+## Is RAP relevant to me?
 
 ::: {.incremental}
 
