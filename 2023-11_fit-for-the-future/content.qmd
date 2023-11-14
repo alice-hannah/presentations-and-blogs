@@ -1,0 +1,350 @@
+## About me
+
+* Reproducible Analytical Pipeline (RAP) developer
+
+* Background in statistics and data analysis
+
+
+## Is RAP relevent to me and my team?
+
+::: {.incremental}
+
+-   Would it be a nightmare to have to go back and rerun your process from the beginning if you found a mistake?
+
+-   Do you have to make a lot of manual edits to code before each run?
+
+-   Is there a lot of repetition in your code?
+
+-   Would a new person find it difficult to understand the process?
+
+:::
+
+::: notes
+-   If the answer to any of these is yes, then RAP could help you.
+:::
+
+
+## Features of RAP {.smaller}
+
+In order to achieve the full benefits, at a minimum a RAP must:
+
+-   Minimise manual steps
+
+-   Be built using open-source software; e.g. R, python
+
+-   Be peer reviewed by colleagues
+
+-   Be version controlled; e.g. git
+
+-   Be open to anyone; e.g. code published on GitHub
+
+-   Follow good practice for quality assurance
+
+-   Contain well-commented code and have documentation embedded
+
+::: footer
+Source: [Reproducible Analytical Pipelines (RAP) – Government Analysis Function](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/)
+:::
+
+::: notes
+-   It is not essential to do all of these at once. Start small and iterate.
+
+-   This is where using agile project management can be useful to encourage iterative development and continuous review.
+:::
+
+## Organised folder structure <img width='10%' align='right' src='images/folder-open-solid.svg' alt=''/> 
+
+<br>
+
+* Keep everything you need to run your code within one repository
+
+* Plan ahead for how you're going to organise future data submissions, outputs, etc.
+
+::: {.footer}
+[Duck book: Structuring your project](https://best-practice-and-impact.github.io/qa-of-code-guidance/project_structure.html)
+:::
+
+
+## Organised folder structure <img width='10%' align='right' src='images/folder-open-solid.svg' alt=''/> 
+
+A good place to start:
+
+```
+    my-project/
+    ├── code/
+    │   ├── 00_setup.R
+    │   └── 01_clean_data.R
+    ├── functions/
+    ├── data/
+    ├── lookups/
+    ├── outputs/
+    │   ├── 2022/
+    │   └── 2023/
+    └── README.md
+```
+
+::: {.footer}
+[Duck book: Structuring your project](https://best-practice-and-impact.github.io/qa-of-code-guidance/project_structure.html)
+:::
+
+
+## Standardised naming conventions <img width='10%' align='right' src='images/file-signature-solid.svg' alt=''/> 
+
+* Underscores and dashes instead of spaces
+
+* All lower case
+
+* Date stamp data and output files
+
+* Number R scripts
+
+* Document the agreed naming convention
+
+::: {.notes}
+Why do this?
+
+* Easier for people to find
+* Easier for computer/code to find
+* Date stamps help sort files in file explorer
+
+Related: ensure consistent file types
+:::
+
+
+## Standardised naming conventions <img width='10%' align='right' src='images/file-signature-solid.svg' alt=''/> 
+
+Examples:
+
+* 2023-11-16_attendance.rds
+
+* 2022_school-report.html
+
+* 01_prepare-data.R
+   
+
+## Open-source software <img width='10%' align='right' src='images/Rlogo.svg' alt=''/> 
+
+* Free for anybody to use
+
+* Active support community
+
+* Flexible: data cleaning, analysis, modelling, visualisation, reporting (and more!)
+
+* R is the most widely used and supported in the Scottish Government
+
+::: {.notes}
+* Proprietary software such as SAS, Microsoft Excel, or Tableau means your analysis is not truly reproducible because you cannot run the process without owning a license. 
+:::
+
+
+## Relative file paths <img width='10%' align='right' src='images/folder-tree-solid.svg' alt=''/> 
+
+* Avoid hard-coding file paths
+
+* Use RStudio Projects
+
+* Use the `here` package to define file paths relative to your project folder
+
+
+## Writing manual processes as code <img width='10%' align='right' src='images/pencil-solid.svg' alt=''/> 
+
+* Creating new folders
+
+* Updating parameters; e.g. dates, geographies
+
+* Creating outputs; e.g. data visualisation, reports, spreadsheets
+
+
+## Functions <img width='10%' align='right' src='images/gears-solid.svg' alt=''/> 
+
+* Don't repeat yourself
+
+* Function arguments allow you to re-use the function for 'similar' actions
+
+* Reduces effort to maintain code
+
+::: {.footer}
+[Duck book: Write re-usable code as functions](https://best-practice-and-impact.github.io/qa-of-code-guidance/modular_code.html#write-re-usable-code-as-functions)
+:::
+
+
+## Version control <img width='10%' align='right' src='images/git.svg' alt=''/>
+
+* Alternative to saving multiple copies of files to keep version history
+
+* When a change is made to a file, create a Git 'commit' to record: 
+    * **what** change was made, 
+    * **when** the change was made, 
+    * **why** the change was made, and 
+    * **who** made the change.
+
+::: {.footer}
+[Duck book: Version Control](https://best-practice-and-impact.github.io/qa-of-code-guidance/version_control.html)
+:::
+
+::: {.notes}
+* Git is another example of open-source software.
+:::
+
+
+## Open code <img width='10%' align='right' src='images/github.svg' alt=''/> 
+
+* Host a Git repository on GitHub and make it public
+
+* Increase trust by making analysis transparent
+
+* Facilitate peer review
+
+* Make it easier for others to reuse code
+
+::: {.footer}
+[Analysis Function: Open sourcing analytical code](https://analysisfunction.civilservice.gov.uk/policy-store/open-sourcing-analytical-code/)
+:::
+
+
+## Summary of examples {.smaller}
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="22%"}
+<center>
+<img class='icon' alt='' src='images/folder-open-solid.svg'/>
+Organised folder structure
+
+<br>
+
+<img class='icon' alt='' src='images/pencil-solid.svg'/>
+Writing manual processes as code
+</center>
+:::
+
+
+::: {.column width="4%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="22%"}
+<center>
+<img class='icon' alt='' src='images/file-signature-solid.svg'/>
+Standardised naming conventions
+
+<br>
+
+<img class='icon' alt='' src='images/gears-solid.svg'/>
+Functions
+</center>
+:::
+
+::: {.column width="4%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="22%"}
+<center>
+<img class='icon' alt='' src='images/Rlogo.svg'/>
+Open-source software
+
+<br><br>
+
+<img class='icon' alt='' src='images/git.svg'/>
+Version control using git
+</center>
+:::
+
+::: {.column width="4%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="22%"}
+<center>
+<img class='icon' alt='' src='images/folder-tree-solid.svg'/>
+Relative file paths
+
+<br><br>
+
+<img class='icon' alt='' src='images/github.svg'/>
+Open code
+</center>
+:::
+
+::::
+
+::: notes
+-   Not an exhaustive list but some of the fundamentals
+
+-   Some seemingly 'simple' things that had a big impact
+:::
+
+
+
+## Where to start
+
+::: {.fragment}
+-   Open-source software
+:::
+
+::: {.fragment}
+-   Would it be a nightmare to have to go back and rerun your process from the beginning if you found a mistake?
+
+    -   Git 
+:::
+
+::: {.fragment}
+-   Do you have to make a lot of manual edits to code before each run?
+
+    -   Setup script 
+:::
+
+
+::: notes
+-   As I said earlier, start by thinking of one way you could improve your current process and try and implement some changes to address this.
+
+-   Open source: will make other changes easier; go on some training; try and replicate a small part of existing process in R (for example) to practice and test approach
+
+-   Reproducibility: using Git keeps your history so you can revert back to previous versions if need be
+
+-   Manual edits: set up script; set all variables here and reuse across the rest of your code
+:::
+
+
+## Where to start
+
+::: {.fragment}
+-   Is there a lot of repetition in your code?
+
+    -   Functions 
+:::
+
+::: {.fragment}
+-   Would a new person find it difficult to understand the process?
+
+    -   Documentation 
+:::
+    
+
+::: notes
+-   Functions: where identical or similar code is repeated, write a function
+
+-   Documentation: save in the same place as the project code/files; ask other people to read and give feedback; comment code
+:::
+
+
+## Links & Contact
+
+-   [Government Analysis Function RAP Resources](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/)
+
+- [Duck book](https://best-practice-and-impact.github.io/qa-of-code-guidance/intro.html)
+
+-   [Civil Service RAP Strategy](https://analysisfunction.civilservice.gov.uk/policy-store/reproducible-analytical-pipelines-strategy/) and [Scottish Government Implementation Plan](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/departmental-rap-plans/initial-scottish-government-rap-strategy-implementation-plan-2023/)
+
+-   [Blog: How we saved 3 analysts 6 weeks of copying and pasting](https://blogs.gov.scot/statistics/2023/07/24/reproducible-analytical-pipelines-how-we-saved-3-analysts-6-weeks-of-copying-and-pasting/)
+
+-   Email me -- I'm always happy to talk about RAP!
+
+    -   [alice.byers\@gov.scot](mailto:alice.byers@gov.scot)
+
+::: notes
+-   Duck book is for 'Quality assurance of code for analysis and research'. Acronym sounds a bit like 'quack' which is the noise a duck makes.
+:::
