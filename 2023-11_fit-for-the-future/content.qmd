@@ -64,6 +64,13 @@ Source: [Reproducible Analytical Pipelines (RAP) – Government Analysis Functio
 [Duck book: Structuring your project](https://best-practice-and-impact.github.io/qa-of-code-guidance/project_structure.html)
 :::
 
+::: {.notes}
+Why?
+* Easier to find things
+* More portable
+* 
+:::
+
 
 ## Organised folder structure <img width='10%' align='right' src='images/folder-open-solid.svg' alt=''/> 
 
@@ -113,6 +120,8 @@ Related: ensure consistent file types
 
 ## Standardised naming conventions <img width='10%' align='right' src='images/file-signature-solid.svg' alt=''/> 
 
+<br>
+
 Examples:
 
 * 2023-11-16_attendance.rds
@@ -121,20 +130,6 @@ Examples:
 
 * 01_prepare-data.R
    
-
-## Open-source software <img width='10%' align='right' src='images/Rlogo.svg' alt=''/> 
-
-* Free for anybody to use
-
-* Active support community
-
-* Flexible: data cleaning, analysis, modelling, visualisation, reporting (and more!)
-
-* R is the most widely used and supported in the Scottish Government
-
-::: {.notes}
-* Proprietary software such as SAS, Microsoft Excel, or Tableau means your analysis is not truly reproducible because you cannot run the process without owning a license. 
-:::
 
 
 ## Relative file paths <img width='10%' align='right' src='images/folder-tree-solid.svg' alt=''/> 
@@ -154,17 +149,55 @@ Examples:
 
 * Creating outputs; e.g. data visualisation, reports, spreadsheets
 
+::: {.notes}
+* Instead of editing lots of different lines of code with the 'new quarter', define this parameter once and reuse
+* Derive related dates; e.g. previous quarter, next quarter to minimise effort and chance of human error
+* Copying and pasting data / figures from R to Excel to Word is laborious and risky.
+* R has packages to create data visualisations (static and interactive), documents, formatted spreadsheets and dashboards.
+:::
+
 
 ## Functions <img width='10%' align='right' src='images/gears-solid.svg' alt=''/> 
 
+<br>
+
 * Don't repeat yourself
 
-* Function arguments allow you to re-use the function for 'similar' actions
+* Use function arguments to re-use the function for 'similar' actions
 
-* Reduces effort to maintain code
+* Keep as simple as possible
 
 ::: {.footer}
 [Duck book: Write re-usable code as functions](https://best-practice-and-impact.github.io/qa-of-code-guidance/modular_code.html#write-re-usable-code-as-functions)
+:::
+
+::: {.notes}
+* If your function is complicated or large, try breaking it down into smaller functions.
+:::
+
+
+## Documentation <img width='10%' align='right' src='images/book.svg' alt=''/> 
+
+* Code comments to provide context
+
+* Include a README file
+
+    * Description of the process
+    
+    * Requirements and dependencies
+    
+    * Guidance to run the process
+    
+    * Contact details
+
+::: {.footer}
+[Duck book: Code documentation](https://best-practice-and-impact.github.io/qa-of-code-guidance/code_documentation.html)
+:::
+
+::: {.notes}
+* Use comments to provide context or to explain reasoning behind decisions. Avoid repeating what is already obvious from the code.
+
+* Ask others who don't know the process for feedback.
 :::
 
 
@@ -202,9 +235,7 @@ Examples:
 :::
 
 
-## Summary of examples {.smaller}
-
-<br>
+## Summary {.smaller}
 
 :::: {.columns}
 
@@ -215,8 +246,8 @@ Organised folder structure
 
 <br>
 
-<img class='icon' alt='' src='images/pencil-solid.svg'/>
-Writing manual processes as code
+<img class='icon' alt='' src='images/gears-solid.svg'/>
+Functions
 </center>
 :::
 
@@ -232,24 +263,8 @@ Standardised naming conventions
 
 <br>
 
-<img class='icon' alt='' src='images/gears-solid.svg'/>
-Functions
-</center>
-:::
-
-::: {.column width="4%"}
-<!-- empty column to create gap -->
-:::
-
-::: {.column width="22%"}
-<center>
-<img class='icon' alt='' src='images/Rlogo.svg'/>
-Open-source software
-
-<br><br>
-
-<img class='icon' alt='' src='images/git.svg'/>
-Version control using git
+<img class='icon' alt='' src='images/book.svg'/>
+Documentation
 </center>
 :::
 
@@ -263,6 +278,22 @@ Version control using git
 Relative file paths
 
 <br><br>
+
+<img class='icon' alt='' src='images/git.svg'/>
+Version control
+</center>
+:::
+
+::: {.column width="4%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="22%"}
+<center>
+<img class='icon' alt='' src='images/pencil-solid.svg'/>
+Writing manual processes as code
+
+<br>
 
 <img class='icon' alt='' src='images/github.svg'/>
 Open code
@@ -294,7 +325,7 @@ Open code
 ::: {.fragment}
 -   Do you have to make a lot of manual edits to code before each run?
 
-    -   Setup script 
+    -   Set parameters in a setup script 
 :::
 
 
