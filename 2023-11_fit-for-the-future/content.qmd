@@ -64,13 +64,6 @@ Source: [Reproducible Analytical Pipelines (RAP) – Government Analysis Functio
 [Duck book: Structuring your project](https://best-practice-and-impact.github.io/qa-of-code-guidance/project_structure.html)
 :::
 
-::: {.notes}
-Why?
-* Easier to find things
-* More portable
-* 
-:::
-
 
 ## Organised folder structure <img width='10%' align='right' src='images/folder-open-solid.svg' alt=''/> 
 
@@ -151,8 +144,11 @@ Examples:
 
 ::: {.notes}
 * Instead of editing lots of different lines of code with the 'new quarter', define this parameter once and reuse
+
 * Derive related dates; e.g. previous quarter, next quarter to minimise effort and chance of human error
+
 * Copying and pasting data / figures from R to Excel to Word is laborious and risky.
+
 * R has packages to create data visualisations (static and interactive), documents, formatted spreadsheets and dashboards.
 :::
 
