@@ -11,14 +11,14 @@ format:
 
 Slides for presentation on RAP (Reproducible Analytical Pipelines) in Practice at the [Scottish Government Digital Academy Fit for the Future](https://digitalacademy.arlo.co/courses/112-fit-for-the-future-leading-a-modern-statistical-service?e=2f5fd1d61f1240239af248e29ede693d) event on 16 November 2023.
 
-[Slides](.../2023-11_fit-for-the-future/slides_fftf.html){.external target="_blank"}
+[Slides](../2023-11_fit-for-the-future/slides_fftf.html){.external target="_blank"}
 
 
 ### Accessible data visualisations
 
 Slides for the Scottish Government Accessibility Champions network meeting on 19 October 2023.
 
-[Slides](.../2023-10-19_accessible-data-vis/slides.html){.external target="_blank"}
+[Slides](../2023-10-19_accessible-data-vis/slides.html){.external target="_blank"}
 
 ### Introduction to RAP
 
