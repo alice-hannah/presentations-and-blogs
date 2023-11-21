@@ -11,7 +11,7 @@ format:
 
 Slides for presentation on RAP (Reproducible Analytical Pipelines) in Practice at the Scottish Government Senior Statisticians Away Day on 22 November 2023.
 
-[Slides](.../2023-11-22_senior-stats/slides.html){.external target="_blank"}
+[Slides](../2023-11-22_senior-stats/slides.html){.external target="_blank"}
 
 ### RAP in Practice
 
