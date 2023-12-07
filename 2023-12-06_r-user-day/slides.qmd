@@ -2,7 +2,7 @@
 title: "5 practical ways to improve your R project"
 subtitle: "Scottish Government R User Day"
 author: "Alice Byers"
-institute: "Data Innovation Team, Data Division"
+institute: "Data Division, Scottish Government"
 date: "6 December 2023"
 format:
   revealjs: 
@@ -13,36 +13,538 @@ format:
     link-external-newwindow: true
     preview-links: true
     theme: [default, styles.scss]
-execute:
-  echo: false
-  fig-format: "svg"
+    code-line-numbers: false
+    code-overflow: wrap
 lang: en
 editor_options: 
   chunk_output_type: console
 ---
 
-## 5 examples
+## Disclaimer
 
 <br>
 
-[1. Folder structure]{.fragment .fade-in-then-semi-out}
+* Opinion based on experience
 
-[2. Define variables in a setup script]{.fragment .fade-in-then-semi-out}
+* One size doesn't fit all
 
-[3. Code style]{.fragment .fade-in-then-semi-out}
+::: {.notes}
+* Pick and mix which methods to try out
+* See what works for you and your team and change things up if it's not working
+:::
 
-[4. Code comments]{.fragment .fade-in-then-semi-out}
 
-[5. Functions]{.fragment .fade-in}
+# 1. RStudio Projects {.h1-blue}
 
+## Why?
 
-# 1. Folder structure {.h1-blue}
+* Keeps all related files together in one folder
 
-# 2. Define variables in a setup script {.h1-blue}
+* Sets working directory so file paths can be relative to project
+
+* Facilitates use of RStudio Git integration
+
+::: footer
+[Posit Support: Using RStudio Projects](https://support.posit.co/hc/en-us/articles/200526207-Using-RStudio-Projects)
+:::
+
+## How to create an RStudio project
+
+* In RStudio, go to File -\> New Project...
+
+* Create a new project or add a project to an existing directory
+
+![](images/new-project.png){fig-align="center" width="10%" fig-alt="A window in RStudio with options to create a project in a new directory, existing directory, or from a version control repository."}
+
+::: footer
+[Posit Support: Using RStudio Projects](https://support.posit.co/hc/en-us/articles/200526207-Using-RStudio-Projects)
+:::
+
+## Opening an RStudio Project {.smaller}
+
+* Creating an RStudio Project adds an `.Rproj` file to your directory
+
+    ``` r
+    my-project/
+    └── my-project.Rproj
+    ```
+
+<div style="line-height:30%;"><br></div>
+
+* Open this file to open your project in RStudio
+
+* Working directory automatically set to location of `my-project.Rproj`
+
+* The 'Files' pane in RStudio will show your project directory
+
+::: footer
+[Posit Support: Using RStudio Projects](https://support.posit.co/hc/en-us/articles/200526207-Using-RStudio-Projects)
+:::
+
+## Opening an RStudio Project
+
+![](images/open-project.png){width=10% fig-align="center" fig-alt="A screenshot of a project open in RStudio. The project name is displayed at the top-right of the screen, and the project directory is displayed in the bottom-right pane."}
+
+::: footer
+[Posit Support: Using RStudio Projects](https://support.posit.co/hc/en-us/articles/200526207-Using-RStudio-Projects)
+:::
+
+## Folder structure
+
+* Where possible, store all files related to your project within your RStudio Project directory
+
+    ``` r
+    my-project/
+        ├── code/
+        ├── functions/
+        ├── data/
+        ├── lookups/
+        ├── outputs/
+        └── my-project.Rproj
+    ```
+
+::: footer
+[Duck book: Structuring your project](https://best-practice-and-impact.github.io/qa-of-code-guidance/project_structure.html)
+:::
+
+::: notes
+* Add sub-folders to further organise. For example;
+
+    * Under code, you could have a folder for data cleaning code, and another for data modelling.
+    * Under outputs, you could have a folder for 2022 outputs and another for 2023.
+:::
+
+## Relative file paths {.smaller}
+
+* Absolute file paths are difficult to manage and are likely to break if you move your project to a different folder or ask somebody else to run your code.
+
+    ``` r
+    "C:/Documents/Alice's Folder/my-project/data/"
+    ```
+
+<div style="line-height:30%;"><br></div>
+
+::: {.fragment}
+* Use the [here package](https://here.r-lib.org/) to write file paths relative to your project directory.
+
+    ``` r
+    here::here("data")
+
+    here::here("outputs", "2023")
+    ```
+:::
+
+::: footer
+[Why should I use the here package?](https://malco.io/articles/2018-11-05-why-should-i-use-the-here-package-when-i-m-already-using-projects)
+:::
+
+::: notes
+* If you give the project to somebody else or have to move it to a different folder, your code won't work if they don't have access to this file path
+:::
+
+# 2. Use a setup script {.h1-blue}
+
+## Why?
+
+* Loading all packages in one place makes it easy to see what is required to run the code
+
+* Defining all variables / parameters in one place reduces the number of places in the code you need to edit to make a change
+
+## Example
+
+```{r, eval = FALSE, echo = TRUE}
+
+# Read in data for current and previous year
+
+schools <- readr::read_csv(
+   here::here("data", "2023-03-31_schools.csv")
+)
+
+library(readr)
+
+schools_prev <- read_csv(
+   here::here("data", "2022-03-31_schools.csv")
+)
+  
+```
+
+## Example - Setup script
+
+``` {.r filename="00_setup.R"}
+
+# Load packages ----
+
+library(here)
+library(readr)
+library(lubridate)
+
+# Set parameters ----
+
+month_end <- ymd("2023-03-31")
+
+prev_year <- month_end - years(1)
+  
+```
+
+## Example - Sourcing setup script
+
+``` {.r filename="01_read-data.R"}
+
+# Run setup script ----
+
+source(here::here("code", "00_setup.R"))
+
+# Read in data for current and previous year ----
+
+schools <- read_csv(
+   here("data", paste0(month_end, "_schools.csv"))
+)
+
+schools_prev <- read_csv(
+   here("data", paste0(prev_year, "_schools.csv"))
+)
+  
+```
+
 
 # 3. Code style {.h1-blue}
 
+## Why?
+
+* Makes code easier to write
+
+* Makes code easier to understand
+
+* Makes code easier to debug
+
+## Tidyverse style guide
+
+* <https://style.tidyverse.org/>
+
+    * Naming files
+
+    * Naming objects
+
+    * Spacing
+
+    * Using pipes (`%>%`)
+
+    * and lots more
+
+## Example
+
+* Bad practice:
+
+```{r}
+#| code-overflow: scroll
+#| eval: false
+#| echo: true
+     
+do_something_very_complicated(something="that",requires=many,arguments="some of which may be long")
+```
+
+::: {.fragment}
+* Good practice:
+
+    ``` r
+    do_something_very_complicated(
+      something = "that",
+      requires = many, 
+      arguments = "some of which may be long"
+    )
+    ```
+:::
+
+## lintr
+
+[lintr](https://lintr.r-lib.org/) runs style checks on existing code and reports back any issues (but doesn't change any of your code).
+
+<div style="line-height:20%;"><br></div>
+
+::: {.fragment}
+``` {.r filename="code.R"}
+do_something_very_complicated(something="that",requires=many,arguments="some of which may be long")
+```
+:::
+
+<div style="line-height:20%;"><br></div>
+
+::: {.fragment}
+``` r
+lintr::lint("code.R")
+```
+:::
+
+<div style="line-height:20%;"><br></div>
+
+::: {.fragment}
+``` r
+[infix_spaces_linter] Put spaces around all infix operators.
+[commas_linter] Commas should always have a space after.
+[infix_spaces_linter] Put spaces around all infix operators.
+[commas_linter] Commas should always have a space after.
+[infix_spaces_linter] Put spaces around all infix operators.
+[line_length_linter] Lines should not be more than 80 characters.
+```
+:::
+
+::: footer
+[lintr guidance](https://lintr.r-lib.org/)
+:::
+
+## styler
+
+[styler](http://styler.r-lib.org/) re-styles existing code following the tidyverse style guide
+
+:::: {.columns}
+
+::: {.column width=35%}
+![](https://style.tidyverse.org/styler-addin.png){fig-align="center" fig-alt="The add-in menu for styler in RStudio. The option to style selection is highlighted."}
+:::
+
+::: {.column width=65%}
+::: {.fragment}
+``` {.r filename="code.R"}
+do_something_very_complicated(
+  something = "that",
+  requires = many,
+  arguments = "some of which may be long"
+)
+```
+:::
+:::
+
+::::
+
+::: footer
+[styler guidance](http://styler.r-lib.org/)
+:::
+
 # 4. Code comments {.h1-blue}
 
+## Why?
+
+* Help somebody else understand the code you've written
+
+* Help future you understand the code you've written
+
+* Provide context
+
+* Section your code to provide structure and easier navigation
+
+::: footer
+[Duck book: Comments](https://best-practice-and-impact.github.io/qa-of-code-guidance/code_documentation.html#comments)
+:::
+
+## How?
+
+* Start a comment line with a single `#` followed by a space
+
+    ``` r
+    # My first comment
+    ```
+
+<div style="line-height:30%;"><br></div>
+
+::: {.fragment}
+* Help other people (and yourself in the future) understand how and why the code has been written in a particular way
+
+    ``` r
+    # Tried solution X, by Y worked better because of Z
+    ```
+:::
+
+::: footer
+[Duck book: Comments](https://best-practice-and-impact.github.io/qa-of-code-guidance/code_documentation.html#comments)
+:::
+
+## What to avoid {.smaller}
+
+::: incremental
+* Repeating what is already obvious from the code
+
+    ``` r
+    # Calculate percentage change
+    perc_change <- x / y * 100
+    ```
+    
+<div style="line-height:30%;"><br></div>
+
+* Hard coded values
+
+    ``` r
+    perc_change <- x / y * 100
+    # 2022: 65%; 2023: 52%
+    ```
+    
+<div style="line-height:30%;"><br></div>
+
+* Commenting out code to save for later or to be conditionally run
+
+    ``` r
+    # Uncomment and run in odd numbered years
+    # perc_change <- x / y * 100
+    ```
+    
+:::
+
+::: footer
+[Duck book: Comments](https://best-practice-and-impact.github.io/qa-of-code-guidance/code_documentation.html#comments)
+:::
+
+::: notes
+* Hard coded values are really difficult to keep up to date and can be difficult to find.
+
+* If you need to record values to refer back to, consider saving these out to a separate file.
+
+* Also poses problems if you decided to use Git and GitHub.
+
+* It can be unclear why certain code is commented out. Using Git can help if you are worried you might need to refer back to a previous version later. Otherwise, save it to another file to save just in case.
+:::
+
+
+## Code sections {.smaller}
+
+* A comment line followed by at least four dashes (-), equal signs (=), or hash signs (#)
+
+   ```r
+   # Section 1 ---------------------------
+   ```
+
+<div style="line-height:30%;"><br></div>
+
+* Navigate and fold
+
+<div style="line-height:5%;"><br></div>
+
+:::: {.columns}
+
+::: {.column width=50%}
+![](images/section-nav.png){fig-align="center" width=80% fig-alt="An open navigation menu in RStudio giving the option to navigate to Section 1, Section 2 or Section 3 in an R script."}
+:::
+
+::: {.column width=50%}
+![](images/section-fold.png){fig-align="center" width=80% fig-alt="An R script open in RStudio where Section 1 of the code is folded. The contents of the section are not visible."}
+:::
+
+::::
+
+::: {.footer}
+[Posit Support: Code folding and sections](https://support.posit.co/hc/en-us/articles/200484568-Code-Folding-and-Sections-in-the-RStudio-IDE)
+:::
+
 # 5. Functions {.h1-blue}
+
+[functions]: https://best-practice-and-impact.github.io/qa-of-code-guidance/modular_code.html#write-re-usable-code-as-functions
+
+## Why?
+
+* Minimises repetition
+
+* Simplifies code
+
+* Ensures consistent methods across code
+
+* Easier to maintain
+
+
+::: {.footer}
+[Duck book: Write re-usable code as functions][functions]
+:::
+
+
+## Example
+
+* Calculating financial year of a date
+
+::: {.fragment}
+``` {.r filename="functions/fin_year.R"}
+fin_year <- function(date) {
+  m <- lubridate::month(date)
+  y <- lubridate::year(date)
+
+  ifelse(
+    m <= 3,
+    paste0(y - 1, "/", y),
+    paste0(y, "/", y + 1)
+  )
+}
+```
+:::
+
+## Using the function
+
+``` {r, include = FALSE}
+fin_year <- function(date) {
+  m <- lubridate::month(date)
+  y <- lubridate::year(date)
+
+  ifelse(
+    m <= 3,
+    paste0(y - 1, "/", y),
+    paste0(y, "/", y + 1)
+  )
+}
+```
+
+<br>
+
+``` {r, echo = TRUE}
+lubridate::today()
+```
+
+<br>
+
+::: {.fragment}
+``` {r, echo = TRUE}
+fin_year(lubridate::today())
+```
+:::
+
+## Using the function in a script {.smaller}
+
+``` {.r filename="code/01_read-data.R" code-line-numbers="|5-7|12|16|"}
+# Run setup script ----
+
+source(here::here("code", "00_setup.R"))
+
+# Source functions ----
+
+source(here::here("functions", "fin_year.R"))
+
+# Read in data for current and previous year ----
+
+schools <- read_csv(
+   here("data", paste0(fin_year(month_end), "_schools.csv"))
+)
+
+schools_prev <- read_csv(
+   here("data", paste0(fin_year(prev_year), "_schools.csv"))
+)
+  
+```
+
+::: {.notes}
+* Store in a separate script
+:::
+
+# Summary {.h1-blue}
+
+1. RStudio Projects
+
+2. Use a setup script
+
+3. Code style
+
+4. Code comments
+
+5. Functions
+
+# Contact {.h1-blue}
+
+<div style="line-height:40%;"><br></div>
+
+Email: <alice.byers@gov.scot>
+
+GitHub: [alicebyers5](https://github.com/alicebyers5>)
 
