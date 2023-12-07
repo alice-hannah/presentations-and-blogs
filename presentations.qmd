@@ -7,11 +7,19 @@ format:
 
 ## 2023
 
+### 5 practical ways to improve your R project
+
+Slides for the [Scottish Government R User Day](https://datasciencescotland.github.io/R-user-day-talks/2023-12-06/agenda.html) on 6 December 2023.
+
+[Slides](../2023-12-06_r-user-day/slides.html){.external target="_blank"}
+
+
 ### RAP in Practice
 
 Slides for presentation on RAP (Reproducible Analytical Pipelines) in Practice at the Scottish Government Senior Statisticians Away Day on 22 November 2023.
 
 [Slides](../2023-11-22_senior-stats/slides.html){.external target="_blank"}
+
 
 ### RAP in Practice
 
