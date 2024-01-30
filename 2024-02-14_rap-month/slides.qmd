@@ -1,0 +1,206 @@
+---
+title: "What is RAP?"
+subtitle: "Statistics Group RAP Month"
+author: "Alice Byers"
+institute: "Data Innovation Team, Data Division"
+date: "14 February 2024"
+format:
+  revealjs: 
+    embed-resources: true
+    slide-number: true
+    logo: images/SG-logo.jpg
+    controls: true
+    link-external-newwindow: true
+    theme: [default, styles.scss]
+lang: en
+---
+
+
+## Why should I care about RAP?
+
+<br>
+
+::: {.incremental}
+
+* Less time spent producing routine analysis; more time for other work
+
+<div style="line-height:50%;"><br></div>
+
+* Better quality analysis
+
+:::
+
+::: {.notes}
+* In every RAP project I've worked on, we've discovered an error in the existing code. These often went undiscovered for so long because they were hidden amongst complicated, convoluted processes.
+
+* Creating a RAP not only helps you to weed out these existing errors; it makes them easier to identify and rectify in the future.
+:::
+
+
+## What is RAP?
+
+* An overall approach to carrying out analysis
+
+* A set of principles that ensure analysis is:
+
+   * reproducible
+   * auditable
+   * efficient
+   * high quality
+   
+::: {.notes}
+* Reproducible means that a process can be repeated at some point in the future and will produce the same result.
+
+* Auditable means that it is clear who, when and why decisions have been made.
+
+* Efficient means that a process is as simple as possible, with no redundant steps.
+
+* High quality means that you are confident your process is doing what you expect it to, often demonstrated by peer review.
+
+* More information on these principles can be found in the [Duck book](https://best-practice-and-impact.github.io/qa-of-code-guidance/principles.html)
+:::
+   
+   
+## Examples of projects
+
+* Routine 'traditional' publications
+
+* Shiny dashboards
+
+* Ministerial briefings
+
+* FOIs
+
+* One-off analysis
+   
+::: {.notes}
+* Although it might seem most obvious that this approach could be used for routine work such as publications, there are also lots of benefits to applying RAP to other types of analysis.
+
+* From experience, what begins as one-off, ad-hoc analysis can often end up being routine. Or at least repeated at some point in the future. 
+:::
+
+
+## Stages of analysis
+
+* Data extraction
+
+* Data cleaning
+
+* Data analysis
+
+* Modelling
+
+* Data visualisation
+
+* Reporting
+
+::: {.notes}
+* Your project may involve some or all of these steps
+
+* RAP applies to all parts of an analytical process, from extracting the data from a database or reading in from a file; to the final product, whatever that looks like.
+
+* So I've talked about when and where you can use RAP. But let's talk more about what it looks like in practice.
+:::
+
+
+## RAP principles {.smaller}
+
+In order to achieve the full benefits, at a minimum a RAP must:
+
+* Minimise manual steps
+
+* Be built using open-source software; e.g. R, Python
+
+* Be peer reviewed by colleagues
+
+* Be version controlled; e.g. Git
+
+* Be open to anyone; e.g. code published on GitHub
+
+* Follow good practice for quality assurance
+
+* Contain well-commented code and have documentation embedded
+
+::: footer
+Source: [Reproducible Analytical Pipelines (RAP) – Government Analysis Function](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/)
+:::
+
+::: {.notes}
+* It might not always be possible to make your code open; for example, when your analysis concerns something sensitive or not in the public domain. However, most of the time this should be possible. 
+
+* Making your code open is not the same as publishing open data.
+:::
+
+
+## Where to start
+
+* Following all 7 principles will help you to achieve the **full benefits**
+
+<div style="line-height:50%;"><br></div>
+
+::: {.incremental}
+
+* Following one or some of the principles will **still bring benefits!**
+
+<div style="line-height:50%;"><br></div>
+
+* Start small, review and iterate
+
+:::
+
+
+## RAP Support {.h2-no-pad .smaller}
+
+* We can help with:
+
+    * Reviewing project requirements and mapping out a process.
+
+    * Deciding where to start when transitioning a process to a RAP.
+
+    * Understanding what software is available and how to make best use of it.
+
+    * Following best practices for structuring scripts, files and folders for your RAP.
+
+    * Using Git and GitHub, ensuring your RAP project is setup within a repository.
+
+    * Applying best practices to your code, for example "do not repeat yourself" and following coding conventions from a style guide.
+
+    * Reviewing your code.
+
+::: {.footer}
+[Statistics Group Sharepoint: Support for RAP](https://scotsconnect.sharepoint.com/sites/StatisticsGroup-Org-SG/SitePages/Support-for-Reproducible-Analytical-Pipelines.aspx)
+:::
+
+
+## RAP Support
+
+* Get in touch to discuss your project
+
+* Long term support
+
+    * The aim is to help you to develop your RAP skills, not to write all the code for you.
+
+    * Agreement to work together for 4-6 months
+
+    * Regular meetings to review progress
+
+::: {.footer}
+[Statistics Group Sharepoint: Support for RAP](https://scotsconnect.sharepoint.com/sites/StatisticsGroup-Org-SG/SitePages/Support-for-Reproducible-Analytical-Pipelines.aspx)
+:::
+
+
+## Links & Contact {.smaller}
+
+* [Government Analysis Function RAP Resources](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/)
+
+* [Civil Service RAP Strategy](https://analysisfunction.civilservice.gov.uk/policy-store/reproducible-analytical-pipelines-strategy/)
+
+* [Scottish Government Implementation Plan](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/departmental-rap-plans/initial-scottish-government-rap-strategy-implementation-plan-2023/)
+
+* [Statistics Group Sharepoint: Support for RAP](https://scotsconnect.sharepoint.com/sites/StatisticsGroup-Org-SG/SitePages/Support-for-Reproducible-Analytical-Pipelines.aspx)
+
+* [Blog: How we saved 3 analysts 6 weeks of copying and pasting](https://blogs.gov.scot/statistics/2023/07/24/reproducible-analytical-pipelines-how-we-saved-3-analysts-6-weeks-of-copying-and-pasting/)
+
+* Email me -- I'm always happy to talk about RAP!
+
+    * [alice.byers\@gov.scot](mailto:alice.byers@gov.scot)

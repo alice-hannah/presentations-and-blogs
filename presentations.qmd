@@ -5,6 +5,15 @@ format:
     toc: true
 ---
 
+## 2024
+
+### What is RAP?
+
+Slides for the Scottish Government Statistics Group RAP Month session on 14 February 2024.
+
+[Slides](../2024-02-14_rap-month/slides.html){.external target="_blank"}
+
+
 ## 2023
 
 ### 5 practical ways to improve your R project
