@@ -67,48 +67,79 @@
     "href": "presentations.html",
     "title": "Presentations",
     "section": "",
-    "text": "Slides for the Scottish Government R User Day on 6 December 2023.\nSlides\n\n\n\nSlides for presentation on RAP (Reproducible Analytical Pipelines) in Practice at the Scottish Government Senior Statisticians Away Day on 22 November 2023.\nSlides\n\n\n\nSlides for presentation on RAP (Reproducible Analytical Pipelines) in Practice at the Scottish Government Digital Academy Fit for the Future event on 16 November 2023.\nSlides\n\n\n\nSlides for the Scottish Government Accessibility Champions network meeting on 19 October 2023.\nSlides\n\n\n\nA version of the previous RAP in the Scottish Government presentation edited for the Data Science Accelerator 2023 cohort meeting on 11 October 2023.\nSlides\n\n\n\nSlides for the Scottish Government analytical seminar on use of the sgplot package on 19 June 2023. This presentation was jointly delivered with Lee Bunce from the Office of the Chief Statistician.\nSlides\n\n\n\nSlides for the Scottish Government Analyst Induction event on Data Tools and Standards on 13 June 2023.\nSlides\n\n\n\nSlides for non-technical presentation to the Scottish Government Data Standards and Open Data Community of Practice on 27 April 2023.\nSlides"
+    "text": "Slides for the Scottish Government Statistics Group RAP Month session on 14 February 2024.\nSlides",
+    "crumbs": [
+      "Presentations"
+    ]
   },
   {
     "objectID": "presentations.html#section",
     "href": "presentations.html#section",
     "title": "Presentations",
     "section": "",
-    "text": "Slides for the Scottish Government R User Day on 6 December 2023.\nSlides\n\n\n\nSlides for presentation on RAP (Reproducible Analytical Pipelines) in Practice at the Scottish Government Senior Statisticians Away Day on 22 November 2023.\nSlides\n\n\n\nSlides for presentation on RAP (Reproducible Analytical Pipelines) in Practice at the Scottish Government Digital Academy Fit for the Future event on 16 November 2023.\nSlides\n\n\n\nSlides for the Scottish Government Accessibility Champions network meeting on 19 October 2023.\nSlides\n\n\n\nA version of the previous RAP in the Scottish Government presentation edited for the Data Science Accelerator 2023 cohort meeting on 11 October 2023.\nSlides\n\n\n\nSlides for the Scottish Government analytical seminar on use of the sgplot package on 19 June 2023. This presentation was jointly delivered with Lee Bunce from the Office of the Chief Statistician.\nSlides\n\n\n\nSlides for the Scottish Government Analyst Induction event on Data Tools and Standards on 13 June 2023.\nSlides\n\n\n\nSlides for non-technical presentation to the Scottish Government Data Standards and Open Data Community of Practice on 27 April 2023.\nSlides"
+    "text": "Slides for the Scottish Government Statistics Group RAP Month session on 14 February 2024.\nSlides",
+    "crumbs": [
+      "Presentations"
+    ]
   },
   {
     "objectID": "presentations.html#section-1",
     "href": "presentations.html#section-1",
     "title": "Presentations",
-    "section": "2022",
-    "text": "2022\n\nRAP in Practice\nSlides for presentation on RAP (Reproducible Analytical Pipelines) in Practice at the Scottish Government Digital Academy Fit for the Future event on 23 November 2022.\nSlides\n\n\nSchool Information Dashboard RAP\nSlides for presentation on School Information Dashboard Reproducible Analytical Pipeline (RAP) project at the Scottish Government R User Day on 5 October 2022. This presentation was jointly delivered with Laura Stott.\nSlides"
+    "section": "2023",
+    "text": "2023\n\n5 practical ways to improve your R project\nSlides for the Scottish Government R User Day on 6 December 2023.\nSlides\n\n\nRAP in Practice\nSlides for presentation on RAP (Reproducible Analytical Pipelines) in Practice at the Scottish Government Senior Statisticians Away Day on 22 November 2023.\nSlides\n\n\nRAP in Practice\nSlides for presentation on RAP (Reproducible Analytical Pipelines) in Practice at the Scottish Government Digital Academy Fit for the Future event on 16 November 2023.\nSlides\n\n\nAccessible data visualisations\nSlides for the Scottish Government Accessibility Champions network meeting on 19 October 2023.\nSlides\n\n\nIntroduction to RAP\nA version of the previous RAP in the Scottish Government presentation edited for the Data Science Accelerator 2023 cohort meeting on 11 October 2023.\nSlides\n\n\nCreating accessible charts in R using sgplot\nSlides for the Scottish Government analytical seminar on use of the sgplot package on 19 June 2023. This presentation was jointly delivered with Lee Bunce from the Office of the Chief Statistician.\nSlides\n\n\nRAP in the Scottish Government\nSlides for the Scottish Government Analyst Induction event on Data Tools and Standards on 13 June 2023.\nSlides\n\n\nIntroduction to Git and GitHub\nSlides for non-technical presentation to the Scottish Government Data Standards and Open Data Community of Practice on 27 April 2023.\nSlides",
+    "crumbs": [
+      "Presentations"
+    ]
   },
   {
     "objectID": "presentations.html#section-2",
     "href": "presentations.html#section-2",
     "title": "Presentations",
+    "section": "2022",
+    "text": "2022\n\nRAP in Practice\nSlides for presentation on RAP (Reproducible Analytical Pipelines) in Practice at the Scottish Government Digital Academy Fit for the Future event on 23 November 2022.\nSlides\n\n\nSchool Information Dashboard RAP\nSlides for presentation on School Information Dashboard Reproducible Analytical Pipeline (RAP) project at the Scottish Government R User Day on 5 October 2022. This presentation was jointly delivered with Laura Stott.\nSlides",
+    "crumbs": [
+      "Presentations"
+    ]
+  },
+  {
+    "objectID": "presentations.html#section-3",
+    "href": "presentations.html#section-3",
+    "title": "Presentations",
     "section": "2020",
-    "text": "2020\n\nCreating Management Reports using flexdashboard\nSlides for presentation on creating management reports using the flexdashboard R package at the PHI useR Group meeting on 25 February 2020.\nSlides"
+    "text": "2020\n\nCreating Management Reports using flexdashboard\nSlides for presentation on creating management reports using the flexdashboard R package at the PHI useR Group meeting on 25 February 2020.\nSlides",
+    "crumbs": [
+      "Presentations"
+    ]
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Presentations and Blogs",
     "section": "",
-    "text": "This site contains presentation slides and blogs I have written.\nI currently work as a Reproducible Analytical Pipeline (RAP) developer at the Scottish Government. Prior to this, I worked at Public Health Scotland (PHS) analysing data on topics such as Delayed Discharges, Dementia and Palliative and End of Life Care.\nA lot of my work is open and available on my GitHub profile."
+    "text": "This site contains presentation slides and blogs I have written.\nI currently work as a Reproducible Analytical Pipeline (RAP) developer at the Scottish Government. Prior to this, I worked at Public Health Scotland (PHS) analysing data on topics such as Delayed Discharges, Dementia and Palliative and End of Life Care.\nA lot of my work is open and available on my GitHub profile.",
+    "crumbs": [
+      "About"
+    ]
   },
   {
     "objectID": "blogs.html",
     "href": "blogs.html",
     "title": "Blogs",
     "section": "",
-    "text": "Reproducible Analytical Pipelines: How we saved 3 analysts 6 weeks of copying and pasting"
+    "text": "Reproducible Analytical Pipelines: How we saved 3 analysts 6 weeks of copying and pasting",
+    "crumbs": [
+      "Blogs"
+    ]
   },
   {
     "objectID": "blogs.html#section",
     "href": "blogs.html#section",
     "title": "Blogs",
     "section": "",
-    "text": "Reproducible Analytical Pipelines: How we saved 3 analysts 6 weeks of copying and pasting"
+    "text": "Reproducible Analytical Pipelines: How we saved 3 analysts 6 weeks of copying and pasting",
+    "crumbs": [
+      "Blogs"
+    ]
   }
 ]
