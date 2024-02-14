@@ -49,8 +49,6 @@ lang: en
    * high quality
    
 ::: {.notes}
-* RAP is no one thing, it is not all or nothing.
-
 * Reproducible means that a process can be repeated at some point in the future and will produce the same result.
 
 * Auditable means that it is clear who, when and why decisions have been made.
@@ -253,6 +251,8 @@ Examples:
 * [Government Analysis Function RAP Resources](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/)
 
 * [Blog: How we saved 3 analysts 6 weeks of copying and pasting](https://blogs.gov.scot/statistics/2023/07/24/reproducible-analytical-pipelines-how-we-saved-3-analysts-6-weeks-of-copying-and-pasting/)
+
+* [ONS Introduction to RAP training](https://analysisfunction.civilservice.gov.uk/training/introduction-to-reproducible-analytical-pipelines-rap/)
 
 * [Civil Service RAP Strategy](https://analysisfunction.civilservice.gov.uk/policy-store/reproducible-analytical-pipelines-strategy/)
 
