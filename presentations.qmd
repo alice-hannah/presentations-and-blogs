@@ -7,6 +7,12 @@ format:
 
 ## 2024
 
+### Accessible data visualisations
+
+Slides for the Community of Practice Open Data session on 13 March 2024.
+
+[Slides](../2024-03-13_accessible-data-vis/slides.html){.external target="_blank"}
+
 ### What is RAP?
 
 Slides for the Scottish Government Statistics Group RAP Month session on 14 February 2024.
