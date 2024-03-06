@@ -51,7 +51,7 @@ editor_options:
 
 . . .
 
-But first, a quick question: [What software do you use to produce charts?](https://app.sli.do/event/rXbNQTHXSzpYNirBpkDece/embed/polls/df35d195-aa99-47b5-a348-5c3e8605d121){preview-link="true"}
+But first, a quick question: [What software do you use to produce charts?](https://app.sli.do/event/15zDigsppNCDuQSRGduriP/embed/polls/0ef21d5b-c4a4-4c2f-8efd-3a5cc183dfb1){preview-link="true"}
 
 
 # Example {.h1-blue}
@@ -106,7 +106,7 @@ ex3_alt_story <- paste(
 
 ![](images/ex1.svg){fig-alt="`r ex1_alt`"}
 
-[Slido poll](https://app.sli.do/event/rXbNQTHXSzpYNirBpkDece/embed/polls/9855f8b6-39fb-409c-9ff9-990b2c83c448){preview-link="true"}: What could be improved?
+[Slido poll](https://app.sli.do/event/15zDigsppNCDuQSRGduriP/embed/polls/3e7035cd-d3e1-425e-9cff-36f0d8a928fa){preview-link="true"}: What could be improved?
 
 ::: {.notes}
 * No context given
@@ -228,7 +228,7 @@ sgplot:::colour_table(sgplot::sg_colour_palettes$main) |>
 
 . . .
 
-[Slido poll](https://app.sli.do/event/rXbNQTHXSzpYNirBpkDece/embed/polls/873ed3d5-81c6-4c46-bbdc-33d95da63885){preview-link="true"}: What could be improved?
+[Slido poll](https://app.sli.do/event/15zDigsppNCDuQSRGduriP/embed/polls/904ae71b-3412-4903-9448-2415c120a554){preview-link="true"}: What could be improved?
 
 ::: {.notes}
 * Some improvements
