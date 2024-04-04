@@ -1,0 +1,241 @@
+---
+title: Accessible colour palettes in sgplot
+author: "Lee Bunce, Office of the Chief Statistician <br> Alice Byers, Data Innovation Team"
+date: "11 April 2024"
+format:
+  revealjs: 
+    embed-resources: true
+    slide-number: true
+    logo: images/SG-logo.jpg
+    controls: true
+    link-external-newwindow: true
+    theme: [default, styles.scss]
+    preview-links: true
+execute:
+  echo: true
+  fig-format: "svg"
+lang: en
+---
+
+## Aims
+
+* Introduce sgplot and available colour palettes
+
+*	Demonstrate how to use sgplot
+
+* Explain why analysts should use sgplot
+
+
+## sgplot <img width='15%' align='right' src='images/sgplot-logo.svg' alt=''/> 
+
+<br>
+
+* sgplot is an R package for creating Scottish Government themed accessible plots
+
+* It works as an add-on to [`ggplot2`](https://ggplot2.tidyverse.org/) plots
+
+* Includes a `ggplot2` theme and colour palettes
+
+
+## Scottish Government colour palettes
+
+* From [Design System data visualisation guidance](https://designsystem.gov.scot/guidance/charts/data-visualisation-colour-palettes)
+
+* Palettes available for: 
+
+  * Categorical data (`main` and `main-extended`)
+
+  * Sequential categorical data (`sequential`)
+
+  * Focus charts (`focus`)
+
+* `main` palette used by default
+
+
+::: {.footer}
+[sgplot colours](https://scotgovanalysis.github.io/sgplot/articles/colours.html)
+:::
+
+
+## Other colour palettes {.smaller}
+
+* [Analysis Function colour palettes](https://analysisfunction.civilservice.gov.uk/policy-store/data-visualisation-colours-in-charts/) also available in `sgplot`
+
+  * Same palette types (`main`, `sequential` and `focus`)
+
+* Scottish Government palettes used by default, but [easy to switch to analysis function (or other) palettes](https://scotgovanalysis.github.io/sgplot/articles/cookbook.html#using-non-default-sgplot-colour-palettes)
+
+* The package can be developed to add other colour palettes where necessary; for example, if another organisation/agency has a palette based on their own brand colours.
+
+
+::: {.footer}
+[sgplot colours](https://scotgovanalysis.github.io/sgplot/articles/colours.html)
+:::
+
+
+## Install the R package
+
+* On SCOTS, install in the same way you install other R packages
+
+* Easiest way is to use [pkginstaller](https://github.com/scotgovanalysis/pkginstaller) add-in
+
+* More guidance available on [eRDM](https://erdm.scotland.gov.uk/documents/A42404229/details)
+
+* Use `remotes::install_github()` if not working on SCOTS
+
+
+## Get some data
+
+```{r echo = TRUE}
+#| output-location: fragment
+#| code-line-numbers: "1-4|6-12"
+ 
+# Load packages
+library(ggplot2)
+library(dplyr)
+library(gapminder)
+
+# Create data set
+life_exp <-
+  gapminder |>
+  select(year, country, lifeExp) |>
+  filter(country %in% c("United Kingdom", "China"))
+
+head(life_exp)
+```
+
+::: {.notes}
+* Load the packages we need
+* Use gapminder package to get some data to use in examples
+:::
+
+
+## ggplot2 defaults
+
+```{r}
+#| output-location: fragment
+#| fig.height: 4
+#| fig.width: 8
+#| fig-alt: "A multiple line chart using default ggplot2 theme and colours. The background is grey with white grid lines, and the data lines are turquoise and orange."
+
+# Create line chart
+ggplot(life_exp) +
+  geom_line(aes(x = year, y = lifeExp, colour = country))
+```
+
+::: {.notes}
+* Use `life_exp` data we created in previous slide
+* Create a simple line chart with year on x axis, life expectancy on y axis and separate countries with colour.
+:::
+
+
+## Apply sgplot theme
+
+```{r}
+#| output-location: fragment
+#| code-line-numbers: "1|3-4|5"
+#| fig-height: 4
+#| fig-width: 8
+#| fig-alt: "A multiple line chart using sgplot theme. The background is white with grey horizontal grid lines. The data lines are turquoise and orange." 
+
+library(sgplot)
+
+ggplot(life_exp) +
+  geom_line(aes(x = year, y = lifeExp, colour = country)) +
+  theme_sg()
+```
+
+::: {.notes}
+* Theme has changed
+* Colour palette is unchanged
+:::
+
+
+## Apply sgplot colour palette
+
+```{r}
+#| output-location: fragment
+#| code-line-numbers: "4"
+#| fig-height: 4
+#| fig-width: 8
+#| fig-alt: "A multiple line chart using sgplot theme and main colour palette. The background is white with grey horizontal grid lines. The data lines are dark blue and turquoise" 
+
+ggplot(life_exp) +
+  geom_line(aes(x = year, y = lifeExp, colour = country)) +
+  theme_sg() +
+  scale_colour_discrete_sg()
+```
+
+
+## Use alternative colour palette
+
+```{r}
+#| output-location: fragment
+#| code-line-numbers: "4"
+#| fig-height: 4
+#| fig-width: 8
+#| fig-alt: "A multiple line chart using sgplot theme and main colour palette from analysis function palettes. The background is white with grey horizontal grid lines. The data lines are dark blue and orange." 
+
+ggplot(life_exp) +
+  geom_line(aes(x = year, y = lifeExp, colour = country)) +
+  theme_sg() +
+  scale_colour_discrete_sg(palette_type = "af")
+```
+
+
+* The [cookbook](https://scotgovanalysis.github.io/sgplot/articles/cookbook.html#other-customisations) contains examples of other tweaks you might want to make.
+
+* Further information on annotations is in the [cookbook](https://scotgovanalysis.github.io/sgplot/articles/cookbook.html#annotations).
+:::
+
+
+## Package website
+
+<https://scotgovanalysis.github.io/sgplot>{preview-link="true"}
+
+* [Cookbook](https://scotgovanalysis.github.io/sgplot/articles/cookbook.html); lots of example code
+
+* [Reference](https://scotgovanalysis.github.io/sgplot/reference/index.html); help files for sgplot functions
+
+* [Further guidance](https://scotgovanalysis.github.io/sgplot/articles/index.html) on accessibility, colours and saving charts
+
+* Guidance on [how to ask for help](https://scotgovanalysis.github.io/sgplot/SUPPORT.html) or [contribute](https://scotgovanalysis.github.io/sgplot/CONTRIBUTING.html)
+
+
+## Support and feedback
+
+* [How to get help](https://scotgovanalysis.github.io/sgplot/SUPPORT.html)
+
+  * [R Users Viva Engage Community](https://engage.cloud.microsoft/main/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiI2MzQ4MzE2NjczIn0)
+  
+  * [Open an issue on GitHub](https://github.com/scotgovanalysis/sgplot/issues/new) if you've found a bug
+  
+  * [Contact the maintainers](https://scotgovanalysis.github.io/sgplot/authors.html#authors)
+
+
+## Why use sgplot
+
+`sgplot` contributes to the wider priorities of the Statistics group:
+
+* Quality, consistency and trust
+
+* Accessibility
+
+* RAP
+
+* Story-driven publications
+
+::: {.notes}
+* All content published on public sector websites, including charts, must meet the level A and AA success criterion in the [Web Content Accessibility Guidelines 2.1](https://www.w3.org/TR/WCAG21/).
+:::
+
+
+## Contact us
+
+* Lee Bunce, Office of the Chief Statistician (OCS)
+
+  <lee.bunce@gov.scot>
+  
+* Alice Byers, Data Innovation Team
+  
+  <alice.byers@gov.scot>
