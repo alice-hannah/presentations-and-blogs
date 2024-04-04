@@ -7,6 +7,12 @@ format:
 
 ## 2024
 
+### Accessible colour palettes in sgplot
+
+Slides for a presentation to Social Security Scotland on [sgplot](https://scotgovanalysis.github.io/sgplot/) and the opportunity for adding new colour palettes.
+
+[Slides](../2024-04-11_sgplot-colour-palettes/slides.html){.external target="_blank"}
+
 ### Accessible data visualisations
 
 Slides for the Community of Practice Open Data session on 13 March 2024.
