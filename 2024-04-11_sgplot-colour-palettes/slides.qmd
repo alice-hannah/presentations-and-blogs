@@ -19,11 +19,28 @@ lang: en
 
 ## Aims
 
+* Explain why we created sgplot
+
 * Introduce sgplot and available colour palettes
 
 *	Demonstrate how to use sgplot
 
-* Explain why analysts should use sgplot
+
+## Why we created sgplot
+
+`sgplot` contributes to the wider priorities of the Statistics group:
+
+* Accessibility
+
+* Quality, consistency and trust
+
+* RAP and use of open-source software
+
+* Story-driven publications
+
+::: {.notes}
+* All content published on public sector websites, including charts, must meet the level A and AA success criterion in the [Web Content Accessibility Guidelines 2.1](https://www.w3.org/TR/WCAG21/).
+:::
 
 
 ## sgplot <img width='15%' align='right' src='images/sgplot-logo.svg' alt=''/> 
@@ -211,23 +228,6 @@ ggplot(life_exp) +
   * [Open an issue on GitHub](https://github.com/scotgovanalysis/sgplot/issues/new) if you've found a bug
   
   * [Contact the maintainers](https://scotgovanalysis.github.io/sgplot/authors.html#authors)
-
-
-## Why use sgplot
-
-`sgplot` contributes to the wider priorities of the Statistics group:
-
-* Quality, consistency and trust
-
-* Accessibility
-
-* RAP
-
-* Story-driven publications
-
-::: {.notes}
-* All content published on public sector websites, including charts, must meet the level A and AA success criterion in the [Web Content Accessibility Guidelines 2.1](https://www.w3.org/TR/WCAG21/).
-:::
 
 
 ## Contact us
