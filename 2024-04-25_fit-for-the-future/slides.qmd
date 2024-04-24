@@ -220,4 +220,12 @@ Source: [Reproducible Analytical Pipelines (RAP) – Government Analysis Functio
 
 * [Blog: How we saved 3 analysts 6 weeks of copying and pasting](https://blogs.gov.scot/statistics/2023/07/24/reproducible-analytical-pipelines-how-we-saved-3-analysts-6-weeks-of-copying-and-pasting/)
 
+* [RAP Strategy](https://analysisfunction.civilservice.gov.uk/policy-store/reproducible-analytical-pipelines-strategy/) and [SG Implementation Plan](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/departmental-rap-plans/initial-scottish-government-rap-strategy-implementation-plan-2023/)
+
 * [Email me](mailto:alice.byers@gov.scot) -- I'm always happy to talk about RAP!
+
+::: {.notes}
+* Following a successful R User Day in December 2023, the Analytical Tools community group are organising another day. This is expected to be held on 18 June 2024. This will cover lots of topics related to RAP with an R focus.
+
+* The Government Analysis Function published the RAP Strategy in June 2022. The Scottish Government have also published a plan to implement the strategy.
+:::
