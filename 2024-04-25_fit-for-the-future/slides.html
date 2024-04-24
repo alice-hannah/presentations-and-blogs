@@ -444,7 +444,7 @@
 
   <meta name="author" content="Alice Byers">
   <meta name="dcterms.date" content="2024-04-25">
-  <title>RAP in Practice</title>
+  <title>Reproducible Analytical Pipelines</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -1142,7 +1142,7 @@ margin-right: 0; }
     <div class="slides">
 
 <section id="title-slide" class="center">
-  <h1 class="title">RAP in Practice</h1>
+  <h1 class="title">Reproducible Analytical Pipelines</h1>
   <p class="subtitle">Fit for the Future: Leading a modern statistical service</p>
   <p class="author">Alice Byers</p>
   <p class="institute">Data Innovation Team, Data Division</p>
@@ -1155,6 +1155,22 @@ margin-right: 0; }
 <li><p>Reproducible Analytical Pipeline (RAP) developer</p></li>
 <li><p>Background in statistics and data analysis</p></li>
 </ul>
+<aside class="notes">
+<ul>
+<li><p>I work in the Data Division of the Scottish Government. I spend some of my time supporting teams to develop RAPs and the rest of my time developing tools and guidance.</p></li>
+<li><p>Although I’m not a statistician now, I’ve worked in stats in the past, mostly producing publications at Public Health Scotland.</p></li>
+</ul>
+<style type="text/css">
+span.MJX_Assistive_MathML {
+position:absolute!important;
+clip: rect(1px, 1px, 1px, 1px);
+padding: 1px 0 0 0!important;
+border: 0!important;
+height: 1px!important;
+width: 1px!important;
+overflow: hidden!important;
+display:block!important;
+}</style></aside>
 </section>
 <section id="why-should-i-care-about-rap" class="slide level2">
 <h2>Why should I care about RAP?</h2>
@@ -1172,8 +1188,10 @@ margin-right: 0; }
 </div>
 <aside class="notes">
 <ul>
-<li><p>In every RAP project I’ve worked on, we’ve discovered an error in the existing code. These often went undiscovered for so long because they were hidden amongst complicated, convoluted processes.</p></li>
-<li><p>Creating a RAP not only helps you to weed out these existing errors; it makes them easier to identify and rectify in the future.</p></li>
+<li><p>Repetitive manual work isn’t very enjoyable for most people.</p></li>
+<li><p>It can be frustrating to know how much useful analysis could be done with the data you hold, but not having the time to do any of it.</p></li>
+<li><p>Errors are easily hidden in complicated, convoluted processes that have grown arms and legs over many years.</p></li>
+<li><p>Creating a RAP can help you to weed out these existing errors; but also makes them easier to identify and rectify in the future.</p></li>
 </ul>
 <style type="text/css">
 span.MJX_Assistive_MathML {
@@ -1201,6 +1219,7 @@ display:block!important;
 </ul>
 <aside class="notes">
 <ul>
+<li><p>RAP is not a one-size-fits-all practice. It is best thought of as an approach rather than a ‘thing’ you either have or haven’t done. Not every RAP will look the same and often, there’s no end point where it’s ‘done’. There will always be more improvements you could make.</p></li>
 <li><p>Reproducible means that a process can be repeated at some point in the future and will produce the same result.</p></li>
 <li><p>Auditable means that it is clear who, when and why decisions have been made.</p></li>
 <li><p>Efficient means that a process is as simple as possible, with no redundant steps.</p></li>
@@ -1265,6 +1284,7 @@ display:block!important;
 <ul>
 <li><p>Git is version control software that is available to install and use on SCOTS. Use to record what, when, why and who made changes.</p></li>
 <li><p>It might not always be possible to make your code open; for example, when your analysis concerns something sensitive or not in the public domain. However, most of the time this should be possible.</p></li>
+<li><p>Write tests to make sure your code does what you expect it to do.</p></li>
 <li><p>Include a README in your project folder with a description of the project, dependencies / pre-requisites, steps to run and contact details.</p></li>
 </ul>
 <style type="text/css">
@@ -1290,8 +1310,8 @@ display:block!important;
 </ul>
 <aside class="notes">
 <ul>
-<li><p>Although it might seem most obvious that this approach could be used for routine work such as publications, there are also lots of benefits to applying RAP to other types of analysis.</p></li>
-<li><p>From experience, what begins as one-off, ad-hoc analysis can often end up being routine. Or at least repeated at some point in the future.</p></li>
+<li><p>Although it might seem most obvious that RAP could be used for routine work such as publications, there are also lots of benefits to applying RAP to other types of analysis.</p></li>
+<li><p>From experience, what begins as one-off, ad-hoc analysis can often end up being routine. Or at least repeated or adapted at some point in the future.</p></li>
 </ul>
 <style type="text/css">
 span.MJX_Assistive_MathML {
@@ -1317,9 +1337,9 @@ display:block!important;
 </ul>
 <aside class="notes">
 <ul>
-<li><p>Your project may involve some or all of these steps</p></li>
 <li><p>RAP applies to all parts of an analytical process, from extracting the data from a database or reading in from a file; to the final product, whatever that looks like.</p></li>
-<li><p>So I’ve talked about when and where you can use RAP. But let’s talk more about what it looks like in practice.</p></li>
+<li><p>Reporting could be in the format of a word document, HTML for a webpage, a dashboard or a spreadsheet.</p></li>
+<li><p>Your project may involve some or all of these steps.</p></li>
 </ul>
 <style type="text/css">
 span.MJX_Assistive_MathML {

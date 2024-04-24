@@ -1,5 +1,5 @@
 ---
-title: "RAP in Practice"
+title: "Reproducible Analytical Pipelines"
 subtitle: "Fit for the Future: Leading a modern statistical service"
 author: "Alice Byers"
 institute: "Data Innovation Team, Data Division"
@@ -21,6 +21,12 @@ lang: en
 
 * Background in statistics and data analysis
 
+::: {.notes}
+* I work in the Data Division of the Scottish Government. I spend some of my time supporting teams to develop RAPs and the rest of my time developing tools and guidance.
+
+* Although I'm not a statistician now, I've worked in stats in the past, mostly producing publications at Public Health Scotland.
+:::
+
 
 ## Why should I care about RAP?
 
@@ -37,9 +43,13 @@ lang: en
 :::
 
 ::: {.notes}
-* In every RAP project I've worked on, we've discovered an error in the existing code. These often went undiscovered for so long because they were hidden amongst complicated, convoluted processes.
+* Repetitive manual work isn't very enjoyable for most people.
 
-* Creating a RAP not only helps you to weed out these existing errors; it makes them easier to identify and rectify in the future.
+* It can be frustrating to know how much useful analysis could be done with the data you hold, but not having the time to do any of it.
+
+* Errors are easily hidden in complicated, convoluted processes that have grown arms and legs over many years. 
+
+* Creating a RAP can help you to weed out these existing errors; but also makes them easier to identify and rectify in the future.
 :::
 
 
@@ -55,6 +65,8 @@ lang: en
    * high quality
    
 ::: {.notes}
+* RAP is not a one-size-fits-all practice. It is best thought of as an approach rather than a 'thing' you either have or haven't done. Not every RAP will look the same and often, there's no end point where it's 'done'. There will always be more improvements you could make.
+
 * Reproducible means that a process can be repeated at some point in the future and will produce the same result.
 
 * Auditable means that it is clear who, when and why decisions have been made.
@@ -87,7 +99,6 @@ Source: [Reproducible Analytical Pipelines (RAP) – Government Analysis Functio
 
 ::: {.notes}
 * Examples of manual steps: creating new folders, copying and pasting data, restructuring data, updating parameters (year, geographies), creating outputs (charts, excel tables, reports, dashboards) 
-
 :::
 
 
@@ -112,7 +123,9 @@ Source: [Reproducible Analytical Pipelines (RAP) – Government Analysis Functio
 ::: {.notes}
 * Git is version control software that is available to install and use on SCOTS. Use to record what, when, why and who made changes. 
 
-* It might not always be possible to make your code open; for example, when your analysis concerns something sensitive or not in the public domain. However, most of the time this should be possible. 
+* It might not always be possible to make your code open; for example, when your analysis concerns something sensitive or not in the public domain. However, most of the time this should be possible.
+
+* Write tests to make sure your code does what you expect it to do.
 
 * Include a README in your project folder with a description of the project, dependencies / pre-requisites, steps to run and contact details.
 :::
@@ -131,9 +144,9 @@ Source: [Reproducible Analytical Pipelines (RAP) – Government Analysis Functio
 * One-off analysis
    
 ::: {.notes}
-* Although it might seem most obvious that this approach could be used for routine work such as publications, there are also lots of benefits to applying RAP to other types of analysis.
+* Although it might seem most obvious that RAP could be used for routine work such as publications, there are also lots of benefits to applying RAP to other types of analysis.
 
-* From experience, what begins as one-off, ad-hoc analysis can often end up being routine. Or at least repeated at some point in the future. 
+* From experience, what begins as one-off, ad-hoc analysis can often end up being routine. Or at least repeated or adapted at some point in the future. 
 :::
 
 
@@ -152,11 +165,11 @@ Source: [Reproducible Analytical Pipelines (RAP) – Government Analysis Functio
 * Reporting
 
 ::: {.notes}
-* Your project may involve some or all of these steps
-
 * RAP applies to all parts of an analytical process, from extracting the data from a database or reading in from a file; to the final product, whatever that looks like.
 
-* So I've talked about when and where you can use RAP. But let's talk more about what it looks like in practice.
+* Reporting could be in the format of a word document, HTML for a webpage, a dashboard or a spreadsheet.
+
+* Your project may involve some or all of these steps.
 :::
 
 
