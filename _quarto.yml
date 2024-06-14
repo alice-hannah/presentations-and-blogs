@@ -14,16 +14,16 @@ format:
       - styles.scss
 
 website:
-  title: "Alice Byers"
+  title: "Alice Hannah"
   sidebar:
     style: "docked"
     align: center
-    title: "Alice Byers"
+    title: "Alice Hannah"
     logo: "https://avatars.githubusercontent.com/u/36480969?v=4"
     tools: 
       - icon: github
-        href: https://github.com/alicebyers5
-        text: "Alice Byers GitHub Profile"
+        href: https://github.com/alice-hannah
+        text: "Alice Hannah GitHub Profile"
     contents:
       - text: "About"
         file: index.qmd

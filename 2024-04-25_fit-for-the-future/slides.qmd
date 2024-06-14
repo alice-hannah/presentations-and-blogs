@@ -204,7 +204,7 @@ Source: [Reproducible Analytical Pipelines (RAP) – Government Analysis Functio
 
 * The aim is to help you to develop your RAP skills, not to write code for you.
 
-* [Get in touch](mailto:alice.byers@gov.scot;thomas.wilson@gov.scot?subject=RAP Support) to discuss your project
+* [Get in touch](mailto:alice.hannah@gov.scot;thomas.wilson@gov.scot?subject=RAP Support) to discuss your project
 
 ::: {.footer}
 [Statistics Group Sharepoint: Support for RAP](https://scotsconnect.sharepoint.com/sites/StatisticsGroup-Org-SG/SitePages/Support-for-Reproducible-Analytical-Pipelines.aspx)
@@ -235,7 +235,7 @@ Source: [Reproducible Analytical Pipelines (RAP) – Government Analysis Functio
 
 * [RAP Strategy](https://analysisfunction.civilservice.gov.uk/policy-store/reproducible-analytical-pipelines-strategy/) and [SG Implementation Plan](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/departmental-rap-plans/initial-scottish-government-rap-strategy-implementation-plan-2023/)
 
-* [Email me](mailto:alice.byers@gov.scot) -- I'm always happy to talk about RAP!
+* [Email me](mailto:alice.hannah@gov.scot) -- I'm always happy to talk about RAP!
 
 ::: {.notes}
 * Following a successful R User Day in December 2023, the Analytical Tools community group are organising another day. This is expected to be held on 18 June 2024. This will cover lots of topics related to RAP with an R focus.

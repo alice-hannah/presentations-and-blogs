@@ -338,7 +338,7 @@ Blog: [How we saved 3 analysts 6 weeks of copying and pasting](https://blogs.gov
 
 -   Email me -- I'm always happy to talk about RAP!
 
-    -   [alice.byers\@gov.scot](mailto:alice.byers@gov.scot)
+    -   [alice.byers\@gov.scot](mailto:alice.hannah@gov.scot)
 
 ::: notes
 -   Duck book is for 'Quality assurance of code for analysis and research'. Acronym sounds a bit like 'quack' which is the noise a duck makes.

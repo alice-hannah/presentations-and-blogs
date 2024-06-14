@@ -304,7 +304,7 @@ ggplot(life_exp) +
   
   * [Contact the maintainers](https://datasciencescotland.github.io/sgplot/authors.html#authors)
 
-* Please [let us know](mailto:alice.byers@gov.scot;lee.bunce@gov.scot?subject=I&#39;m%20using%20sgplot&#33;) if you're using sgplot - we would love to see examples of publications using sgplot
+* Please [let us know](mailto:alice.hannah@gov.scot;lee.bunce@gov.scot?subject=I&#39;m%20using%20sgplot&#33;) if you're using sgplot - we would love to see examples of publications using sgplot
 
 
 ## Future developments
@@ -505,4 +505,4 @@ Source: [General health by age, sex and deprivation, England and Wales - Office 
   
 * Alice Byers, Data Innovation Team
   
-  <alice.byers@gov.scot>
+  <alice.hannah@gov.scot>

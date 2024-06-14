@@ -209,4 +209,4 @@ Source: [Reproducible Analytical Pipelines (RAP) – Government Analysis Functio
 
 * Email me -- I'm always happy to talk about RAP!
 
-    * [alice.byers\@gov.scot](mailto:alice.byers@gov.scot)
+    * [alice.byers\@gov.scot](mailto:alice.hannah@gov.scot)

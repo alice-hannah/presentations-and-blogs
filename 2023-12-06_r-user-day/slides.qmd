@@ -544,7 +544,7 @@ schools_prev <- read_csv(
 
 <div style="line-height:40%;"><br></div>
 
-Email: <alice.byers@gov.scot>
+Email: <alice.hannah@gov.scot>
 
-GitHub: [alicebyers5](https://github.com/alicebyers5>)
+GitHub: [alice-hannah](https://github.com/alice-hannah>)
 

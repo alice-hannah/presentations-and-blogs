@@ -91,13 +91,13 @@ Slides for non-technical presentation to the Scottish Government [Data Standards
 
 Slides for presentation on RAP (Reproducible Analytical Pipelines) in Practice at the [Scottish Government Digital Academy Fit for the Future](https://digitalacademy.arlo.co/courses/112-fit-for-the-future-leading-a-modern-statistical-service?e=2f5fd1d61f1240239af248e29ede693d) event on 23 November 2022.
 
-[Slides](https://github.com/alicebyers5/presentations-and-blogs/raw/main/2022-11-23_fit-for-the-future/rap-in-practice.pptx){.download target="_blank"}
+[Slides](https://github.com/alice-hannah/presentations-and-blogs/raw/main/2022-11-23_fit-for-the-future/rap-in-practice.pptx){.download target="_blank"}
 
 ### School Information Dashboard RAP
 
 Slides for presentation on [School Information Dashboard Reproducible Analytical Pipeline (RAP) project](https://github.com/DataScienceScotland/school-information-dashboard) at the [Scottish Government R User Day](https://github.com/DataScienceScotland/R-user-day-talks) on 5 October 2022. This presentation was jointly delivered with [Laura Stott](https://github.com/LauraStott). 
 
-[Slides](https://github.com/alicebyers5/presentations-and-blogs/raw/main/2022-10-05_school-information-dashboard-rap/school-information-dashboard-rap.pptx){.download target="_blank"}
+[Slides](https://github.com/alice-hannah/presentations-and-blogs/raw/main/2022-10-05_school-information-dashboard-rap/school-information-dashboard-rap.pptx){.download target="_blank"}
 
 ## 2020
 

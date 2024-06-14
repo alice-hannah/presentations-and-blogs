@@ -2,7 +2,7 @@
 title: "Git and GitHub for <br> Reproducible Data Analysis"
 subtitle: "Data Standards and Open Data Community of Practice"
 author: "Alice Byers <br> Data Innovation Team, Scottish Government <br>"
-date: "27 April 2023 <br><br> Slides: https://alicebyers5.github.io/presentations-and-blogs/2023-04-27_git-github-intro/slides.html"
+date: "27 April 2023 <br><br> Slides: https://alice-hannah.github.io/presentations-and-blogs/2023-04-27_git-github-intro/slides.html"
 output:
   ioslides_presentation:
     widescreen: true
@@ -170,6 +170,6 @@ Alice Byers <br>
 RAP Developer <br>
 Data Innovation Team, Scottish Government
 
-* Email - [alice.byers@gov.scot](mailto:alice.byers@gov.scot)
+* Email - [alice.hannah@gov.scot](mailto:alice.hannah@gov.scot)
 
-* GitHub - [alicebyers5](https://github.com/alicebyers5)
+* GitHub - [alice-hannah](https://github.com/alice-hannah)

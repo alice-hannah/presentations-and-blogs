@@ -86,7 +86,7 @@ Source: [Reproducible Analytical Pipelines (RAP) strategy – Government Analysi
 
 -   Contact us
 
-    -   [Alice Byers](mailto:alice.byers@gov.scot), RAP Developer
+    -   [Alice Byers](mailto:alice.hannah@gov.scot), RAP Developer
     -   [Tom Wilson](mailto:thomas.wilson@gov.scot), Data Scientist
     -   [Gerry Scullion](mailto:gerard.scullion@gov.scot), Head of Data Innovation
 
@@ -219,4 +219,4 @@ Open code on GitHub
 
 -   Email me -- I'm always happy to talk about RAP!
 
-    -   [alice.byers\@gov.scot](mailto:alice.byers@gov.scot)
+    -   [alice.byers\@gov.scot](mailto:alice.hannah@gov.scot)

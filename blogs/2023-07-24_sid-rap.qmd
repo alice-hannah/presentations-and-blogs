@@ -107,7 +107,7 @@ Working with Laura was great; it helped me learn about other teams in the Scotti
 
 I’m really keen to hear from you if you work in analysis in the Scottish Government and have been thinking about implementing RAP. 
 Our team currently has some capacity to support RAP projects, so you don’t have to do this alone. 
-Drop me an email at <alice.byers@gov.scot> and we can have a chat.
+Drop me an email at <alice.hannah@gov.scot> and we can have a chat.
 
 If you’re interested in learning more about RAP in the Scottish Government, have a look at the open projects in our [Data Science Scotland GitHub organisation](https://github.com/DataScienceScotland).
 

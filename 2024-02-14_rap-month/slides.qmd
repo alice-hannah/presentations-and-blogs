@@ -237,7 +237,7 @@ Examples:
 
     * Regular meetings to review progress
     
-* [Get in touch](mailto:alice.byers@gov.scot;thomas.wilson@gov.scot;gerard.scullion@gov.scot?subject=RAP Support) to discuss your project
+* [Get in touch](mailto:alice.hannah@gov.scot;thomas.wilson@gov.scot;gerard.scullion@gov.scot?subject=RAP Support) to discuss your project
 
 ::: {.footer}
 [Statistics Group Sharepoint: Support for RAP](https://scotsconnect.sharepoint.com/sites/StatisticsGroup-Org-SG/SitePages/Support-for-Reproducible-Analytical-Pipelines.aspx)
@@ -260,4 +260,4 @@ Examples:
 
 * Email me -- I'm always happy to talk about RAP!
 
-    * [alice.byers\@gov.scot](mailto:alice.byers@gov.scot)
+    * [alice.byers\@gov.scot](mailto:alice.hannah@gov.scot)
