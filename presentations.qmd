@@ -7,6 +7,12 @@ format:
 
 ## 2024
 
+### Introduction to Git and GitHub
+
+Slides for internal version control awareness session on 20 August 2024.
+
+[Slides](../2024-08-20_version-control/slides.html){.external target="_blank"}
+
 ### Reproducible Analytical Pipelines
 
 Slides for presentation on RAP at the [Scottish Government Digital Academy Fit for the Future](https://digitalacademy.arlo.co/courses/112-fit-for-the-future-leading-a-modern-statistical-service?e=2f5fd1d61f1240239af248e29ede693d) event on 25 April 2024.
