@@ -2,7 +2,7 @@
 title: "<img class='image1' src='images/rap_hex.png' alt=''/>Reproducible Analytical Pipelines"
 author: "Alice Hannah"
 institute: "Data Innovation Team, Scottish Government"
-date: "23 October 2023"
+date: "23 October 2024"
 format:
   revealjs: 
     embed-resources: true
