@@ -7,6 +7,12 @@ format:
 
 ## 2024
 
+### Introduction to RAP
+
+Slides for the [Data Science Accelerator](https://www.gov.scot/publications/data-science-accelerator/) 2024 cohort meeting on 23 October 2024.
+
+[Slides](../2024-10-23_RAP-DSAP/slides.html){.external target="_blank"}
+
 ### That's a RAP – working across teams to develop official statistics, dashboards and accessibility
 
 Slides for a [contributed talk](https://virtual.oxfordabstracts.com/#/event/6693/submission/161) at the [Royal Statistical Society Conference 2024](https://rss.org.uk/training-events/conference-2024/), delivered jointly with [Laura Dale](https://github.com/laura-dale). 
