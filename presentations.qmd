@@ -7,6 +7,13 @@ format:
 
 ## 2024
 
+### Accessible data visualisations
+
+Slides for workshop at the Science and Engineering in Government Conference on 12 November 2024.
+
+[Slides](../2024-11-12_accessible-data-vis/slides.html){.external target="_blank"}
+
+
 ### Introduction to RAP
 
 Slides for the [Data Science Accelerator](https://www.gov.scot/publications/data-science-accelerator/) 2024 cohort meeting on 23 October 2024.
