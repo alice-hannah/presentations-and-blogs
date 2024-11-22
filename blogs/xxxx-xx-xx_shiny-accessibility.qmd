@@ -1,0 +1,32 @@
+---
+title: "Shiny Accessibility"
+format: 
+  html:
+    page-layout: full
+---
+
+## HTML
+
+You can improve accessibility by following HTML best practice. You can write HTML in R using these [Shiny functions](https://shiny.posit.co/r/reference/shiny/latest/builder.html).
+
+In your code, you’re probably wrapping text with h2(), h3(), etc. These should only be used for true headers, text should be wrapped in p() for paragraphs, or for a bulleted list, wrapped in ul and li tags. There’s more info on this on the [W3 HTML accessibility page](https://www.w3schools.com/html/html_accessibility.asp).
+
+For alt text for images and charts – if you’re using img(), you can add an extra argument to provide alt text; e.g. img(…, alt = "alt text here"). However, for charts in particular, the alternative doesn’t have to be a text description, it could also be a table of data. If you do this, the alt attribute of the image should still be supplied, but be empty; e.g. img(…, alt = "").
+
+
+## Shiny features
+
+Some built-in elements of Shiny apps aren’t accessible ‘out of the box’. For example, the time out message is a built-in Shiny feature. I’ve not worked out how to customise this to make it accessible but it’s something I’m looking into.
+
+
+## Data visualisation
+
+For your charts, I’d start by using the [sgplot package](https://github.com/ScotGovAnalysis/sgplot/) for themes and colours instead of doing this yourself. It has been developed to be as accessible as possible so should do a lot of the hard work for you. The [Analysis Function charts guidance](https://analysisfunction.civilservice.gov.uk/policy-store/data-visualisation-charts/) is also really good. 
+
+sgplot will control what colours are used in your charts, but I’d recommend installing the [Colour contrast analyser app](https://ifix.systems.gov.scot/assystnet/application.jsp#serviceOfferings/952) to check colour contrast of other elements (e.g. light grey text they mentioned). If you need to change these, you might need to use a bit of css. 
+
+
+## Tools for checking accessibility
+
+I’d also really recommend installing the [Sa11y browser add-in](https://sa11y.netlify.app/bookmarklet/). You can click the bookmark while viewing your app to see any accessibility errors or warnings. It won’t highlight every potential issue, but it’s a good first check. Would highly recommend.
+
