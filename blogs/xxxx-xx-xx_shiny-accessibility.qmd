@@ -13,6 +13,11 @@ In your code, you’re probably wrapping text with h2(), h3(), etc. These should
 
 For alt text for images and charts – if you’re using img(), you can add an extra argument to provide alt text; e.g. img(…, alt = "alt text here"). However, for charts in particular, the alternative doesn’t have to be a text description, it could also be a table of data. If you do this, the alt attribute of the image should still be supplied, but be empty; e.g. img(…, alt = "").
 
+Remember to set the language somewhere:
+
+```
+attr(ui, "lang") <- "en"
+```
 
 ## Shiny features
 
