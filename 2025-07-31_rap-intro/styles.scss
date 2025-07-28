@@ -2,7 +2,7 @@
 
 $presentation-title-slide-text-align: left !default;
 
-$presentation-font-size-root: 35px;
+$presentation-font-size-root: 38px;
 
 $presentation-font-smaller: 0.8 !default;
 
@@ -13,27 +13,18 @@ $presentation-h2-line-height: 2.5;
 $link-color: #0079d2;
 
 #title-slide .title {
-  font-size: 2em;
+  font-size: 1.8em;
   margin-bottom: 2.5rem;
 }
 
 #title-slide p {
-  font-size: 0.8em;
+  font-size: 1em;
   line-height: 1;
 }
 
 .image1 { 
   width: 240px; 
   height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 25px;
-}
-
-.icon { 
-  width: auto; 
-  height: 60px;
   display: block;
   margin-left: auto;
   margin-right: auto;
