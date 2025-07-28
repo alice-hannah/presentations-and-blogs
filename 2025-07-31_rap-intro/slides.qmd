@@ -3,6 +3,7 @@ title: "<img class='image1' src='images/rap_hex.png' alt=''/>Reproducible Analyt
 author: "Alice Hannah"
 institute: "Data Innovation Team, Scottish Government"
 date: "31 July 2025"
+date-format: "D MMMM YYYY"
 format:
   revealjs: 
     embed-resources: true
@@ -35,15 +36,17 @@ lang: en
 
 ## What is RAP?
 
-Automated statistical and analytical processes that are:
+* An overall approach to carrying out analysis
 
--   Reproducible
+* Automated statistical and analytical processes that are:
 
--   Auditable
+  -   Reproducible
 
--   Efficient
+  -   Auditable
 
--   High quality
+  -   Efficient
+
+  -   High quality
 
 ::: footer
 Source: [Reproducible Analytical Pipelines (RAP) – Government Analysis Function](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/)
