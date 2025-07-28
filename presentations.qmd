@@ -5,6 +5,14 @@ format:
     toc: true
 ---
 
+## 2025
+
+### Introduction to RAP
+
+Slides for an internal learning & development session for HSCA and WSIA on 31 July 2025.
+
+[Slides](../2025-07-31_rap-intro/slides.html){.external target="_blank"}
+
 ## 2024
 
 ### Accessible data visualisations
