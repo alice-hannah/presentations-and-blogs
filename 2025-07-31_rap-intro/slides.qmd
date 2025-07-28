@@ -1,0 +1,345 @@
+---
+title: "<img class='image1' src='images/rap_hex.png' alt=''/>Reproducible Analytical Pipelines"
+author: "Alice Hannah"
+institute: "Data Innovation Team, Scottish Government"
+date: "31 July 2025"
+format:
+  revealjs: 
+    embed-resources: true
+    slide-number: true
+    preview-links: auto
+    logo: images/SG-logo.jpg
+    controls: true
+    theme: [default, styles.scss]
+lang: en
+---
+
+## Is RAP relevant to me?
+
+::: {.incremental}
+
+-   Would it be a nightmare to have to go back and rerun your process from the beginning if you found a mistake?
+
+-   Do you have to make a lot of manual edits to code before each run?
+
+-   Is there a lot of repetition in your code?
+
+-   Would a new person find it difficult to understand the process?
+
+:::
+
+::: notes
+-   If the answer to any of these is yes, then RAP could help you.
+:::
+
+
+## What is RAP?
+
+Automated statistical and analytical processes that are:
+
+-   Reproducible
+
+-   Auditable
+
+-   Efficient
+
+-   High quality
+
+::: footer
+Source: [Reproducible Analytical Pipelines (RAP) – Government Analysis Function](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/)
+:::
+
+::: notes
+-   Reproducible means that a process can be repeated at some point in the future and will produce the same result.
+
+-   Auditable means that it is clear who, when and why decisions have been made.
+
+-   Efficient means that a process is as simple as possible, with no redundant steps.
+
+-   High quality means that you are confident your process is doing what you expect it to, often demonstrated by peer review.
+
+-   More information on these principles can be found in the [Duck book](https://best-practice-and-impact.github.io/qa-of-code-guidance/principles.html)
+
+-   There are lots of things you could do to work towards these, but the Government Analysis Function have outlined 7 core features to aim for
+
+:::
+
+
+## Features of RAP {.smaller}
+
+In order to achieve these benefits, at a minimum a RAP must:
+
+-   Minimise manual steps
+
+-   Be built using open-source software; e.g. R, python
+
+-   Be peer reviewed by colleagues
+
+-   Be version controlled; e.g. git
+
+-   Be open to anyone; e.g. code published on GitHub
+
+-   Follow good practice for quality assurance
+
+-   Contain well-commented code and have documentation embedded
+
+::: footer
+Source: [Reproducible Analytical Pipelines (RAP) – Government Analysis Function](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/)
+:::
+
+::: notes
+-   It is not essential to do all of these at once. Start small and iterate.
+
+-   This is where using agile project management can be useful to encourage iterative development and continuous review.
+:::
+
+
+## RAP Strategy {.smaller}
+
+-   Developed by Government Analysis Function to help analysts and analyst leaders understand why RAP is important and how to deliver it.
+
+-   Vision: RAP is the default approach to analysis
+
+-   Three goals
+
+    -   Tools
+
+    -   Capability
+
+    -   Culture
+    
+- [Scottish Government RAP Strategy Implementation Plan 2023](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/departmental-rap-plans/initial-scottish-government-rap-strategy-implementation-plan-2023/)
+
+::: footer
+Source: [Reproducible Analytical Pipelines (RAP) strategy – Government Analysis Function](https://analysisfunction.civilservice.gov.uk/policy-store/reproducible-analytical-pipelines-strategy/)
+:::
+
+::: notes
+-   Applicable to Civil Service but content could also be useful to other public sector bodies looking to develop their RAP capability
+:::
+
+
+## Case Study - Existing Process
+
+-   School Information Dashboards
+
+-   10 data sources
+
+-   Data cleaned, linked and analysed manually in Excel
+
+-   Dashboards created in Tableau
+
+-   Updated twice a year; each update took three weeks of work for three statisticians - longer if errors were found
+
+::: footer
+Blog: [How we saved 3 analysts 6 weeks of copying and pasting](https://blogs.gov.scot/statistics/2023/07/24/reproducible-analytical-pipelines-how-we-saved-3-analysts-6-weeks-of-copying-and-pasting/)
+:::
+
+::: notes
+-   Case study on existing analytical process 'transformed' to RAP
+
+-   Could also develop RAP from scratch for new process but this example illustrates the improvements and benefits compared to 'non-RAP' process well
+:::
+
+
+## Case Study - Planning
+
+-   Engage with SG RAP support team
+
+-   Define aims -- what will success look like?
+
+-   Mock ups of what dashboards would look like
+
+-   Planning how best to structure datasets
+
+-   Work with data providers to improve process
+
+::: footer
+Blog: [How we saved 3 analysts 6 weeks of copying and pasting](https://blogs.gov.scot/statistics/2023/07/24/reproducible-analytical-pipelines-how-we-saved-3-analysts-6-weeks-of-copying-and-pasting/)
+:::
+
+::: notes
+-   RAP Support team; find people who can help you or are willing to be a critical friend
+
+-   What are we aiming for, whilst also being open to this changing as we go
+
+-   Work with data providers; don't feel restricted by the current setup. If something doesn't make sense and you're having to do extra work to accommodate, talk to people. Often you'll find they're also having to do extra work to produce the output in the format they think you need it in!
+
+-   This links to an important point - RAP isn't about replicating / shoehorning an existing process into new software. Step back - look at what you have to start with, what you'd like to end up with and the most logical way of getting from one to the other. It's easy to assume processes are complex and convoluted for unavoidable reasons, but often they're just a result of years of different analysts adding new layers on top of old ones until it doesn't make sense anymore!
+:::
+
+
+## Case Study - RAP Principles Applied {.smaller}
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="22%"}
+<center>
+<img class='icon' alt='' src='images/folder-open-solid.svg'/>
+Organised folder structure
+
+<br>
+
+<img class='icon' alt='' src='images/pencil-solid.svg'/>
+Writing manual processes as code
+</center>
+:::
+
+::: {.column width="4%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="22%"}
+<center>
+<img class='icon' alt='' src='images/file-signature-solid.svg'/>
+Standardised naming conventions
+
+<br>
+
+<img class='icon' alt='' src='images/gears-solid.svg'/>
+Functions
+</center>
+:::
+
+::: {.column width="4%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="22%"}
+<center>
+<img class='icon' alt='' src='images/Rlogo.svg'/>
+Open-source software
+
+<br><br>
+
+<img class='icon' alt='' src='images/git.svg'/>
+Version control using git
+</center>
+:::
+
+::: {.column width="4%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="22%"}
+<center>
+<img class='icon' alt='' src='images/folder-tree-solid.svg'/>
+Relative file paths
+
+<br><br>
+
+<img class='icon' alt='' src='images/github.svg'/>
+Open code on GitHub
+</center>
+:::
+
+::::
+
+::: footer
+Blog: [How we saved 3 analysts 6 weeks of copying and pasting](https://blogs.gov.scot/statistics/2023/07/24/reproducible-analytical-pipelines-how-we-saved-3-analysts-6-weeks-of-copying-and-pasting/)
+:::
+
+::: notes
+-   Not an exhaustive list but some of the fundamentals
+
+-   Some seemingly 'simple' things that had a big impact
+:::
+
+
+## Case Study - Result
+
+-   Faster
+
+    -   Previously took three weeks for three statisticians (twice per year)
+
+    -   Now takes at most one day for one statistician (twice per year)
+
+-   More accurate
+
+-   Reduced risk
+
+-   Well documented
+
+-   Developed skills to apply to other projects
+
+::: footer
+Blog: [How we saved 3 analysts 6 weeks of copying and pasting](https://blogs.gov.scot/statistics/2023/07/24/reproducible-analytical-pipelines-how-we-saved-3-analysts-6-weeks-of-copying-and-pasting/)
+:::
+
+::: notes
+-   This is a time saving of 90 days to 2 days
+:::
+
+## Where to start
+
+::: {.fragment}
+-   Open-source software
+:::
+
+::: {.fragment}
+-   Would it be a nightmare to have to go back and rerun your process from the beginning if you found a mistake?
+
+    -   Git 
+:::
+
+::: {.fragment}
+-   Do you have to make a lot of manual edits to code before each run?
+
+    -   Setup script 
+:::
+
+
+::: notes
+-   As I said earlier, start by thinking of one way you could improve your current process and try and implement some changes to address this.
+
+-   Open source: will make other changes easier; go on some training; try and replicate a small part of existing process in R (for example) to practice and test approach
+
+-   Reproducibility: using Git keeps your history so you can revert back to previous versions if need be
+
+-   Manual edits: set up script; set all variables here and reuse across the rest of your code
+:::
+
+
+## Where to start
+
+::: {.fragment}
+-   Is there a lot of repetition in your code?
+
+    -   Functions 
+:::
+
+::: {.fragment}
+-   Would a new person find it difficult to understand the process?
+
+    -   Documentation 
+:::
+    
+
+::: notes
+-   Functions: where identical or similar code is repeated, write a function
+
+-   Documentation: save in the same place as the project code/files; ask other people to read and give feedback; comment code
+:::
+
+
+## Links & Contact
+
+-   [Government Analysis Function RAP Resources](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/)
+
+- [Duck book](https://best-practice-and-impact.github.io/qa-of-code-guidance/intro.html)
+
+-   [Civil Service RAP Strategy](https://analysisfunction.civilservice.gov.uk/policy-store/reproducible-analytical-pipelines-strategy/)
+
+-   [Blog: How we saved 3 analysts 6 weeks of copying and pasting](https://blogs.gov.scot/statistics/2023/07/24/reproducible-analytical-pipelines-how-we-saved-3-analysts-6-weeks-of-copying-and-pasting/)
+
+-   [School Information Dashboard GitHub repository](https://github.com/scotgovanalysis/school-information-dashboard)
+
+-   Email me -- I'm always happy to talk about RAP!
+
+    -   [alice.hannah\@gov.scot](mailto:alice.hannah@gov.scot)
+
+::: notes
+-   Duck book is for 'Quality assurance of code for analysis and research'. Acronym sounds a bit like 'quack' which is the noise a duck makes.
+:::
