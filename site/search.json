@@ -67,7 +67,7 @@
     "href": "presentations.html",
     "title": "Presentations",
     "section": "",
-    "text": "Slides for workshop at the Science and Engineering in Government Conference on 12 November 2024.\nSlides\n\n\n\nSlides for the Data Science Accelerator 2024 cohort meeting on 23 October 2024.\nSlides\n\n\n\nSlides for a contributed talk at the Royal Statistical Society Conference 2024, delivered jointly with Laura Dale.\nSlides\n\n\n\nSlides for internal version control awareness session on 20 August 2024.\nSlides\n\n\n\nSlides for presentation on RAP at the Scottish Government Digital Academy Fit for the Future event on 25 April 2024.\nSlides\n\n\n\nSlides for a presentation to Social Security Scotland on sgplot and the opportunity for adding new colour palettes.\nSlides\n\n\n\nSlides for the Community of Practice Open Data session on 13 March 2024.\nSlides\n\n\n\nSlides for the Scottish Government Statistics Group RAP Month session on 14 February 2024.\nSlides",
+    "text": "Slides for an internal learning & development session for HSCA and WSIA on 31 July 2025.\nSlides",
     "crumbs": [
       "Presentations"
     ]
@@ -77,7 +77,7 @@
     "href": "presentations.html#section",
     "title": "Presentations",
     "section": "",
-    "text": "Slides for workshop at the Science and Engineering in Government Conference on 12 November 2024.\nSlides\n\n\n\nSlides for the Data Science Accelerator 2024 cohort meeting on 23 October 2024.\nSlides\n\n\n\nSlides for a contributed talk at the Royal Statistical Society Conference 2024, delivered jointly with Laura Dale.\nSlides\n\n\n\nSlides for internal version control awareness session on 20 August 2024.\nSlides\n\n\n\nSlides for presentation on RAP at the Scottish Government Digital Academy Fit for the Future event on 25 April 2024.\nSlides\n\n\n\nSlides for a presentation to Social Security Scotland on sgplot and the opportunity for adding new colour palettes.\nSlides\n\n\n\nSlides for the Community of Practice Open Data session on 13 March 2024.\nSlides\n\n\n\nSlides for the Scottish Government Statistics Group RAP Month session on 14 February 2024.\nSlides",
+    "text": "Slides for an internal learning & development session for HSCA and WSIA on 31 July 2025.\nSlides",
     "crumbs": [
       "Presentations"
     ]
@@ -86,8 +86,8 @@
     "objectID": "presentations.html#section-1",
     "href": "presentations.html#section-1",
     "title": "Presentations",
-    "section": "2023",
-    "text": "2023\n\n5 practical ways to improve your R project\nSlides for the Scottish Government R User Day on 6 December 2023.\nSlides\n\n\nRAP in Practice\nSlides for presentation on RAP (Reproducible Analytical Pipelines) in Practice at the Scottish Government Senior Statisticians Away Day on 22 November 2023.\nSlides\n\n\nRAP in Practice\nSlides for presentation on RAP (Reproducible Analytical Pipelines) in Practice at the Scottish Government Digital Academy Fit for the Future event on 16 November 2023.\nSlides\n\n\nAccessible data visualisations\nSlides for the Scottish Government Accessibility Champions network meeting on 19 October 2023.\nSlides\n\n\nIntroduction to RAP\nA version of the previous RAP in the Scottish Government presentation edited for the Data Science Accelerator 2023 cohort meeting on 11 October 2023.\nSlides\n\n\nCreating accessible charts in R using sgplot\nSlides for the Scottish Government analytical seminar on use of the sgplot package on 19 June 2023. This presentation was jointly delivered with Lee Bunce from the Office of the Chief Statistician.\nSlides\n\n\nRAP in the Scottish Government\nSlides for the Scottish Government Analyst Induction event on Data Tools and Standards on 13 June 2023.\nSlides\n\n\nIntroduction to Git and GitHub\nSlides for non-technical presentation to the Scottish Government Data Standards and Open Data Community of Practice on 27 April 2023.\nSlides",
+    "section": "2024",
+    "text": "2024\n\nAccessible data visualisations\nSlides for workshop at the Science and Engineering in Government Conference on 12 November 2024.\nSlides\n\n\nIntroduction to RAP\nSlides for the Data Science Accelerator 2024 cohort meeting on 23 October 2024.\nSlides\n\n\nThat’s a RAP – working across teams to develop official statistics, dashboards and accessibility\nSlides for a contributed talk at the Royal Statistical Society Conference 2024, delivered jointly with Laura Dale.\nSlides\n\n\nIntroduction to Git and GitHub\nSlides for internal version control awareness session on 20 August 2024.\nSlides\n\n\nReproducible Analytical Pipelines\nSlides for presentation on RAP at the Scottish Government Digital Academy Fit for the Future event on 25 April 2024.\nSlides\n\n\nAccessible colour palettes in sgplot\nSlides for a presentation to Social Security Scotland on sgplot and the opportunity for adding new colour palettes.\nSlides\n\n\nAccessible data visualisations\nSlides for the Community of Practice Open Data session on 13 March 2024.\nSlides\n\n\nWhat is RAP?\nSlides for the Scottish Government Statistics Group RAP Month session on 14 February 2024.\nSlides",
     "crumbs": [
       "Presentations"
     ]
@@ -96,8 +96,8 @@
     "objectID": "presentations.html#section-2",
     "href": "presentations.html#section-2",
     "title": "Presentations",
-    "section": "2022",
-    "text": "2022\n\nRAP in Practice\nSlides for presentation on RAP (Reproducible Analytical Pipelines) in Practice at the Scottish Government Digital Academy Fit for the Future event on 23 November 2022.\nSlides\n\n\nSchool Information Dashboard RAP\nSlides for presentation on School Information Dashboard Reproducible Analytical Pipeline (RAP) project at the Scottish Government R User Day on 5 October 2022. This presentation was jointly delivered with Laura Stott.\nSlides",
+    "section": "2023",
+    "text": "2023\n\n5 practical ways to improve your R project\nSlides for the Scottish Government R User Day on 6 December 2023.\nSlides\n\n\nRAP in Practice\nSlides for presentation on RAP (Reproducible Analytical Pipelines) in Practice at the Scottish Government Senior Statisticians Away Day on 22 November 2023.\nSlides\n\n\nRAP in Practice\nSlides for presentation on RAP (Reproducible Analytical Pipelines) in Practice at the Scottish Government Digital Academy Fit for the Future event on 16 November 2023.\nSlides\n\n\nAccessible data visualisations\nSlides for the Scottish Government Accessibility Champions network meeting on 19 October 2023.\nSlides\n\n\nIntroduction to RAP\nA version of the previous RAP in the Scottish Government presentation edited for the Data Science Accelerator 2023 cohort meeting on 11 October 2023.\nSlides\n\n\nCreating accessible charts in R using sgplot\nSlides for the Scottish Government analytical seminar on use of the sgplot package on 19 June 2023. This presentation was jointly delivered with Lee Bunce from the Office of the Chief Statistician.\nSlides\n\n\nRAP in the Scottish Government\nSlides for the Scottish Government Analyst Induction event on Data Tools and Standards on 13 June 2023.\nSlides\n\n\nIntroduction to Git and GitHub\nSlides for non-technical presentation to the Scottish Government Data Standards and Open Data Community of Practice on 27 April 2023.\nSlides",
     "crumbs": [
       "Presentations"
     ]
@@ -105,6 +105,16 @@
   {
     "objectID": "presentations.html#section-3",
     "href": "presentations.html#section-3",
+    "title": "Presentations",
+    "section": "2022",
+    "text": "2022\n\nRAP in Practice\nSlides for presentation on RAP (Reproducible Analytical Pipelines) in Practice at the Scottish Government Digital Academy Fit for the Future event on 23 November 2022.\nSlides\n\n\nSchool Information Dashboard RAP\nSlides for presentation on School Information Dashboard Reproducible Analytical Pipeline (RAP) project at the Scottish Government R User Day on 5 October 2022. This presentation was jointly delivered with Laura Stott.\nSlides",
+    "crumbs": [
+      "Presentations"
+    ]
+  },
+  {
+    "objectID": "presentations.html#section-4",
+    "href": "presentations.html#section-4",
     "title": "Presentations",
     "section": "2020",
     "text": "2020\n\nCreating Management Reports using flexdashboard\nSlides for presentation on creating management reports using the flexdashboard R package at the PHI useR Group meeting on 25 February 2020.\nSlides",
