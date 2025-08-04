@@ -1,0 +1,36 @@
+---
+title: "sgplot"
+subtitle: "An R package for accessible data visualisations in the Scottish Government"
+author: "Alice Hannah"
+institute: "<img class='sglogo' src='images/SG-logo.jpg' alt='Scottish Government'/>"
+format:
+  revealjs: 
+    embed-resources: true
+    slide-number: true
+    preview-links: auto
+    logo: images/sgplot-qr-code.svg
+    logo-alt: "test"
+    controls: true
+    theme: [default, styles.scss]
+lang: en
+---
+
+## Slide 1
+
+* Some content
+
+## Slide 2
+
+* Some content
+
+## Slide 3
+
+* Some content
+
+## Slide 4
+
+* Some content
+
+## Slide 5
+
+* Some content

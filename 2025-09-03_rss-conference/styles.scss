@@ -1,0 +1,63 @@
+/*-- scss:defaults --*/
+
+$presentation-title-slide-text-align: left !default;
+
+$presentation-font-size-root: 38px;
+
+$presentation-font-smaller: 0.8 !default;
+
+$presentation-line-height: 1.8;
+
+$presentation-h2-line-height: 2.5;
+
+$link-color: #0065bd;
+
+#title-slide .title {
+  font-size: 3em;
+  margin-bottom: 2.5rem;
+  color: #0065bd;
+}
+
+#title-slide .subtitle {
+  font-size: 1.5em;
+  line-height: 1;
+}
+
+#title-slide p .author, .institute{
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.sglogo {
+  height: 50px !important;
+  width: auto !important;
+}
+
+.smallest {
+  @extend .smaller;
+  font-size: 0.5;
+}
+
+/*-- scss:rules --*/
+
+.reveal .slides h2 {
+  margin-bottom: 2.5rem;
+}
+
+.reveal .slide-logo {
+  height: 200px !important;
+  width: auto !important;
+  max-width: unset !important;
+  max-height: unset !important;
+  margin-bottom: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.reveal .footer {
+  color: $body-color;
+}
+
+.reveal .footer a {
+  color: $link-color;
+}
+
