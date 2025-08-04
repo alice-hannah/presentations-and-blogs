@@ -7,6 +7,13 @@ format:
 
 ## 2025
 
+### sgplot: An R package for accessible data visualisations in the Scottish Government
+
+Slides for a [rapid-fire talk](https://virtual.oxfordabstracts.com/event/40660/submission/333) at the [Royal Statistical Society Conference 2025](https://rss.org.uk/training-events/conference-2025/) in Edinburgh. 
+
+[Slides](../2025-09-03_rss-conference/slides.html){.external target="_blank"}
+
+
 ### Introduction to RAP
 
 Slides for an internal learning & development session for HSCA and WSIA on 31 July 2025.
