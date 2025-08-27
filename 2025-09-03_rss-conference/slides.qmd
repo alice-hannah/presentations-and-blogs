@@ -2,35 +2,103 @@
 title: "sgplot"
 subtitle: "An R package for accessible data visualisations in the Scottish Government"
 author: "Alice Hannah"
-institute: "<img class='sglogo' src='images/SG-logo.jpg' alt='Scottish Government'/>"
+email: "alice.hannah@gov.scot"
+lang: en
 format:
   revealjs: 
     embed-resources: true
     slide-number: true
     preview-links: auto
-    logo: images/sgplot-qr-code.svg
-    logo-alt: "test"
+    logo: images/qr.svg
     controls: true
     theme: [default, styles.scss]
-lang: en
+    template-partials:
+      - title-slide.html
+execute:
+  echo: false
+editor_options: 
+  chunk_output_type: console
 ---
 
-## Slide 1
+```{r setup}
+library(gapminder)
+library(dplyr)
+library(ggplot2)
+library(sgplot)
 
-* Some content
+life_exp <- 
+  gapminder %>%
+  select(country, year, lifeExp) %>%
+  filter(country %in% c("United Kingdom", "China"))
 
-## Slide 2
+create_chart <- function() {
+  ggplot(life_exp) +
+  geom_line(aes(x = year, y = lifeExp, colour = country), linewidth = 1) +
+  labs(
+    x = "Year",
+    y = "Life Expectancy",
+    colour = "Country"
+  )
+}
+```
 
-* Some content
+## {.center}
 
-## Slide 3
+```{r default}
+create_chart()
+```
 
-* Some content
+::: {.notes}
+* Many analysts use ggplot2 package to produce charts in R.
+* This is the default style of a ggplot2 chart.
+* As you can see, there are many visual improvements we might want to make:
+  * Make background white instead of grey
+  * Increase text size 
+  * Change the colours used
+  * And many other possible things
+* This can become quite a long list that likely needs to be applied to many different charts.
+* Inevitably, there is variation in how different analysts style their charts, and often even variation among charts the same analyst has produced. Code to produce the charts becomes lengthy and analysts need to spend time understanding accessibility requirements and how to apply them.
+* At at organisation level, this results in large variation in quality, consistency of branding, accessibility and reproducibility of charts.
+* This is where the sgplot package comes in.
+:::
 
-## Slide 4
+## {.center}
 
-* Some content
+::: {.center-h}
+`sgplot::use_sgplot()`
+:::
 
-## Slide 5
+::: {.notes}
+By adding just this one line of code, a large proportion of these concerns are taken care of.
+:::
 
-* Some content
+
+## {.center}
+
+```{r}
+sgplot::use_sgplot(base_size = 16)
+create_chart() +
+  labs(y = "Life\nExpectancy")
+```
+
+::: {.notes}
+* Theme
+* Colours
+* There are other customisations you should make to ensure the chart is accessible. For example:
+  * Labelling lines directly instead of using a legend
+  * Adding titles
+:::
+
+
+## {.center}
+
+::: {.center-h}
+![](images/home.svg)
+:::
+
+
+## {.center}
+
+::: {.center-h}
+![](images/cookbook.svg)
+:::
