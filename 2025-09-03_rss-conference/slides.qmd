@@ -75,12 +75,12 @@ create_chart() +
 ## {#website data-menu-title="Website" .center}
 
 ::: {.center-h}
-![A screenshot of the sgplot website homepage: https://scotgovanalysis.github.io/sqplot. Content includes instructions to install the sgplot package, and links to a function reference page, and articles.](images/home.svg)
+![](images/home.svg){fig-alt="A screenshot of the sgplot website homepage: https://scotgovanalysis.github.io/sqplot. Content includes instructions to install the sgplot package, and links to a function reference page, and articles."}
 :::
 
 
 ## {#cookbook data-menu-title="Cookbook" .center}
 
 ::: {.center-h}
-![A screenshot of the sgplot website cookbook: https://scotgovanalysis.github.io/sqplot/articles/cookbook. The table of contents lists the chart types included in the cookbook: line charts, bar charts, histograms, scatterplots, and more.](images/cookbook.svg)
+![](images/cookbook.svg){fig-alt="A screenshot of the sgplot website cookbook: https://scotgovanalysis.github.io/sqplot/articles/cookbook. The table of contents lists the chart types included in the cookbook: line charts, bar charts, histograms, scatterplots, and more."}
 :::
