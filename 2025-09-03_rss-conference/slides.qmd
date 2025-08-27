@@ -42,63 +42,43 @@ create_chart <- function() {
 }
 ```
 
-## {.center}
+## {#default-chart data-menu-title="Default ggplot2 chart" .center}
 
-```{r default}
+```{r chart-default}
+#| fig.alt = "A multiple line chart showing life expectancy over time in China and the United Kingdom. The background is grey, with many white grid lines. Labels have a small font size and the y-axis label is angled. The two data lines are coloured in light blue and pink-orange."
+
 create_chart()
 ```
 
-::: {.notes}
-* Many analysts use ggplot2 package to produce charts in R.
-* This is the default style of a ggplot2 chart.
-* As you can see, there are many visual improvements we might want to make:
-  * Make background white instead of grey
-  * Increase text size 
-  * Change the colours used
-  * And many other possible things
-* This can become quite a long list that likely needs to be applied to many different charts.
-* Inevitably, there is variation in how different analysts style their charts, and often even variation among charts the same analyst has produced. Code to produce the charts becomes lengthy and analysts need to spend time understanding accessibility requirements and how to apply them.
-* At at organisation level, this results in large variation in quality, consistency of branding, accessibility and reproducibility of charts.
-* This is where the sgplot package comes in.
-:::
 
-## {.center}
+## {#use-sgplot data-menu-title="use_sgplot()" .center}
 
 ::: {.center-h}
 `sgplot::use_sgplot()`
 :::
 
-::: {.notes}
-By adding just this one line of code, a large proportion of these concerns are taken care of.
-:::
 
+## {#sgplot-chart data-menu-title="sgplot chart" .center}
 
-## {.center}
+```{r chart-sgplot}
+#| fig.alt = "A multiple line chart showing life expectancy over time in China and the United Kingdom. The background is white, with minimal horizontal grid lines in a light grey colour. All text is horizontal and has a large font size. The two data lines are coloured in turquoise and navy blue."
 
-```{r}
 sgplot::use_sgplot(base_size = 16)
+
 create_chart() +
   labs(y = "Life\nExpectancy")
 ```
 
-::: {.notes}
-* Theme
-* Colours
-* There are other customisations you should make to ensure the chart is accessible. For example:
-  * Labelling lines directly instead of using a legend
-  * Adding titles
+
+## {#website data-menu-title="Website" .center}
+
+::: {.center-h}
+![A screenshot of the sgplot website homepage: https://scotgovanalysis.github.io/sqplot. Content includes instructions to install the sgplot package, and links to a function reference page, and articles.](images/home.svg)
 :::
 
 
-## {.center}
+## {#cookbook data-menu-title="Cookbook" .center}
 
 ::: {.center-h}
-![](images/home.svg)
-:::
-
-
-## {.center}
-
-::: {.center-h}
-![](images/cookbook.svg)
+![A screenshot of the sgplot website cookbook: https://scotgovanalysis.github.io/sqplot/articles/cookbook. The table of contents lists the chart types included in the cookbook: line charts, bar charts, histograms, scatterplots, and more.](images/cookbook.svg)
 :::
