@@ -1,0 +1,50 @@
+---
+title: "sgplot"
+subtitle: "An R package for accessible data visualisations in the Scottish Government"
+author: "Alice Hannah"
+institute: "Scottish Government"
+format:
+  html:
+    embed-resources: true
+---
+
+## Introduction
+
+## Slide 1 - Default ggplot2 chart
+
+* Many analysts use ggplot2 package to produce charts in R.
+
+* This is the default style of a ggplot2 chart.
+
+* As you can see, there are many visual improvements we might want to make:
+  * Make background white instead of grey
+  * Increase text size 
+  * Change the colours used
+  * And many other possible things
+
+* This can become quite a long list that likely needs to be applied to many different charts.
+
+* Inevitably, there is variation in how different analysts style their charts, and often even variation among charts the same analyst has produced. Code to produce the charts becomes lengthy and analysts need to spend time understanding accessibility requirements and how to apply them.
+
+* At at organisation level, this results in large variation in quality, consistency of branding, accessibility and reproducibility of charts.
+
+* This is where the sgplot package comes in.
+
+
+## Slide 2 - `use_sgplot()`
+
+By adding just this one line of code, a large proportion of these concerns are taken care of.
+
+
+## Slide 3 - sgplot chart
+
+* Theme
+* Colours
+* There are other customisations you should make to ensure the chart is accessible. For example:
+  * Labelling lines directly instead of using a legend
+  * Adding titles
+
+
+## Slide 4 - Website
+
+## Slide 5 - Cookbook
