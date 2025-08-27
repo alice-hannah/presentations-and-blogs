@@ -2,47 +2,36 @@
 
 $presentation-title-slide-text-align: left !default;
 
-$presentation-font-size-root: 38px;
-
-$presentation-font-smaller: 0.8 !default;
-
-$presentation-line-height: 1.8;
-
-$presentation-h2-line-height: 2.5;
-
 $link-color: #0065bd;
 
 #title-slide .title {
   font-size: 3em;
   margin-bottom: 2.5rem;
-  color: #0065bd;
+  color: $link-color;
 }
 
 #title-slide .subtitle {
   font-size: 1.5em;
   line-height: 1;
+  margin-bottom: 5rem !important;
 }
 
-#title-slide p .author, .institute{
-  font-size: 1rem;
-  line-height: 1;
+.author {
+  margin-bottom: 0 !important;
+}
+
+.email {
+  font-size: 0.8em !important;
+  margin-top: 0 !important;
 }
 
 .sglogo {
   height: 50px !important;
   width: auto !important;
-}
-
-.smallest {
-  @extend .smaller;
-  font-size: 0.5;
+  margin-top: 10px !important;
 }
 
 /*-- scss:rules --*/
-
-.reveal .slides h2 {
-  margin-bottom: 2.5rem;
-}
 
 .reveal .slide-logo {
   height: 200px !important;
@@ -53,11 +42,11 @@ $link-color: #0065bd;
   margin-right: 1.5rem;
 }
 
-.reveal .footer {
-  color: $body-color;
+.reveal section div.center-h {
+	text-align: center;
+	font-size: 2em;
 }
 
-.reveal .footer a {
+.reveal code {
   color: $link-color;
 }
-
