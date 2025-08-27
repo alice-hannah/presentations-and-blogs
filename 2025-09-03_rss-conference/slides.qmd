@@ -1,6 +1,6 @@
 ---
 title: "sgplot"
-subtitle: "An R package for accessible data visualisations in the Scottish Government"
+subtitle: "An R package for accessible data visualisations\n\nin the Scottish Government"
 author: "Alice Hannah"
 email: "alice.hannah@gov.scot"
 lang: en
