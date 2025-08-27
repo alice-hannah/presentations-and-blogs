@@ -7,10 +7,7 @@ lang: en
 format:
   revealjs: 
     embed-resources: true
-    slide-number: true
-    preview-links: auto
     logo: images/qr.svg
-    controls: true
     theme: [default, styles.scss]
     template-partials:
       - title-slide.html
