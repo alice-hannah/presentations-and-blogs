@@ -1,0 +1,83 @@
+---
+title: "sgplot"
+subtitle: "An R package for accessible data visualisations\n\nin the Scottish Government"
+author: "Alice Hannah"
+email: "alice.hannah@gov.scot"
+lang: en
+format:
+  revealjs: 
+    embed-resources: true
+    logo: images/qr.svg
+    theme: [default, styles.scss]
+    template-partials:
+      - title-slide.html
+    width: 1280
+    height: 720
+execute:
+  echo: false
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup}
+library(gapminder)
+library(dplyr)
+library(ggplot2)
+library(sgplot)
+
+life_exp <- 
+  gapminder %>%
+  select(country, year, lifeExp) %>%
+  filter(country %in% c("United Kingdom", "China"))
+
+create_chart <- function() {
+  ggplot(life_exp) +
+  geom_line(aes(x = year, y = lifeExp, colour = country), linewidth = 1) +
+  labs(
+    x = "Year",
+    y = "Life Expectancy",
+    colour = "Country"
+  )
+}
+```
+
+## {#default-chart data-menu-title="Default ggplot2 chart" .center}
+
+```{r chart-default}
+#| fig.alt = "A multiple line chart showing life expectancy over time in China and the United Kingdom. The background is grey, with many white grid lines. Labels have a small font size and the y-axis label is angled. The two data lines are coloured in light blue and pink-orange."
+
+create_chart()
+```
+
+
+## {#use-sgplot data-menu-title="use_sgplot()" .center}
+
+::: {.center-h}
+`sgplot::use_sgplot()`
+:::
+
+
+## {#sgplot-chart data-menu-title="sgplot chart" .center}
+
+```{r chart-sgplot}
+#| fig.alt = "A multiple line chart showing life expectancy over time in China and the United Kingdom. The background is white, with minimal horizontal grid lines in a light grey colour. All text is horizontal and has a large font size. The two data lines are coloured in turquoise and navy blue."
+
+sgplot::use_sgplot(base_size = 16)
+
+create_chart() +
+  labs(y = "Life\nExpectancy")
+```
+
+
+## {#website data-menu-title="Website" .center}
+
+::: {.center-h}
+![](images/home.svg){fig-alt="A screenshot of the sgplot website homepage: https://scotgovanalysis.github.io/sqplot. Content includes instructions to install the sgplot package, and links to a function reference page, and articles."}
+:::
+
+
+## {#cookbook data-menu-title="Cookbook" .center}
+
+::: {.center-h}
+![](images/cookbook.svg){fig-alt="A screenshot of the sgplot website cookbook: https://scotgovanalysis.github.io/sqplot/articles/cookbook. The table of contents lists the chart types included in the cookbook: line charts, bar charts, histograms, scatterplots, and more."}
+:::

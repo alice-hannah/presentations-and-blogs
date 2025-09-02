@@ -1,0 +1,52 @@
+/*-- scss:defaults --*/
+
+$presentation-title-slide-text-align: left !default;
+
+$link-color: #0065bd;
+
+#title-slide .title {
+  font-size: 3em;
+  margin-bottom: 2.5rem;
+  color: $link-color;
+}
+
+#title-slide .subtitle {
+  font-size: 1.5em;
+  line-height: 1;
+  margin-bottom: 5rem !important;
+}
+
+.author {
+  margin-bottom: 0 !important;
+}
+
+.email {
+  font-size: 0.8em !important;
+  margin-top: 0 !important;
+}
+
+.sglogo {
+  height: 50px !important;
+  width: auto !important;
+  margin-top: 10px !important;
+}
+
+/*-- scss:rules --*/
+
+.reveal .slide-logo {
+  height: 200px !important;
+  width: auto !important;
+  max-width: unset !important;
+  max-height: unset !important;
+  margin-bottom: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.reveal section div.center-h {
+	text-align: center;
+	font-size: 2em;
+}
+
+.reveal code {
+  color: $link-color;
+}

@@ -1,0 +1,7 @@
+[RSS Guidelines for Rapid-Fire Talks](https://rss.org.uk/RSS/media/File-library/Conference/RSS-2025-Guidelines-for-Rapid-Fire-presentations.pdf)
+
+* Maximum 5 minutes
+* Maximum 5 slides (plus a title slide)
+* Slides formatted in 16:9; ppt or pdf.
+* File name format: Wednesday-RF-First name-Last name
+* Submitted by Thursday 28 August
