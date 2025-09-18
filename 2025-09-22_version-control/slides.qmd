@@ -64,10 +64,9 @@ Commits contain information on:
 
 Git tracks changes to the content of files, not just the file as a whole. This means the information above can be recorded for changes as small as one character on one line of code.
 
-
 ## What is in a code repository?
 
-A version controlled code repository will usually contain files for one project and can contain:
+A version controlled code repository will usually contain files for one distinct project and can contain:
 
 * Code (e.g. R scripts)
 * Documentation (e.g. README)
@@ -85,11 +84,11 @@ A version controlled code repository will usually contain files for one project 
 
 * A `.gitignore` file tells Git which files in the code repository it shouldn't track changes to.
 
-* Can include specific files, folders or file extensions
+* Can include specific files, folders or file extensions.
 
 * Use the [Scottish Government template .gitignore](https://github.com/ScotGovAnalysis/welcome/blob/main/.gitignore) to get started.
 
-* More information on using Git safely can be found in the [Duck Book](https://best-practice-and-impact.github.io/qa-of-code-guidance/version_control.html#avoid-commiting-sensitive-information-to-git-repositories).
+* More information on using Git safely can be found in the [Duck Book](https://best-practice-and-impact.github.io/qa-of-code-guidance/version_control.html#avoid-committing-sensitive-information-to-git-repositories).
 
 ::: {.notes}
 * Examples; csv files, a 'data' folder, or a config.yml file
@@ -97,6 +96,8 @@ A version controlled code repository will usually contain files for one project 
 * Alternatively, these files can be stored outside of your code repository.
 
 * Ensuring data or other sensitive information isn't tracked by Git becomes more important if you start using GitHub.
+
+* It's also important not to include sensitive information in your code files that are tracked by Git. For example, avoid hard-coding data, passwords, or sensitive information.
 :::
 
 
@@ -106,7 +107,7 @@ A version controlled code repository will usually contain files for one project 
 
 GitHub is a web interface for hosting version controlled code and can be used to:
 
-* Make code publicly available (although repositories can also be private)
+* Make code publicly available (although repositories can also be 'private')
 
 * Facilitate code review (using 'pull requests')
 
@@ -205,9 +206,9 @@ GitHub is a web interface for hosting version controlled code and can be used to
 
    * [Version Control](https://best-practice-and-impact.github.io/qa-of-code-guidance/version_control.html)
    
-   * [Using Git safely](https://best-practice-and-impact.github.io/qa-of-code-guidance/version_control.html#avoid-commiting-sensitive-information-to-git-repositories)
+   * [Using Git safely](https://best-practice-and-impact.github.io/qa-of-code-guidance/version_control.html#avoid-committing-sensitive-information-to-git-repositories)
    
-   * [GitHub features](https://best-practice-and-impact.github.io/qa-of-code-guidance/version_control.html#github)
+   * [GitHub features](https://best-practice-and-impact.github.io/qa-of-code-guidance/version_control.html#using-github)
    
 *  [Open sourcing analytical code](https://analysisfunction.civilservice.gov.uk/policy-store/open-sourcing-analytical-code/) (Government Analysis Function)
 
