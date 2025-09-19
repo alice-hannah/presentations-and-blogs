@@ -1,0 +1,147 @@
+---
+title: "<img class='image1' src='../images/rap_hex.png' alt=''/>Reproducible Analytical Pipelines"
+author: "Alice Hannah"
+institute: "Data Innovation Team, Scottish Government"
+date: "24 September 2025"
+date-format: "D MMMM YYYY"
+format:
+  revealjs: 
+    embed-resources: true
+    slide-number: true
+    preview-links: auto
+    logo: ../images/SG-logo.jpg
+    controls: true
+    theme: [default, styles.scss]
+lang: en
+---
+
+## What is RAP?
+
+* An overall approach to analysis
+
+::: {.incremental}
+
+* Automated statistical and analytical processes that are:
+
+  -   Reproducible
+
+  -   Auditable
+
+  -   Efficient
+
+  -   High quality
+  
+:::
+
+::: footer
+Source: [Government Analysis Function](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/)
+:::
+
+::: notes
+-   A RAP approach an be applied to all stages of analysis; data extraction, cleaning, analysis, modelling, visualisation and reporting.
+
+-   Reproducible means that a process can be repeated at some point in the future and will produce the same result.
+
+-   Auditable means that it is clear who, when and why decisions have been made.
+
+-   Efficient means that a process is as simple as possible, with no redundant steps.
+
+-   High quality means that you are confident your process is doing what you expect it to, often demonstrated by peer review.
+:::
+
+
+## RAP principles (1)
+
+In order to achieve the full benefits, at a minimum a RAP must:
+
+::: {.incremental}
+
+* Minimise manual steps
+
+* Be built using open-source software; e.g. R, Python
+
+* Be peer reviewed by colleagues
+
+:::
+
+::: {.footer}
+Source: [Government Analysis Function](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/)
+:::
+
+::: {.notes}
+* Examples of manual steps: creating new folders, copying and pasting data, restructuring data, updating parameters (year, geographies), creating outputs (charts, excel tables, reports, dashboards) 
+:::
+
+
+## RAP principles (2)
+
+::: {.incremental}
+
+* Be version controlled; e.g. Git
+
+* Be open to anyone; e.g. code published on GitHub
+
+* Follow good practice for quality assurance
+
+* Contain well-commented code and have documentation embedded
+
+:::
+
+::: footer
+Source: [Government Analysis Function](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/)
+:::
+
+
+## Is RAP relevant to me?
+
+::: {.incremental}
+
+-   Would it be a nightmare to have to go back and rerun your process from the beginning if you found a mistake?
+
+-   Do you have to make a lot of manual edits to code before each run?
+
+-   Is there a lot of repetition in your code?
+
+-   Would a new person find it difficult to understand the process?
+
+:::
+
+::: notes
+-   If the answer to any of these is yes, then RAP could help you.
+:::
+
+
+## Self-assessment tool
+
+* [RAP Self-Assessment Tool](https://scotland.shinyapps.io/sg-rap-self-assessment/) developed internally for analysts in the Scottish Government.
+
+* Criteria categorised into 4 'levels': Aspiring, Fundamental, Intermediate and Advanced.
+
+* Description and links to further resources for each criteria.
+
+* Complete form and download report to track progress and inform next steps.
+
+
+## Examples
+
+* Either icons from previous slides or example criteria?
+
+
+## Top tips
+
+* Create a process map of your existing process (or your aspirational process)
+
+* Start small and iterate (Agile project development helps here!)
+
+* Learn from others around you. Find somebody who can be a critical friend.
+
+
+## Links & Contact
+
+-   [Government Analysis Function RAP Resources](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/)
+
+-   [Scottish Government RAP Self-Assessment Tool](https://scotland.shinyapps.io/sg-rap-self-assessment/)
+
+-   [Blog: How we saved 3 analysts 6 weeks of copying and pasting](https://blogs.gov.scot/statistics/2023/07/24/reproducible-analytical-pipelines-how-we-saved-3-analysts-6-weeks-of-copying-and-pasting/)
+
+-   Email me ([alice.hannah\@gov.scot](mailto:alice.hannah@gov.scot))
