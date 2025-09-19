@@ -88,27 +88,6 @@ A version controlled code repository will usually contain files for one distinct
 :::
 
 
-## Ignoring files
-
-* A `.gitignore` file tells Git which files in the code repository it shouldn't track changes to.
-
-* Can include specific files, folders or file extensions.
-
-* Use the [Scottish Government template .gitignore](https://github.com/ScotGovAnalysis/welcome/blob/main/.gitignore) to get started.
-
-* More information on using Git safely can be found in the [Duck Book](https://best-practice-and-impact.github.io/qa-of-code-guidance/version_control.html#avoid-committing-sensitive-information-to-git-repositories).
-
-::: {.notes}
-* Examples; csv files, a 'data' folder, or a config.yml file
-
-* Alternatively, these files can be stored outside of your code repository.
-
-* Ensuring data or other sensitive information isn't tracked by Git becomes more important if you start using GitHub.
-
-* For this reason, it's also important not to include sensitive information in your code files that are tracked by Git. For example, avoid hard-coding data, passwords, or sensitive information.
-:::
-
-
 ## GitHub {.smaller}
 
 ![](images/github.svg){.absolute alt="GitHub logo" top=25 right=50 height=75}
@@ -169,6 +148,26 @@ GitHub is a web interface for hosting version controlled code and can be used to
    * **Good quality**: Code review is built into the GitHub workflow.
 
 
+## Security
+
+* Don't track data files (or other sensitive files)
+
+  * Use a `.gitignore` file to exclude specific files, file extensions or folders.
+
+  * Use the [Scottish Government template .gitignore](https://github.com/ScotGovAnalysis/welcome/blob/main/.gitignore).
+
+* Don't embed sensitive information in your code.
+
+* Consult the [Scottish Government GitHub User Responsibilities](https://scotsconnect.sharepoint.com/sites/StatisticsGroup-Org-SG/SitePages/GitHub-User-Responsibilities.aspx) document before using GitHub.
+
+::: {.notes}
+* Can include specific files, folders or file extensions; e.g. csv files, a 'data' folder, or a config.yml file.
+
+* Alternatively, these files can be stored outside of your code repository.
+
+* All of this is good practice whether you are using GitHub or not.
+:::
+
 ## Getting started on SCOTS (1)
 
 * Familiarise yourself with the [Version Control guidance page](https://scotsconnect.sharepoint.com/sites/StatisticsGroup-Org-SG/SitePages/Version-Control.aspx) on SharePoint
@@ -176,11 +175,6 @@ GitHub is a web interface for hosting version controlled code and can be used to
 * Explore the public code repositories in the [Scottish Government Analysis GitHub organisation](https://github.com/ScotGovAnalysis) to see how other teams are using Git and GitHub
 
 * [Install and set up Git on your SCOTS laptop](https://scotsconnect.sharepoint.com/sites/StatisticsGroup-Org-SG/SitePages/Version-Control.aspx#using-git-within-scots)
-
-::: {.footer}
-[Version control SharePoint page](https://scotsconnect.sharepoint.com/sites/StatisticsGroup-Org-SG/SitePages/Version-Control.aspx)
-:::
-
 
 ## Getting started on SCOTS (2)
 
@@ -192,22 +186,21 @@ GitHub is a web interface for hosting version controlled code and can be used to
    
 * [Join the SSH security group and set up an SSH key](https://scotsconnect.sharepoint.com/sites/StatisticsGroup-Org-SG/SitePages/Version-Control.aspx#connecting-to-github-on-scots)
 
-::: {.footer}
-[Version control SharePoint page](https://scotsconnect.sharepoint.com/sites/StatisticsGroup-Org-SG/SitePages/Version-Control.aspx)
-:::
-
 ::: {.notes}
 * An SSH key allows Git (installed on your laptop) to communicate with GitHub.
 :::
 
 
-## External learning
+## External learning {.smaller}
 
-* ONS Learning Hub ([contact ONS](mailto:Data.Science.Campus.Faculty@ons.gov.uk) to request an account)
-   
-   * [Command Line Basics](https://gss.civilservice.gov.uk/training/command-line-basics/)
-   
-   * [Introduction to Git](https://analysisfunction.civilservice.gov.uk/training/introduction-to-git/)
+* ONS Learning Hub self-led courses: 
+  * [Command Line Basics](https://gss.civilservice.gov.uk/training/command-line-basics/)
+  * [Introduction to Git](https://analysisfunction.civilservice.gov.uk/training/introduction-to-git/)
+
+* The Turing Way training videos and [materials](https://github.com/aim-rsf/training/tree/main/version-control):
+  * [Introduction to Git](https://youtu.be/z9-qAGq78qE)
+  * [Introduction to GitHub](https://youtu.be/9mnKloUiTUc)
+  * [GitHub for Collaboration](https://youtu.be/ejx_M5cgMsI)
 
 * [Happy Git with R](https://happygitwithr.com/)
 
