@@ -19,6 +19,8 @@ lang: en
 
 Version control is the practice of tracking and managing changes to files. 
 
+<div style="line-height:50%;"><br></div>
+
 Does this look familiar?
 
 ```
@@ -30,6 +32,10 @@ Does this look familiar?
 │   ├── publication-analysis-code-final.R
 │   ├── publication-analysis-code-final April 2023.R
 ```
+
+::: {.notes}
+* This is still a valid form of version control - just not a very effective one!
+:::
 
 
 ## Git 
@@ -47,7 +53,7 @@ It allows you to:
 * Collaborate with others on the same project using 'branches'
 
 ::: {.notes}
-Using Git means you don’t need to save multiple copies of the same file to retain older versions. This information is stored by Git.
+* Using Git means you don’t need to save multiple copies of the same file to retain older versions. This information is stored by Git.
 :::
 
 
@@ -76,7 +82,9 @@ A version controlled code repository will usually contain files for one distinct
 ::: {.notes}
 * If you're using R, your code repository will be your RStudio Project.
 
-* NOT DATA because: Git is not designed to track changes to data files; when using Git in conjunction with GitHub, you will often not want to publish the data files you're using in your code.
+* NOT DATA because: 
+  * Git is not designed to track changes to data files; 
+  * when using Git in conjunction with GitHub, you will often not want to publish the data files you're using in your code.
 :::
 
 
@@ -97,7 +105,7 @@ A version controlled code repository will usually contain files for one distinct
 
 * Ensuring data or other sensitive information isn't tracked by Git becomes more important if you start using GitHub.
 
-* It's also important not to include sensitive information in your code files that are tracked by Git. For example, avoid hard-coding data, passwords, or sensitive information.
+* For this reason, it's also important not to include sensitive information in your code files that are tracked by Git. For example, avoid hard-coding data, passwords, or sensitive information.
 :::
 
 
@@ -125,6 +133,10 @@ GitHub is a web interface for hosting version controlled code and can be used to
 [Scottish Government Analysis GitHub organisation](https://github.com/ScotGovAnalysis)
 
 <div style="text-align: center;"><img src="images/scotgovanalysis.png" alt="Screenshot of Scottish Government Analysis GitHub organisation homepage" align="middle" height="400" width="800"/></div>
+
+::: {.notes}
+* This is where you should store any SG related GitHub repositories.
+:::
 
 
 ## How to use Git and GitHub
