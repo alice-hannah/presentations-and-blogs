@@ -1,5 +1,5 @@
 ---
-title: "<img class='image1' src='images/rap_hex.png' alt=''/>Reproducible Analytical Pipelines"
+title: "<img class='image1' src='../images/rap_hex.png' alt=''/>Reproducible Analytical Pipelines"
 author: "Alice Hannah"
 institute: "Data Innovation Team, Scottish Government"
 date: "31 July 2025"
@@ -9,7 +9,7 @@ format:
     embed-resources: true
     slide-number: true
     preview-links: auto
-    logo: images/SG-logo.jpg
+    logo: ../images/SG-logo.jpg
     controls: true
     theme: [default, styles.scss]
 lang: en
