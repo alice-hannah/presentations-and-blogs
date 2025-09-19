@@ -7,6 +7,12 @@ format:
 
 ## 2025
 
+### Introduction to Git and GitHub
+
+Slides for internal version control awareness session on 22 September 2025.
+
+[Slides](../2025-09-22_version-control/slides.html){.external target="_blank"}
+
 ### sgplot: An R package for accessible data visualisations in the Scottish Government
 
 Slides for a [rapid-fire talk](https://virtual.oxfordabstracts.com/event/40660/submission/333) at the [Royal Statistical Society Conference 2025](https://rss.org.uk/training-events/conference-2025/) in Edinburgh. 
