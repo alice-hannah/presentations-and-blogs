@@ -7,7 +7,7 @@ lang: en
 format:
   revealjs: 
     embed-resources: true
-    logo: images/qr.svg
+    logo: ../images/sgplot-qr.svg
     theme: [default, styles.scss]
     template-partials:
       - title-slide.html
@@ -72,12 +72,12 @@ create_chart() +
 ## {#website data-menu-title="Website" .center}
 
 ::: {.center-h}
-![](images/home.svg){fig-alt="A screenshot of the sgplot website homepage: https://scotgovanalysis.github.io/sqplot. Content includes instructions to install the sgplot package, and links to a function reference page, and articles."}
+![](../images/sgplot-home.svg){fig-alt="A screenshot of the sgplot website homepage: https://scotgovanalysis.github.io/sqplot. Content includes instructions to install the sgplot package, and links to a function reference page, and articles."}
 :::
 
 
 ## {#cookbook data-menu-title="Cookbook" .center}
 
 ::: {.center-h}
-![](images/cookbook.svg){fig-alt="A screenshot of the sgplot website cookbook: https://scotgovanalysis.github.io/sqplot/articles/cookbook. The table of contents lists the chart types included in the cookbook: line charts, bar charts, histograms, scatterplots, and more."}
+![](../images/sgplot-cookbook.svg){fig-alt="A screenshot of the sgplot website cookbook: https://scotgovanalysis.github.io/sqplot/articles/cookbook. The table of contents lists the chart types included in the cookbook: line charts, bar charts, histograms, scatterplots, and more."}
 :::
