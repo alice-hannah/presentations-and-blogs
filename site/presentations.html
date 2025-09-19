@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.8.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -32,14 +32,15 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="./">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-588b6c89d58e6e3d2e9edc2548d77350.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-e30f6f8d81cc300eb56ac22dfecd6a8e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -95,7 +96,8 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header sidebar-header-stacked">
       <a href="./index.html" class="sidebar-logo-link">
-      <img src="https://avatars.githubusercontent.com/u/36480969?v=4" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="https://avatars.githubusercontent.com/u/36480969?v=4" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="https://avatars.githubusercontent.com/u/36480969?v=4" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Alice Hannah</a> 
@@ -141,6 +143,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">2025</a>
   <ul class="collapse">
+  <li><a href="#introduction-to-git-and-github" id="toc-introduction-to-git-and-github" class="nav-link" data-scroll-target="#introduction-to-git-and-github">Introduction to Git and GitHub</a></li>
   <li><a href="#sgplot-an-r-package-for-accessible-data-visualisations-in-the-scottish-government" id="toc-sgplot-an-r-package-for-accessible-data-visualisations-in-the-scottish-government" class="nav-link" data-scroll-target="#sgplot-an-r-package-for-accessible-data-visualisations-in-the-scottish-government">sgplot: An R package for accessible data visualisations in the Scottish Government</a></li>
   <li><a href="#introduction-to-rap" id="toc-introduction-to-rap" class="nav-link" data-scroll-target="#introduction-to-rap">Introduction to RAP</a></li>
   </ul></li>
@@ -149,7 +152,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#accessible-data-visualisations" id="toc-accessible-data-visualisations" class="nav-link" data-scroll-target="#accessible-data-visualisations">Accessible data visualisations</a></li>
   <li><a href="#introduction-to-rap-1" id="toc-introduction-to-rap-1" class="nav-link" data-scroll-target="#introduction-to-rap-1">Introduction to RAP</a></li>
   <li><a href="#thats-a-rap-working-across-teams-to-develop-official-statistics-dashboards-and-accessibility" id="toc-thats-a-rap-working-across-teams-to-develop-official-statistics-dashboards-and-accessibility" class="nav-link" data-scroll-target="#thats-a-rap-working-across-teams-to-develop-official-statistics-dashboards-and-accessibility">That’s a RAP – working across teams to develop official statistics, dashboards and accessibility</a></li>
-  <li><a href="#introduction-to-git-and-github" id="toc-introduction-to-git-and-github" class="nav-link" data-scroll-target="#introduction-to-git-and-github">Introduction to Git and GitHub</a></li>
+  <li><a href="#introduction-to-git-and-github-1" id="toc-introduction-to-git-and-github-1" class="nav-link" data-scroll-target="#introduction-to-git-and-github-1">Introduction to Git and GitHub</a></li>
   <li><a href="#reproducible-analytical-pipelines" id="toc-reproducible-analytical-pipelines" class="nav-link" data-scroll-target="#reproducible-analytical-pipelines">Reproducible Analytical Pipelines</a></li>
   <li><a href="#accessible-colour-palettes-in-sgplot" id="toc-accessible-colour-palettes-in-sgplot" class="nav-link" data-scroll-target="#accessible-colour-palettes-in-sgplot">Accessible colour palettes in sgplot</a></li>
   <li><a href="#accessible-data-visualisations-1" id="toc-accessible-data-visualisations-1" class="nav-link" data-scroll-target="#accessible-data-visualisations-1">Accessible data visualisations</a></li>
@@ -164,7 +167,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#introduction-to-rap-2" id="toc-introduction-to-rap-2" class="nav-link" data-scroll-target="#introduction-to-rap-2">Introduction to RAP</a></li>
   <li><a href="#creating-accessible-charts-in-r-using-sgplot" id="toc-creating-accessible-charts-in-r-using-sgplot" class="nav-link" data-scroll-target="#creating-accessible-charts-in-r-using-sgplot">Creating accessible charts in R using sgplot</a></li>
   <li><a href="#rap-in-the-scottish-government" id="toc-rap-in-the-scottish-government" class="nav-link" data-scroll-target="#rap-in-the-scottish-government">RAP in the Scottish Government</a></li>
-  <li><a href="#introduction-to-git-and-github-1" id="toc-introduction-to-git-and-github-1" class="nav-link" data-scroll-target="#introduction-to-git-and-github-1">Introduction to Git and GitHub</a></li>
+  <li><a href="#introduction-to-git-and-github-2" id="toc-introduction-to-git-and-github-2" class="nav-link" data-scroll-target="#introduction-to-git-and-github-2">Introduction to Git and GitHub</a></li>
   </ul></li>
   <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">2022</a>
   <ul class="collapse">
@@ -202,6 +205,11 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="section" class="level2">
 <h2 class="anchored" data-anchor-id="section">2025</h2>
+<section id="introduction-to-git-and-github" class="level3">
+<h3 class="anchored" data-anchor-id="introduction-to-git-and-github">Introduction to Git and GitHub</h3>
+<p>Slides for internal version control awareness session on 22 September 2025.</p>
+<p><a href="../2025-09-22_version-control/slides.html" class="external" target="_blank">Slides</a></p>
+</section>
 <section id="sgplot-an-r-package-for-accessible-data-visualisations-in-the-scottish-government" class="level3">
 <h3 class="anchored" data-anchor-id="sgplot-an-r-package-for-accessible-data-visualisations-in-the-scottish-government">sgplot: An R package for accessible data visualisations in the Scottish Government</h3>
 <p>Slides for a <a href="https://virtual.oxfordabstracts.com/event/40660/submission/333">rapid-fire talk</a> at the <a href="https://rss.org.uk/training-events/conference-2025/">Royal Statistical Society Conference 2025</a> in Edinburgh.</p>
@@ -230,8 +238,8 @@ ul.task-list li input[type="checkbox"] {
 <p>Slides for a <a href="https://virtual.oxfordabstracts.com/#/event/6693/submission/161">contributed talk</a> at the <a href="https://rss.org.uk/training-events/conference-2024/">Royal Statistical Society Conference 2024</a>, delivered jointly with <a href="https://github.com/laura-dale">Laura Dale</a>.</p>
 <p><a href="https://github.com/alice-hannah/presentations-and-blogs/raw/main/2024-09-03_rss-conference/thats-a-rap.pptx" class="download" target="_blank">Slides</a></p>
 </section>
-<section id="introduction-to-git-and-github" class="level3">
-<h3 class="anchored" data-anchor-id="introduction-to-git-and-github">Introduction to Git and GitHub</h3>
+<section id="introduction-to-git-and-github-1" class="level3">
+<h3 class="anchored" data-anchor-id="introduction-to-git-and-github-1">Introduction to Git and GitHub</h3>
 <p>Slides for internal version control awareness session on 20 August 2024.</p>
 <p><a href="../2024-08-20_version-control/slides.html" class="external" target="_blank">Slides</a></p>
 </section>
@@ -293,8 +301,8 @@ ul.task-list li input[type="checkbox"] {
 <p>Slides for the Scottish Government Analyst Induction event on Data Tools and Standards on 13 June 2023.</p>
 <p><a href="../2023-06-13_RAP-in-SG/slides.html" class="external" target="_blank">Slides</a></p>
 </section>
-<section id="introduction-to-git-and-github-1" class="level3">
-<h3 class="anchored" data-anchor-id="introduction-to-git-and-github-1">Introduction to Git and GitHub</h3>
+<section id="introduction-to-git-and-github-2" class="level3">
+<h3 class="anchored" data-anchor-id="introduction-to-git-and-github-2">Introduction to Git and GitHub</h3>
 <p>Slides for non-technical presentation to the Scottish Government <a href="https://www.eventbrite.co.uk/e/git-and-github-for-reproducible-data-analysis-tickets-558593497187">Data Standards and Open Data Community of Practice</a> on 27 April 2023.</p>
 <p><a href="../2023-04-27_git-github-intro/slides.html" class="external" target="_blank">Slides</a></p>
 </section>
@@ -375,13 +383,14 @@ ul.task-list li input[type="checkbox"] {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
