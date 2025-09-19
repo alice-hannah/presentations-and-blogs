@@ -8,7 +8,7 @@ format:
   revealjs: 
     embed-resources: true
     slide-number: true
-    logo: images/SG-logo.jpg
+    logo: ../images/SG-logo.jpg
     controls: true
     link-external-newwindow: true
     theme: [default, styles.scss]
@@ -40,7 +40,7 @@ Does this look familiar?
 
 ## Git 
 
-![](images/git.svg){.absolute alt="git logo" top=25 right=50 height=75}
+![](../images/git.svg){.absolute alt="git logo" top=25 right=50 height=75}
 
 Git is a free and open source software for version control. 
 
@@ -59,7 +59,7 @@ It allows you to:
 
 ## Git Commits {.smaller}
 
-![](images/git.svg){.absolute alt="git logo" top=25 right=50 height=75}
+![](../images/git.svg){.absolute alt="git logo" top=25 right=50 height=75}
 
 Commits contain information on:
 
@@ -90,7 +90,7 @@ A version controlled code repository will usually contain files for one distinct
 
 ## GitHub {.smaller}
 
-![](images/github.svg){.absolute alt="GitHub logo" top=25 right=50 height=75}
+![](../images/github.svg){.absolute alt="GitHub logo" top=25 right=50 height=75}
 
 GitHub is a web interface for hosting version controlled code and can be used to:
 
@@ -107,11 +107,11 @@ GitHub is a web interface for hosting version controlled code and can be used to
 
 ## GitHub Organisation
 
-![](images/github.svg){.absolute alt="GitHub logo" top=25 right=50 height=75}
+![](../images/github.svg){.absolute alt="GitHub logo" top=25 right=50 height=75}
 
 [Scottish Government Analysis GitHub organisation](https://github.com/ScotGovAnalysis)
 
-<div style="text-align: center;"><img src="images/scotgovanalysis.png" alt="Screenshot of Scottish Government Analysis GitHub organisation homepage" align="middle" height="400" width="800"/></div>
+<div style="text-align: center;"><img src="../images/scotgovanalysis.png" alt="Screenshot of Scottish Government Analysis GitHub organisation homepage" align="middle" height="400" width="800"/></div>
 
 ::: {.notes}
 * This is where you should store any SG related GitHub repositories.
