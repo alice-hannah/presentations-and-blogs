@@ -15,105 +15,96 @@ format:
 lang: en
 ---
 
-## What is RAP?
-
-* An overall approach to analysis
+## Is RAP relevant to me?
 
 ::: {.incremental}
 
-* Automated statistical and analytical processes that are:
+-   Would it be a nightmare to have to go back and rerun your data project from the beginning if you found a mistake?
 
-  -   Reproducible
+-   Do you have to make a lot of manual edits to code before each run?
 
-  -   Auditable
+-   Is there a lot of repetition in your code?
 
-  -   Efficient
+-   Would a new person find it difficult to understand?
 
-  -   High quality
-  
 :::
 
+::: notes
+* At this stage of your accelerator projects, the answer might be no to most of these.
+* However, I imagine you might be able to relate when thinking about other, longer term work projects.
+* And hopefully, your accelerator projects will soon become one of these longer term work projects!
+* Thinking about RAP early on in a project is a great way to future proof your work.
+:::
+
+
+## What is RAP? {.smaller}
+
+* An overall approach to analysis
+  
+* A RAP will:
+
+  * Improve the quality of the analysis
+  * Increase trust in the analysis by producers, their managers and users
+  * Create a more efficient process
+  * Improve business continuity and knowledge management
+  
 ::: footer
 Source: [Government Analysis Function](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/)
 :::
 
 ::: notes
--   A RAP approach an be applied to all stages of analysis; data extraction, cleaning, analysis, modelling, visualisation and reporting.
-
--   Reproducible means that a process can be repeated at some point in the future and will produce the same result.
-
--   Auditable means that it is clear who, when and why decisions have been made.
-
--   Efficient means that a process is as simple as possible, with no redundant steps.
-
--   High quality means that you are confident your process is doing what you expect it to, often demonstrated by peer review.
+* A RAP approach an be applied to all stages of analysis; data extraction, cleaning, analysis, modelling, visualisation and reporting.
 :::
 
 
-## RAP principles (1)
+## RAP principles
 
-In order to achieve the full benefits, at a minimum a RAP must:
+<div style="line-height:50%;"><br></div>
 
-::: {.incremental}
+:::: {.columns}
 
-* Minimise manual steps
-
-* Be built using open-source software; e.g. R, Python
-
-* Be peer reviewed by colleagues
-
+::: {.column width="50%"}
+::: {.fragment .fade-in-then-semi-out}
+1. Minimise manual steps
 :::
+::: {.fragment .fade-in-then-semi-out}
+2. Be built using open-source software; e.g. R, Python
+:::
+::: {.fragment .fade-in-then-semi-out}
+3. Be peer reviewed by colleagues
+:::
+::: {.fragment .fade-in-then-semi-out}
+4. Be version controlled; e.g. Git
+:::
+:::
+
+::: {.column width="50%"}
+::: {.fragment .fade-in-then-semi-out}
+5. Be open to anyone; e.g. code published on GitHub
+:::
+::: {.fragment .fade-in-then-semi-out}
+6. Follow good practice for quality assurance
+:::
+::: {.fragment .fade-in-then-semi-out}
+7. Contain well-commented code and have documentation embedded
+:::
+:::
+
+::::
 
 ::: {.footer}
 Source: [Government Analysis Function](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/)
 :::
 
 ::: {.notes}
+* To achieve these benefits, a RAP should...
 * Examples of manual steps: creating new folders, copying and pasting data, restructuring data, updating parameters (year, geographies), creating outputs (charts, excel tables, reports, dashboards) 
-:::
-
-
-## RAP principles (2)
-
-::: {.incremental}
-
-* Be version controlled; e.g. Git
-
-* Be open to anyone; e.g. code published on GitHub
-
-* Follow good practice for quality assurance
-
-* Contain well-commented code and have documentation embedded
-
-:::
-
-::: footer
-Source: [Government Analysis Function](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/)
-:::
-
-
-## Is RAP relevant to me?
-
-::: {.incremental}
-
--   Would it be a nightmare to have to go back and rerun your process from the beginning if you found a mistake?
-
--   Do you have to make a lot of manual edits to code before each run?
-
--   Is there a lot of repetition in your code?
-
--   Would a new person find it difficult to understand the process?
-
-:::
-
-::: notes
--   If the answer to any of these is yes, then RAP could help you.
 :::
 
 
 ## Self-assessment tool
 
-* [RAP Self-Assessment Tool](https://scotland.shinyapps.io/sg-rap-self-assessment/) developed internally for analysts in the Scottish Government.
+* [Scottish Government RAP Self-Assessment Tool](https://scotland.shinyapps.io/sg-rap-self-assessment/)
 
 * Criteria categorised into 4 'levels': Aspiring, Fundamental, Intermediate and Advanced.
 
@@ -121,19 +112,76 @@ Source: [Government Analysis Function](https://analysisfunction.civilservice.gov
 
 * Complete form and download report to track progress and inform next steps.
 
+::: {.notes}
+* Some of the 7 RAP principles are still quite high-level so we've broken this down further.
+* The tool was developed internally to support Scottish Government analysts, however it is publicly available.
+:::
 
-## Examples
 
-* Either icons from previous slides or example criteria?
+## Example criteria
+
+:::: {.columns}
+
+::: {.column width="45%"}
+<center>
+[Aspiring RAP]{.blue}
+<img class='icon' alt='' src='../images/icons/folder-tree-solid.svg'/>
+Repository self-contained and <br>well-structured
+
+<br>
+
+::: {.fragment fragment-index=2}
+[Intermediate RAP]{.blue}
+<img class='icon' alt='' src='../images/icons/gears-solid.svg'/>
+Functions used where appropriate
+:::
+</center>
+:::
+
+::: {.column width="10%"}
+:::
+
+::: {.column width="45%"}
+<center>
+::: {.fragment fragment-index=1}
+[Fundamental RAP]{.blue}
+<img class='icon' alt='' src='../images/icons/file-signature-solid.svg'/>
+Code follows a style guide
+:::
+
+<br><br>
+
+::: {.fragment fragment-index=3}
+[Advanced RAP]{.blue}
+<img class='icon' alt='' src='../images/icons/list-check-solid-full.svg'/>
+Functions have unit tests
+:::
+</center>
+:::
+
+::::
+
+::: {.footer}
+[RAP Self-Assessment Tool](https://scotland.shinyapps.io/sg-rap-self-assessment/)
+:::
+
+::: {.notes}
+* Organised folder/file structure with sensible names
+* Following a style guide makes code easier to understand by others and maintain
+* Using functions improves efficiency and understandability
+* Testing functions improves quality
+:::
 
 
 ## Top tips
 
-* Create a process map of your existing process (or your aspirational process)
-
 * Start small and iterate (Agile project development helps here!)
 
-* Learn from others around you. Find somebody who can be a critical friend.
+* Share what you are doing and learn from others around you
+
+* Find a critical friend who is willing to review your project
+
+* Use an issues log to keep track and plan future improvements
 
 
 ## Links & Contact

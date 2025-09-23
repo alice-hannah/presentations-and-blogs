@@ -4,7 +4,7 @@ $presentation-title-slide-text-align: left !default;
 
 $presentation-font-size-root: 38px;
 
-$presentation-font-smaller: 0.8 !default;
+$presentation-font-smaller: 0.9 !default;
 
 $presentation-line-height: 1.8;
 
@@ -31,6 +31,14 @@ $link-color: #0079d2;
   padding-bottom: 25px;
 }
 
+.icon { 
+  width: auto; 
+  height: 60px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .column {
   font-size: 0.8em;
 }
@@ -38,6 +46,11 @@ $link-color: #0079d2;
 .smallest {
   @extend .smaller;
   font-size: 0.5;
+}
+
+.blue {
+  color: $link-color !important;
+  font-weight: bold;
 }
 
 /*-- scss:rules --*/
